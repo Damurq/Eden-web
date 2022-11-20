@@ -1,0 +1,24 @@
+{
+    "components": {
+        "Contact": {
+            "title": "Contáctanos",
+            "extra": [
+                {
+                    "icon": "phone",
+                    "label": "Teléfono",
+                    "info": "0412-656-0199"
+                },
+                {
+                    "icon": "email",
+                    "label": "Email",
+                    "info": "club@gmail.com"
+                },
+                {
+                    "icon": "location",
+                    "label": "Localización",
+                    "info": "Venezuela-Barquisimeto"
+                }
+            ]
+        }
+    }
+}

@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+// Third party
+import React                                      from "react"
+import { BrowserRouter as Router, Switch, Route  } from "react-router-dom"
+// Local
+import Navbar           from "./components/Navbar/Navbar"
+import Footer           from "./components/Footer/Footer"
+import Home             from "./pages/Home/Home"
+// Data
+import data             from "./data/components.json"
+// Styles
+import "./App.css"
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+      <Navbar data={data.Navbar} />
+        <Switch>
+          <Route path="/">
+            <Home />
+          </Route>
+        </Switch>
+        <Footer data={data.Footer} />
+      </Router>      
     </div>
   );
 }

@@ -1,38 +1,182 @@
-.App {
-  text-align: center;
-}
+/* Generals*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.absolute {
+    display: none;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  
+  * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
   }
-  to {
-    transform: rotate(360deg);
+  
+  body {
+    margin: 0;
+    min-height: 100%;
+    font-family: "Poppins", sans-serif;
   }
-}
+  
+  /*==================== LAYOUT ====================*/
+  .container {
+    max-width: 768px;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+  }
+  
+  .Content{
+    background: linear-gradient(180deg, #132D46 5.21%, #016F6C 100%);
+  }
+
+  .grid {
+    display: grid;
+    gap: 1.5rem;
+  }
+  
+  .Content {
+    width: 100%;
+  }
+  
+  /* Themes */
+  .theme--1 {
+    background-color: #1B1D29;
+    color: #FFFFFF;
+  }
+  .theme--2 {
+    background-color: #1E9C98;
+    color: #FFFFFF;
+  }
+
+
+ .App{
+  color: #FFFFFF;
+ }
+  
+  /*Titles, subtitles and buttons*/
+  .title {
+    font-size: 3.5rem;
+    font-weight: bolder;
+  }
+  
+  .subtitle-yelow {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #48CBC5;
+  }
+  
+  .subtitle {
+    font-size: 1, 8rem;
+  }
+  
+  .mini-title {
+    font-size: 1rem;
+  }
+  
+  .mini-title-2 {
+    font-size: 0.6rem;
+  }
+  
+  /* Buttoms */
+  .button-yellow {
+    font-size: 1.2rem;
+    outline: none;
+    border-radius: 30px;
+    background-color: #48CBC5;
+    color: hsl(198deg, 22%, 9%);
+    padding: 0.5rem 3.5rem;
+    display: inline-block;
+    box-shadow: 6px 6px 20px -1px hsla(198deg, 0%, 0%, 0.15);
+  }
+  
+  .button-dark {
+    font-size: 1.2rem;
+    border: 1px solid hsl(198deg, 0%, 100%);
+    border-radius: 30px;
+    background-color: hsl(198deg, 22%, 9%);
+    color: hsl(198deg, 0%, 100%);
+    padding: 0.5rem 3.5rem;
+    display: inline-block;
+    text-decoration: none;
+    transition: background-color 1s ease, color 1s ease;
+  }
+  
+  .button-yellow:hover {
+    box-shadow: inset 4px 4px 10px -1px rgba(0, 0, 0, 0.15) inset -4px -4px 10px -1px #48CBC5;
+  }
+  
+  .button-dark:hover {
+    border: 1px solid hsl(198deg, 22%, 9%);
+    background-color: hsl(198deg, 0%, 100%);
+    color: hsl(198deg, 22%, 9%);
+  }
+  
+  button.theme--1 {
+    font-size: 1.2rem;
+    outline: none;
+    border-radius: 30px;
+    background-color: hsl(198deg, 22%, 9%);
+    color: hsl(198deg, 0%, 100%);
+    padding: 0.5rem 3.5rem;
+    display: inline-block;
+    box-shadow: 6px 6px 20px -1px rgba(0, 0, 0, 0.15);
+  }
+  
+  button.theme--1 {
+    font-size: 1.2rem;
+    outline: none;
+    border-radius: 30px;
+    background-color: hsl(198deg, 0%, 100%);
+    color: hsl(198deg, 22%, 9%);
+    padding: 0.5rem 3.5rem;
+    display: inline-block;
+    box-shadow: 6px 6px 20px -1px rgba(0, 0, 0, 0.15);
+  }
+  
+  /*=============== SCROLL BAR ===============*/
+  ::-webkit-scrollbar {
+    width: 0.6rem;
+    background-color: hsl(190deg, 12%, 48%);
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: hsl(190deg, 12%, 36%);
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: hsl(190deg, 8%, 75%);
+  }
+  
+  @media (max-width: 992px) {
+    .mini-title {
+      font-size: 1.5rem;
+    }
+  }
+  /*Modify text*/
+  .text--center {
+    text-align: center;
+  }
+  
+  .text-dark {
+    color: hsl(180deg, 2%, 25%);
+  }
+  
+  /* margins */
+  .mv-0-5r {
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+  }
+  
+  @media screen and (max-width: 350px) {
+    .container {
+      margin-left: 1rem;
+      margin-right: 1rem;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    .container {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  
+  
