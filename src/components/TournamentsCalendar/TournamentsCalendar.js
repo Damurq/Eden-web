@@ -11,7 +11,7 @@ const TournamentsCalendar = ({discipline}) => {
     const [currentTournaments, setCurrentTournaments] = useState([])
     const [values, setValues] = useState([])
     const [activetournament, setActivetournament] = useState(null)
-    
+
     useEffect(() => {
         const today = new Date()
         let tournaments = data[discipline].Calendar.tournaments.filter((tournament) => {
@@ -20,6 +20,7 @@ const TournamentsCalendar = ({discipline}) => {
         })
         setCurrentTournaments(tournaments)
         setValues(tournaments.map((tournament) => stringToDate(tournament.date)))
+        setActivetournament(null)
     }, [discipline])
     
     

@@ -3,7 +3,7 @@ import './InitialCard.css';
 function InitialCard() {
 
   return (
-    <body>
+    <div className='portada'>
 
       <div className='TextInitialCard'>
         <sub className='Text1'>El mejor club de Barquisimeto</sub>
@@ -13,13 +13,12 @@ function InitialCard() {
       <div className='Frame29'>
         <h2 className='Text3'>Siguenos-</h2>
       </div>
-      
-      <button className='Group2'>
-        <text className='Exp'>Explorar</text>
+      <div className='button-container'>
+      <button className='Group2 button-yellow'>
+        Explorar
       </button>
-
-
-    </body>
+      </div>
+    </div>
   );
 }
 

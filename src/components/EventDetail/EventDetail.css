@@ -1,106 +1,33 @@
-.Container2{
-    position: absolute;
-    width: 1440px;
-    height: 2383px;
-    left: 0px;
-    top: 0px;
-
-}
-.Event{
-    position: absolute;
-    width: 1101px;
-    height: 837px;
-    left: 170px;
-}
-.Text1_EventDetail{
-    position: absolute;
-    width: 300px;
-    height: 47px;
-    left: 400px;
-    top: 0px;
-
-    font-style: normal;
-    font-weight: 700;
-    font-size: 40px;
-    line-height: 47px;
-    text-align: center;
-
-    letter-spacing: -0.02em;
-
-}
-.Text2_EventDetail{
-    position: absolute;
-    width: 122px;
-    height: 28px;
-    left: 490px;
-    top: 74px;
-    
-    font-style: normal;
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 20px;
-    text-align: center;
+.Container-section{
     
 }
-.Text3_EventDetail{
-    position: absolute;
-    width: 835px;
-    height: 22px;
-    left: 133px;
-    top: 135px;
 
-    font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 19px;
-    letter-spacing: -0.02em;
-    text-align: center;
+.Event-container{
+    padding-top:3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    column-gap: 1rem;
+    row-gap: 1rem;
 }
+
 .Frame27{
-    position: absolute;
-    width: 1101px;
-    height: 56px;
-    left: 0px;
-    top: 720px;
+    margin: 2rem 0;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 100%;
 }
-.Text4_EventDetail{
-    position: absolute;
-    width: 327px;
-    height: 56px;
-    left: 0px;
-    top: 0px;
-    
-    font-style: normal;
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 28px;
+.Text_EventDetail{
     text-align: center;
-    letter-spacing: -0.02em;
-    
 }
-.Text5_EventDetail{
-    position: absolute;
-    width: 146px;
-    height: 56px;
-    left: 955px;
-    top: 0px;
 
-    font-style: normal;
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 28px;
-    text-align: center;
-    letter-spacing: -0.02em;
-
-}
 .ImageEventDetail{
-    position: absolute;
-    width: 970px;
-    height: 536px;
-    left: 65px;
-    top: 184px;
+    width: 80%;    
+}
 
-    background: url('../../../public/EventDetail/ImageEvent.jpg');
+.ImageEventDetail img{
+    width: 100%;
+    margin: 0 auto;
     border-radius: 15px;
-    
 }

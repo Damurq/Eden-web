@@ -26,9 +26,10 @@
     display: flex;
     flex-direction: column;
     background-color: rgba(255, 255, 255, 0.10);
+    margin-top: 1rem;
     padding: 1rem;
     border-radius: 15px;
-    gap: 10px;
+    gap: 1rem;
     max-height: 220px;
     overflow-y: auto;
 }
@@ -38,19 +39,17 @@
     flex-wrap: wrap;
     background-color: rgba(255, 255, 255, 0.10);
     justify-content: space-between;
-    padding: 0 1.5rem;
+    padding: 1rem 1.5rem;
     border-radius: 15px;
     cursor:pointer;
 }
 
 .active-event{
-    background-color: rgba(255, 255, 255, 0.45);
-    -webkit-transition: background-color 1000ms linear;
-    -ms-transition: background-color 1000ms linear;
-    transition: background-color 1000ms linear;
+    background-color: rgba(255, 255, 255, 0.40);
+    -webkit-transition: background-color 900ms linear;
+    -ms-transition: background-color 900ms linear;
+    transition: background-color 900ms linear;
 }
-
-
 
 /*Calendario*/
 .rmdp-wrapper{
@@ -58,6 +57,9 @@
 }
 
 @media screen and (max-width: 680px) {
+    .event-container{
+        margin-top: 2rem;
+    }
     .event-container, .calendar-container{
         width:80%;
     }

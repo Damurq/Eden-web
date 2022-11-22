@@ -5,6 +5,8 @@
 }
 
 .philosophy {
+    margin: 0;
+    padding: 3rem;
     width: 100%;
     /*background: linear-gradient(180deg, #132D46 60.94%, #016F6C 100%);*/
     padding-bottom: 4rem;
