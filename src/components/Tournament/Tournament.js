@@ -1,19 +1,17 @@
-import React            from 'react'
+import React from 'react'
 // Components
-import ContactForm      from '../ContactForm/ContactForm'
-import InformationCard  from '../InformationCard/InformationCard'
 // Style
-import './Torneo.css'
+import './Tournament.css'
 
-const Torneo = ({data}) => {
+const Tournament = ({data}) => {
 
     return (
-        <div id="Torneo" className="Contact contact section" >
+        <div id="Tournament" className="Contact contact section" >
             <center>
             <h2 className="title">Torneos</h2>
             <h1>Participa en los torneos más desafiantes </h1>
-            <img class="img-1" src="./Torneo/image 9.png" alt="domino" />
-            <img class="img-2" src="./Torneo/image 10.png" alt="bolas" />
+            <img class="img-1" src="./Tournament/image 9.png" alt="domino" />
+            <img class="img-2" src="./Tournament/image 10.png" alt="bolas" />
             <h1>La mejor experiencia deportiva </h1>
 
             <div class="paragraphs" >
@@ -40,4 +38,4 @@ const Torneo = ({data}) => {
     )
 }
 
-export default Torneo
+export default Tournament
