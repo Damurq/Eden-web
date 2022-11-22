@@ -10,9 +10,9 @@ const Philosophy = () => {
 
     return (
         <div className="philosophy">
+                    <h2 className='title'>Sobre nosotros</h2>
             <div className="philosophy__up">
                 <div className="philosophy__left">
-                    <h1>Sobre nosotros</h1>
                     <img src={imageOne} alt="one" />
                 </div>
                 <div className="philosophy__right">

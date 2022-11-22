@@ -4,8 +4,9 @@
 
 .presentation__up{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
+    gap: 20px;
 }
 
 .presentation__content, .presentation__image{
