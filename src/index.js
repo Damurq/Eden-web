@@ -3,11 +3,13 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import InitialCard from './components/InitialCard/InitialCard'
+import EventDetail from './components/EventDetail/EventDetail'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <InitialCard/>
   </React.StrictMode>
 );
 
