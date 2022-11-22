@@ -1,0 +1,45 @@
+/*==================== Torneo ====================*/
+.contact__container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.Contact {
+  margin: 0;
+  padding: 0 3rem;
+  padding-bottom: 6rem;
+}
+.Contact .title {
+  margin-top: 0;
+  padding-top: 4rem;
+  padding-left: 2.5rem;
+}
+.img-1 {
+  margin-right: 15px;
+  width:"439"; 
+  height:"456";
+}
+.img-2 {
+  
+  width:"364"; 
+  height:"453";
+}
+.paragraphs {
+ 
+ display: flex;
+ text-align: center;
+ margin:15px;
+height: 150px;
+
+}
+.paragraphs-2 {
+  margin: 0 auto;
+  }
+
+
+@media screen and (max-width: 992px) {
+  .contact__container {
+    justify-content: normal;
+  }
+}
