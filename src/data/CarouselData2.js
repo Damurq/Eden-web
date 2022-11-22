@@ -7,12 +7,12 @@ export const CarouselData2 = [
     {
         id:1,
         img:image1a,
-        title:"Crown Clash"
+        title:"Crown Clash información relevante"
     },
     {
         id:2,
         img:image2a,
-        title:"Saints Row"
+        title:"Saints Row información relevante aqui"
     },
     {
         id:3,

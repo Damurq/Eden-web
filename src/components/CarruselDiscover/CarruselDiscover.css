@@ -119,6 +119,8 @@
     height: 100%;
     width: 100%;
     margin-top: 15px;
+    margin-left: 10px;
+    justify-content: start;
     align-content:center;
     align-self:center;
 }
@@ -126,14 +128,22 @@
 .carousel-image{
     display: block;
     align-self:center;
+    margin-right: 10px;
 }
 
 .carousel-text{
-    display: flex;
-    flex-direction: column;
+    display: block;
     justify-content: center;
-    margin-left: 10px;
-    margin: 0;
+    align-content: center;
+    max-width: 150px;
+}
+
+.carousel-text p{
+    display: flex;
+    margin: 0px;
+    vertical-align: bottom;
+    text-align: start;
+    font-size: 12px;
 }
 
 
