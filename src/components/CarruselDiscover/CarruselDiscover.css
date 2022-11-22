@@ -141,7 +141,7 @@
 .carousel-text p{
     display: flex;
     margin: 0px;
-    vertical-align: bottom;
+    align-content: bottom;
     text-align: start;
     font-size: 12px;
 }
