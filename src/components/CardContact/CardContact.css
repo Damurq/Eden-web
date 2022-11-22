@@ -5,11 +5,12 @@
   flex-wrap: wrap;
 }
 
-.Contact {
+.contact.section {
   margin: 0;
   padding: 0 3rem;
   padding-bottom: 6rem;
 }
+
 .Contact .title {
   margin-top: 0;
   padding-top: 4rem;

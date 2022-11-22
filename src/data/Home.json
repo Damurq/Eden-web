@@ -1,5 +1,21 @@
 {
     "components": {
+        "Presentation": {
+            "title": "¿Quienes somos?",
+            "paragraphs": [
+                {
+                    "description" : "Apucla es un club que busca promover las actividades recreativas en barquisimeto promoviendo el deporte\nApucla es un club que busca promover las actividades recreativas en barquisimeto promoviendo el deporte",
+                    "image": "./Presentation/familyPicnic.png",
+                    "alt":"club"
+
+                },
+                {
+                    "description" : "Apucla es un club que busca promover las actividades recreativas en barquisimeto promoviendo el deporte\nApucla es un club que busca promover las actividades recreativas en barquisimeto promoviendo el deporte",
+                    "image": "./Presentation/campingFriends.png",
+                    "alt":"club"
+                }
+            ]
+        },
         "Contact": {
             "title": "Contáctanos",
             "extra": [
