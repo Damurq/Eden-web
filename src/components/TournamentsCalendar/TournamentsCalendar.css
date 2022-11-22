@@ -1,0 +1,70 @@
+.CalendarSection{
+    margin: 0;
+    padding: 0 3rem;
+    padding-bottom: 6rem;
+}
+
+.CalendarSection .title{
+    margin-top: 0;
+    padding-top: 4rem;
+    padding-left: 2.5rem;
+}
+
+.calendar-header{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.tournament-container, .calendar-container{
+    width:50%;
+    align-self: baseline;
+}
+
+.tournament-list{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.10);
+    padding: 1rem;
+    border-radius: 15px;
+    gap: 10px;
+    max-height: 220px;
+    overflow-y: auto;
+}
+
+.tournament-element{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgba(255, 255, 255, 0.10);
+    justify-content: space-between;
+    padding: 0 1.5rem;
+    border-radius: 15px;
+    cursor:pointer;
+}
+
+.active-tournament{
+    background-color: rgba(255, 255, 255, 0.45);
+    -webkit-transition: background-color 1000ms linear;
+    -ms-transition: background-color 1000ms linear;
+    transition: background-color 1000ms linear;
+}
+
+
+
+/*Calendario*/
+.rmdp-wrapper{
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 680px) {
+    .tournament-container, .calendar-container{
+        width:80%;
+    }
+    .tournament-container h2{
+        text-align: center;
+    }
+    .tournament-list{
+        margin:0 auto;
+    }
+  }

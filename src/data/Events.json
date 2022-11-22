@@ -1,0 +1,22 @@
+{
+        "Calendar": {
+            "title": "Calendario de eventos",
+            "events": [
+                {
+                    "id":0,
+                    "title": "Partido de futbol",
+                    "date": "2022-11-17"
+                },
+                {
+                    "id":1,
+                    "title": "Bailoterapia",
+                    "date": "2022-11-18"
+                },
+                {
+                    "id":2,
+                    "title": "Bingo",
+                    "date": "2022-11-19"
+                }
+            ]
+    }
+}
