@@ -2,6 +2,7 @@ import React from 'react'
 // Components
 // Style
 import './Tournament.css'
+import SeeMore  from '../SeeMore/SeeMore'
 
 const Tournament = ({ data }) => {
 
@@ -28,6 +29,7 @@ const Tournament = ({ data }) => {
                     <p>canchas deportivas</p>
                 </div>
             </div>
+            <SeeMore to="/Torneos" />
         </div>
     )
 }
