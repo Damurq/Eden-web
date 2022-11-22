@@ -1,0 +1,101 @@
+.discover__container {
+    display: flex;
+    justify-content: center;
+  }
+
+
+  .main-carousel{
+    display: block;
+    position: relative;
+    box-sizing: border-box;
+    margin-bottom: 3rem!important;
+    margin-top: 1.5rem!important;
+  }
+
+  .luis01{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .row{
+    display: flex; 
+    justify-content: center;
+    margin-left: 50%;
+    margin-right: 50%;
+  }
+  
+  .img-main{
+    border-radius: 20px !important;
+ }
+
+.container-info{
+    display: block;
+    position: relative;
+    top: -280px;
+    left: 500px;
+}
+
+.container-info2{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    align-items: flex-start;
+    padding: 30px;
+    top: 280px;
+}
+.container-title{
+    flex: 0 0 auto;
+    width: 33%;
+}
+.mini-text{
+    margin-top: 1rem;
+}
+
+
+
+
+
+
+
+
+
+/* Aqui esdelcarruselderecho*/
+
+.custom-indicator{
+    top: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    left: 83%;
+    height:100%;
+   gap: 24px !important;
+
+
+}
+
+
+.carousel-box{
+    display: flex !important;
+    flex-direction: column !important;
+    left: 83%;
+    height: 100%;
+
+}
+
+
+
+
+/*==================== carrusel principal ====================*/
+
+.slick-list{
+    width: 83%;
+}
+.slick-prev:before , .slick-next:before{
+    display: none;
+    cursor:none;
+}
+
+.slick-arrow{
+    display: none !important;
+}

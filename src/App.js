@@ -28,7 +28,7 @@ function App() {
             <Home />
           </Route>
         </Switch>
-        <Footer data={data.Footer} />
+        {/*<Footer data={data.Footer} />*/}
       </Router>
     </div>
   );
