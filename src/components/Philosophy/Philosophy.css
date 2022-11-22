@@ -1,0 +1,138 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.philosophy{
+    width: 100%;
+    height: 1250px;
+    /*background: linear-gradient(180deg, #132D46 60.94%, #016F6C 100%);*/
+}
+
+/*PRIMERA PARTE*/
+
+.philosophy__up{
+    display: flex;
+    width: 100%;
+    height: 600px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.philosophy__up .philosophy__left{
+    width: 70%;
+    height: 600px;
+    padding: 0px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    
+}
+
+.philosophy__up .philosophy__left h1{
+    
+    /*font-family: 'Work Sans';*/
+    font-style: normal;
+    font-weight: 700;
+    font-size: 3rem;
+    line-height: 4.5rem;
+        /* identical to box height */
+    
+    letter-spacing: -0.02em;
+    
+    /*color: #FFFFFF;*/
+
+}
+
+.philosophy__up .philosophy__left img{
+    width: 100%;
+    border-radius: 15px;
+    /*padding: 20px 20px;*/
+    
+    
+}
+
+.philosophy__up .philosophy__right{
+    width: 30%;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    
+}
+/*
+.philosophy__up .philosophy__right p{
+    color: #FFFFFF;
+    
+
+}*/
+
+/*SEGUNDA PARTE*/
+.philosophy__center{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.philosophy__center h2{
+    
+
+    /*color: #FFFFFF;*/
+    margin-top: 20px;
+    margin-bottom: 20px;
+    
+
+}
+/*
+.philosophy__center p{
+    color: #FFFFFF;
+}*/
+
+/*TERCERA PARTE*/
+.philosophy__down{
+    display: flex;
+    width: 100%;
+    height: 450px;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.philosophy__down .philosophy__left {
+    width: 50%;
+    height: 450px;
+    padding: 0px 20px;
+    display: flex;
+    align-items: center;
+
+}
+
+.philosophy__down .philosophy__left img {
+    width: 100%;
+    border-radius: 15px;
+
+}
+
+.philosophy__down .philosophy__right {
+    width: 50%;
+    height: 450px;
+    display: flex;
+    align-items: center;
+
+}
+
+.philosophy__down .philosophy__right p {
+    /*color: #FFFFFF;*/
+    padding: 20px 20px;
+    padding-top: 70px;
+
+
+}
