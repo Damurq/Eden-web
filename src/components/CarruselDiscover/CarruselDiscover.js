@@ -10,10 +10,6 @@ import { CarouselData2 } from '../../data/CarouselData2';
 const CarruselDiscover = () => {
   return (
     <>
-        <div className='discover__container'>
-            CarruselDiscover
-        </div>
-
         <section className="main-carousel">
           <div  className="carousel">
             <Slider
@@ -26,12 +22,12 @@ const CarruselDiscover = () => {
               customPaging={(i)=>{
                 return (
                   <div className="carousel-box" key={(CarouselData2[i].id)}>
-                    <div className="all d-flex">
+                    <div className="box-info">
                         <div className="carousel-image">
                             <img src={(CarouselData2[i].img)}  alt="" style={{width:"60px", height:"80px", objectFit:"cover" , borderRadius:"4px"}} />
                         </div>
-                        <div className="carousel-text d-flex align-items-center">
-                            <p  className="mb-0 text-light qq ms-3">{(CarouselData2[i].title)}</p>
+                        <div className="carousel-text">
+                            <p  className="">{(CarouselData2[i].title)}</p>
                         </div>
                     </div>
                   </div>
@@ -40,10 +36,9 @@ const CarruselDiscover = () => {
               dotsClass="slick-dots custom-indicator"
               >
               {CarouselData.map((item) => (
-                <div class="luis01">
+                <div class="container-main">
                     <div className='row'>
                         <img src={item.img} class="img-main" alt="..." />
-                        {/* Titulo de Noticia */}
                         <div className='container-info2'>
                             <div  className="container-title" >
                                 <div>

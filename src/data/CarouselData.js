@@ -27,5 +27,13 @@ export const CarouselData = [
         text1:'SPARATAN SHOWDOWN COMES TO FALL GUYS',
         text2:"Complete challenges to unlock spartan themed rewards from June 30 to July 4."
      
+    },
+    {
+        id:4,
+        img:image3,
+        miniimg:image3mini,
+        text1:'SPARATAN SHOWDOWN COMES TO FALL GUYS',
+        text2:"Complete challenges to unlock spartan themed rewards from June 30 to July 4."
+     
     }
 ]

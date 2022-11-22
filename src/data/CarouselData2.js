@@ -18,5 +18,10 @@ export const CarouselData2 = [
         id:3,
         img:image3a,
         title:"Fall Guys - Spartan Showdown"
+    },
+    {
+        id:4,
+        img:image3a,
+        title:"Fall Guys - Spartan Showdown"
     }
 ]
