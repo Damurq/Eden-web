@@ -22,7 +22,7 @@ const Navbar = ({ data }) => {
      */
     function clickHandler(e) {
         e.preventDefault();
-        if (!(location.pathname === "/")) {
+        if (location.pathname === "/") {
             history.push("/");
         }
         // Get the top height of the element

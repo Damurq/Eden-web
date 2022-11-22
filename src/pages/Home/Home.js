@@ -2,6 +2,7 @@ import React            from "react"
 // Components
 import CardContact      from "../../components/CardContact/CardContact.js"
 import Presentation      from "../../components/Presentation/Presentation.js"
+import Tournament      from "../../components/Tournament/Tournament.js"
 import InitialCard      from "../../components/InitialCard/InitialCard.js"
 import data             from "../../data/Home.json"
 
@@ -11,6 +12,7 @@ const Home = ()=>{
         <div className="Content">
             <InitialCard />
             <Presentation data={data.components.Presentation} />
+            <Tournament />
             <CardContact data={data.components.Contact} />
         </div>
     )

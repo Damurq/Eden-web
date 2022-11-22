@@ -1,45 +1,37 @@
 /*==================== Torneo ====================*/
-.contact__container {
+.tournament-section {
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 2rem;
+  margin: 0;
+  padding: 0 3rem;
+}
+
+.discipline-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  gap: 3rem;
   flex-wrap: wrap;
 }
 
-.Contact {
-  margin: 0;
-  padding: 0 3rem;
-  padding-bottom: 6rem;
+.discipline-container img {
+  width: 30%;
 }
-.Contact .title {
-  margin-top: 0;
-  padding-top: 4rem;
-  padding-left: 2.5rem;
-}
-.img-1 {
-  margin-right: 15px;
-  width:"439"; 
-  height:"456";
-}
-.img-2 {
-  
-  width:"364"; 
-  height:"453";
-}
+
 .paragraphs {
- 
- display: flex;
- text-align: center;
- margin:15px;
-height: 150px;
-
+  display: flex;
+  text-align: center;
+  flex-direction: row;
+  gap: 2rem;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100%;
 }
-.paragraphs-2 {
-  margin: 0 auto;
-  }
 
-
-@media screen and (max-width: 992px) {
-  .contact__container {
-    justify-content: normal;
+@media screen and (max-width: 425px) {
+  .discipline-container img {
+    width: 70%;
   }
 }
