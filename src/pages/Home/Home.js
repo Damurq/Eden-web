@@ -9,6 +9,7 @@ const Home = ()=>{
     return (
         <div className="Content">
             <CarruselDiscover />
+            <CardContact data={data.components.Contact} />
         </div>
     )
 }

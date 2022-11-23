@@ -24,7 +24,7 @@ const CarruselDiscover = () => {
                   <div className="carousel-box" key={(CarouselData2[i].id)}>
                     <div className="box-info">
                         <div className="carousel-image">
-                            <img src={(CarouselData2[i].img)}  alt="" style={{width:"60px", height:"80px", objectFit:"cover" , borderRadius:"4px"}} />
+                            <img src={(CarouselData2[i].img)}  alt="" style={{width:"60px", height:"80px", objectFit:"cover" , borderRadius:"10px"}} />
                         </div>
                         <div className="carousel-text">
                             <p  className="">{(CarouselData2[i].title)}</p>
@@ -41,14 +41,11 @@ const CarruselDiscover = () => {
                         <img src={item.img} class="img-main" alt="..." />
                         <div className='container-info2'>
                             <div  className="container-title" >
-                                <div>
-                                    <img src={item.miniimg}  alt=""  />
-                                </div>
                                 <div className="mini-text">
                                     <p class="card-text-1 mb-3">{item.text1}</p>
                                     <p class="card-text-2 mb-4">{item.text2}</p>
                                 </div>
-                                <button className="btn learn-more">mas</button>
+                                <button className="btn learn-more">Ver más</button>
                             </div>
                         </div>
                     </div>      
