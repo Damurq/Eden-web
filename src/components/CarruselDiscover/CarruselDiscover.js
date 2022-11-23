@@ -24,7 +24,7 @@ const CarruselDiscover = () => {
               infinite
               customPaging={(i)=>{
                 return (
-                  <div className="carousel-box" >
+                  <div className="carousel-box" key={(CarouselData2[i].id)} >
                     <div className="box-info">
                         <div className="carousel-image">
                             <img src={(CarouselData2[i].img)}  alt="" style={{width:"60px", height:"80px", objectFit:"cover" , borderRadius:"10px"}} />
@@ -39,14 +39,14 @@ const CarruselDiscover = () => {
               dotsClass="slick-dots custom-indicator"
               >
               {CarouselData.map((item) => (
-                <div class="container-main">
+                <div className="container-main">
                     <div className='row'>
-                        <img src={item.img} class="img-main" alt="..." />
+                        <img src={item.img} className="img-main" alt="..." />
                         <div className='container-info2'>
                             <div  className="container-title" >
                                 <div className="mini-text">
-                                    <p class="card-text-1 mb-3">{item.text1}</p>
-                                    <p class="card-text-2 mb-4">{item.text2}</p>
+                                    <p className="card-text-1 mb-3">{item.text1}</p>
+                                    <p className="card-text-2 mb-4">{item.text2}</p>
                                 </div>
                                 {/*
 
