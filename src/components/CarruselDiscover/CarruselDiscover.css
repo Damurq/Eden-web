@@ -4,7 +4,7 @@
     justify-content: center;
     padding-top: 35px;
     margin-bottom: 35px;
-    font-size: 2rem;
+    font-size: 3.5rem;
     font-weight: bolder;
 }
 .Title-carousel h2{
@@ -90,6 +90,7 @@
     margin-bottom: -15px;
 }
 .card-text-2{
+    margin-top: 1rem;
     font-size: 15px;
 }
 
@@ -475,7 +476,7 @@
         flex: 0 0 auto;
         position: absolute;
         margin-left: 1%;
-        margin-top: -20%;
+        margin-top: -15%;
         width: 95%;
     }
 
