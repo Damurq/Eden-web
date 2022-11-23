@@ -4,8 +4,8 @@ import data from "../../data/Events.json"
 //
 import { Calendar } from "react-multi-date-picker"
 import './EventsCalendar.css'
-import {stringToDate} from "../../utilities/utilsDate"
-
+import { stringToDate } from "../../utilities/utilsDate"
+import EventDetail from "../EventDetail/EventDetail"
 const EventsCalendar = () => {
     const today = new Date()
     const [currentEvents, setCurrentEvents] = useState(data.Calendar.events.filter((event) => {
@@ -29,21 +29,21 @@ const EventsCalendar = () => {
                 <div className="event-container">
                     <h2 className="">Lista de eventos</h2>
                     <div className="event-list">
-                    {currentEvents.map((event) => (
-                        <div key={`${event.id}-event`} className={`event-element${event.id === activeEvent
-                            ? " active-event"
-                            : ""}`}
-                        onClick={() => { setActiveEvent(event.id) }}
-                        >
-                            <p className="">{event.title}</p>
-                            <p className="">{event.date}</p>
-                        </div>
-                    ))}
+                        {currentEvents.map((event) => (
+                            <div key={`${event.id}-event`} className={`event-element${event.id === activeEvent
+                                ? " active-event"
+                                : ""}`}
+                                onClick={() => { setActiveEvent(event.id) }}
+                            >
+                                <p className="">{event.title}</p>
+                                <p className="">{event.date}</p>
+                            </div>
+                        ))}
                     </div>
                 </div>
             </div>
             <div className="">
-                
+                <EventDetail />
             </div>
         </div>
     )

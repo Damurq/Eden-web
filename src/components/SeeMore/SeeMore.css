@@ -1,0 +1,12 @@
+.seeMore {
+  display: flex;
+  margin-top: 2rem;
+  align-items: center;
+  width: 100%;
+}
+
+.seeMore .line {
+  width: 70%;
+  margin: 0 2rem;
+  border-bottom: 1.5px solid rgb(255, 255, 255);
+}
