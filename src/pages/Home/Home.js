@@ -1,5 +1,6 @@
 import React            from "react"
 // Components
+import CarruselDiscover from "../../components/CarruselDiscover/CarruselDiscover"
 import CardContact      from "../../components/CardContact/CardContact.js"
 import Presentation      from "../../components/Presentation/Presentation.js"
 import Tournament      from "../../components/Tournament/Tournament.js"
@@ -13,6 +14,7 @@ const Home = ()=>{
             <InitialCard />
             <Presentation data={data.components.Presentation} />
             <Tournament />
+            <CarruselDiscover />
             <CardContact data={data.components.Contact} />
         </div>
     )
