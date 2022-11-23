@@ -7,6 +7,7 @@ import Footer from "./components/Footer/Footer"
 import Home from "./pages/Home/Home"
 import Events from "./pages/Events/Events"
 import Tournament from "./pages/Tournament/Tournament"
+import AboutUs from "./pages/AboutUs/AboutUs"
 // Data
 import data from "./data/components.json"
 // Styles
@@ -20,6 +21,9 @@ function App() {
         <Switch>
           <Route path="/Eventos">
             <Events />
+          </Route>
+          <Route path="/Sobre-nosotros">
+            <AboutUs />
           </Route>
           <Route path="/Torneos">
             <Tournament />

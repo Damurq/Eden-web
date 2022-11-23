@@ -1,0 +1,150 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.philosophy {
+    margin: 0;
+    padding: 3rem;
+    width: 100%;
+    /*background: linear-gradient(180deg, #132D46 60.94%, #016F6C 100%);*/
+    padding-bottom: 4rem;
+}
+
+/*PRIMERA PARTE*/
+
+.philosophy__up {
+    margin: 2rem 0;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.philosophy__up .philosophy__left {
+    width: 70%;
+    padding: 0px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+
+}
+
+.philosophy__up .philosophy__left h1 {
+
+    /*font-family: 'Work Sans';*/
+    font-style: normal;
+    font-weight: 700;
+    font-size: 3rem;
+    line-height: 4.5rem;
+    /* identical to box height */
+
+    letter-spacing: -0.02em;
+
+    /*color: #FFFFFF;*/
+
+}
+
+.philosophy__up .philosophy__left img {
+    width: 100%;
+    border-radius: 15px;
+    /*padding: 20px 20px;*/
+
+
+}
+
+.philosophy__up .philosophy__right {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 20px;
+    padding-right: 20px;
+
+}
+
+/*
+.philosophy__up .philosophy__right p{
+    color: #FFFFFF;
+    
+
+}*/
+
+/*SEGUNDA PARTE*/
+.philosophy__center {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.philosophy__center h2 {
+
+
+    /*color: #FFFFFF;*/
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+
+}
+
+/*
+.philosophy__center p{
+    color: #FFFFFF;
+}*/
+
+/*TERCERA PARTE*/
+.philosophy__down {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.philosophy__down .philosophy__left {
+    width: 50%;
+    padding: 0px 20px;
+    display: flex;
+    align-items: center;
+
+}
+
+.philosophy__down .philosophy__left img {
+    width: 100%;
+    border-radius: 15px;
+
+}
+
+.philosophy__down .philosophy__right {
+    width: 50%;
+    display: flex;
+    align-items: center;
+
+}
+
+.philosophy__down .philosophy__right p {
+    /*color: #FFFFFF;*/
+    padding: 20px 20px;
+}
+
+@media (max-width: 992px) {
+
+    .philosophy__up .philosophy__left,
+    .philosophy__up .philosophy__right,
+    .philosophy__down .philosophy__left,
+    .philosophy__down .philosophy__right {
+        width: 90%;
+        margin: 1rem 0;
+    }
+
+    .philosophy__center {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+}
