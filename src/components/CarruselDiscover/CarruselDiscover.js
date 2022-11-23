@@ -10,6 +10,9 @@ import { CarouselData2 } from '../../data/CarouselData2';
 const CarruselDiscover = () => {
   return (
     <>
+        <div className="Title-carousel">
+          <h2>Eventos</h2>
+        </div>
         <section className="main-carousel">
           <div  className="carousel">
             <Slider
@@ -17,11 +20,11 @@ const CarruselDiscover = () => {
               autoplaySpeed={2000}
               fade
               dots
-              initialSlide={2}
+              initialSlide={0}
               infinite
               customPaging={(i)=>{
                 return (
-                  <div className="carousel-box" key={(CarouselData2[i].id)}>
+                  <div className="carousel-box" >
                     <div className="box-info">
                         <div className="carousel-image">
                             <img src={(CarouselData2[i].img)}  alt="" style={{width:"60px", height:"80px", objectFit:"cover" , borderRadius:"10px"}} />
@@ -45,9 +48,17 @@ const CarruselDiscover = () => {
                                     <p class="card-text-1 mb-3">{item.text1}</p>
                                     <p class="card-text-2 mb-4">{item.text2}</p>
                                 </div>
-                                <button className="btn learn-more">Ver más</button>
+                                {/*
+
+                                <a href={item.href}>
+                                  <button className="btn">Ver más</button>
+                                </a>
+                                
+                                */}
+                                
                             </div>
                         </div>
+                        
                     </div>      
                 </div>
               ))}

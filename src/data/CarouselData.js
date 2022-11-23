@@ -12,21 +12,24 @@ export const CarouselData = [
         img:image1,
         miniimg:image1mini,
         text1:'Partido de futbol',
-        text2:"Te invitamos a ver el increíble partidazo!"
+        text2:"Te invitamos a ver este increíble partidazo.",
+        href:'/'
     },
     {
         id:2,
         img:image2,
         miniimg:image2mini,
         text1:'Tenis Femenino',
-        text2:"Te invitamos a ver el increíble partidazo!"
+        text2:"Juega y gana en los sets de juegos disponibles.",
+        href:'/'
     },
     {
         id:3,
         img:image3,
         miniimg:image3mini,
         text1:'Natación para Niños',
-        text2:"Te invitamos a ver el increíble partidazo!"
+        text2:"Disfruta de una experiencia maravillosa con tus hijos en las piscinas.",
+        href:'/'
      
     },
     {
@@ -34,7 +37,8 @@ export const CarouselData = [
         img:image4,
         miniimg:image3mini,
         text1:'Dominó para Sabios',
-        text2:"Te invitamos a ver el increíble partidazo!"
+        text2:"El juego de mesa favorito de todos.",
+        href:'/'
      
     }
 ]
