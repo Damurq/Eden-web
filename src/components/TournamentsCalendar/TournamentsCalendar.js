@@ -2,39 +2,84 @@ import React, { useState, useEffect } from 'react';
 // Components
 import data from "../../data/Tournaments.json"
 //
-import { Calendar } from "react-multi-date-picker"
 import './TournamentsCalendar.css'
 import TournamentSection from '../TournamentSection/TournamentSection';
 import {stringToDate} from "../../utilities/utilsDate"
+import { FaSearch } from "react-icons/fa"
+import moment from 'moment';
+import Comment from "../Comment/Comment"
 
 const TournamentsCalendar = ({discipline}) => {
     const [currentTournaments, setCurrentTournaments] = useState([])
-    const [values, setValues] = useState([])
     const [activetournament, setActivetournament] = useState(null)
+    const [values, setValues] = useState({
+        start: "",
+        end: "",
+    });
 
     useEffect(() => {
-        const today = new Date()
-        let tournaments = data[discipline].Calendar.tournaments.filter((tournament) => {
-            let aux = new Date(tournament.date)
-            return aux.getMonth() === today.getMonth() && aux.getFullYear() === today.getFullYear()
+        setCurrentTournaments([])
+        setValues({
+            start: "",
+            end: "",
         })
-        setCurrentTournaments(tournaments)
-        setValues(tournaments.map((tournament) => stringToDate(tournament.date)))
         setActivetournament(null)
     }, [discipline])
     
+    const handleDateChange = (event) => {
+        const { name, value } = event.target;
+        setValues({
+            ...values,
+            [name]: value,
+        });
+    };
+
+    const searchEvents = (event) => {
+        event.preventDefault()
+        const start = moment(values.start, "YYYY-MM-DD");
+        const end = moment(values.end, "YYYY-MM-DD");
+        if (values.start !== null && values.end !== null && start.isBefore(end)) {
+            setCurrentTournaments(data[discipline].Calendar.tournaments.filter((item) => {
+                const date = moment(item.date, "YYYY-MM-DD");
+                return date.isSameOrAfter(values["start"]) && date.isSameOrBefore(values["end"]);
+            }))
+        } else {
+            alert("Ingresa fechas válidas y asegura que la fecha inicial sea anterior a la final");
+        }
+    }
     
     return (
         <div id="CalendarSection" className="CalendarSection section">
             <h2 className="title">{data[discipline].Calendar.title}</h2>
             <div className="calendar-header">
                 <div className="calendar-container">
-                    <Calendar
-                        multiple
-                        value={values}
-                        onChange={setValues}
-                        onMonthChange={(value) => { console.log(value.month, value.year) }}
-                    />
+                    <h2 className="">Fechas de eventos</h2>
+                    <p>Introduzca el intervalo de fechas en el que desea buscar</p>
+                    <div className="search-inputs">
+                        <div className="input-box">
+                            <input
+                                type="date"
+                                name="start"
+                                id="start"
+                                onChange={handleDateChange}
+                                value={values.start}
+                            />
+                            <label htmlFor="start">Fecha de inicio</label>
+                        </div>
+                        <div className="input-box">
+                            <input
+                                type="date"
+                                name="end"
+                                id="end"
+                                onChange={handleDateChange}
+                                value={values.end}
+                            />
+                            <label htmlFor="end">Fecha de fin</label>
+                        </div>
+                        <button className='search-inputs__button' onClick={searchEvents}>
+                            <FaSearch />
+                        </button>
+                    </div>
                 </div>
                 <div className="tournament-container">
                     <h2>Lista de torneos</h2>
@@ -55,6 +100,9 @@ const TournamentsCalendar = ({discipline}) => {
             {activetournament && <div>
                 <TournamentSection data={data[discipline].Tornaments[activetournament]} />
             </div>}
+            {/* <div className="">
+                <Comment />
+            </div> */}
         </div>
     )
 }

@@ -19,6 +19,66 @@
 .tournament-container, .calendar-container{
     width:50%;
     align-self: baseline;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.search-inputs{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.input-box{
+    position: relative;
+}
+
+.search-inputs input{
+    margin-left: 1rem;
+
+    width: 100%;
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+    border: 1px solid #7e7d7d;
+    outline: none;
+    padding: 0.25rem 0.5rem 0.5rem 0;
+    border-radius: 5px;
+    padding: 1rem .5rem;
+}
+
+.search-inputs label{
+    position: absolute;
+    left: 1.5rem;
+    bottom: 2.5rem;
+    padding: 1rem;
+    pointer-events: none;
+    font-size: 1rem;
+    color: #7e7d7d;
+    transition: 0.5s;
+}
+
+
+.search-inputs input:valid ~ label ,
+.search-inputs input:focus ~ label {
+    padding: .45rem;
+    padding-top: .15rem;
+    padding-bottom: .15rem;
+    background-color: #48CBC5;
+    font-weight: bold;
+    color: #FFFFFF;
+    border-radius: 5px;
+}
+
+.search-inputs__button{
+    font-size: 1.5rem;
+    padding: .75rem;
+    background-color: #48CBC5;
+    color: #FFFFFF;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 .tournament-list{
@@ -65,6 +125,11 @@
     }
     .tournament-container, .calendar-container{
         width:80%;
+    }
+    .calendar-container{
+        padding-left: 0;
+        justify-content: center;
+        align-items: center;
     }
     .tournament-container h2{
         text-align: center;
