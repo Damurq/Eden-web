@@ -8,6 +8,7 @@ import Home from "./pages/Home/Home"
 import Events from "./pages/Events/Events"
 import Tournament from "./pages/Tournament/Tournament"
 import AboutUs from "./pages/AboutUs/AboutUs"
+import Areas from "./pages/Areas/Areas"
 // Data
 import data from "./data/components.json"
 // Styles
@@ -28,9 +29,13 @@ function App() {
           <Route path="/Torneos">
             <Tournament />
           </Route>
+          <Route path="/Areas">
+            <Areas />
+          </Route>
           <Route path="/">
             <Home />
           </Route>
+          
         </Switch>
         <Footer data={data.Footer} />
       </Router>
