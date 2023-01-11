@@ -1,0 +1,58 @@
+::placeholder {
+    color: white;
+}
+
+.form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+}
+
+.form__field {
+    width: 100%;
+    padding: 0.5rem;
+    margin: 0.25rem;
+    font-size: 1.2rem;
+    color: #FFFFFF;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #FFFFFF;
+    transition: border-color 0.2s ease-out;
+}
+
+.form__field:focus {
+    border-bottom-color: #FFFFFF;
+}
+
+.form__field--textarea {
+    min-height: 150px;
+}
+
+.form__field--checkbox {
+    display: flex;
+    align-items: center;
+}
+
+.form__button {
+    width: 100%;
+    padding: 1rem;
+    margin: 1rem 0;
+    background-color: transparent;
+    color: #FFFFFF;
+    border: 2px solid #FFFFFF;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease-out;
+}
+
+.form__button:hover {
+    background-color: #FFFFFF;
+    color: black;
+}
+
+.error{
+    color: rgb(90, 0, 0);
+    font-weight: bolder;
+}
