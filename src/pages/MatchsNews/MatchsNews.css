@@ -1,0 +1,126 @@
+.information-elements{
+    padding-top: 2rem;
+    display: flex;
+    justify-content: space-evenly;
+    gap:2.5rem;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.info-element--container {
+    justify-content: center;
+    align-items: baseline;
+  }
+
+  .custom-button {
+    cursor: pointer;
+  }
+
+  .custom-button h2{
+    font-weight: bolder;
+    padding: 0 1rem;
+    margin: 1rem;
+  }
+
+  .info-element--container {
+    justify-content: center;
+    align-items: baseline;
+  }
+  
+  .info-element {
+    text-align: center;
+    margin: 3.5rem 0;
+    margin-bottom: 6rem;
+    color: #48CBC5;
+    border: #48CBC5 0.125em solid;
+    padding: 0.5em 1em;
+    border-radius: 15px;
+    text-shadow: 0 0 0.125em hsla(0deg, 0%, 100%, 0.3), 0 0 0.45em currentColor;
+    box-shadow: inset 0 0 0.5em 0 #48CBC5, 0 0 0.5em 0 #48CBC5;
+    position: relative;
+  }
+
+  .info-element:hover,
+.active-element:focus,
+.active-element {
+  color: hsl(198deg, 22%, 9%);
+  background: #48CBC5;
+  text-shadow: none;
+}
+
+@media screen and (min-width: 330px) and (max-width: 505px) {
+    .information-details {
+      padding-right: 2.5rem;
+      padding-left: 2.5rem;
+    }
+    .info-element {
+      font-size: 1.3rem;
+      width: min-content;
+      padding: 0.75rem 2.25rem;
+    }
+  }
+
+  
+.active-element {
+    color: #48CBC5;
+    border: #48CBC5 0.125em solid;
+    padding: 0.5em 1em;
+    text-shadow: 0 0 0.125em hsla(0deg, 0%, 100%, 0.3), 0 0 0.45em currentColor;
+    box-shadow: inset 0 0 0.5em 0 #48CBC5, 0 0 0.5em 0 #48CBC5;
+    border-radius: 15px;
+    position: relative;
+  }
+  
+  .active-element::before {
+    pointer-events: none;
+    content: "";
+    /*position*/
+    position: absolute;
+    background: #48CBC5;
+    top: 120%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: perspective(1em) rotateX(40deg) scale(1, 0.35);
+    filter: blur(1em);
+    opacity: 0.7;
+  }
+  
+  .active-element::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0 0 2em 0.5em #48CBC5;
+    opacity: 0;
+    background-color: #48CBC5;
+    z-index: -1;
+    transition: opacity 100ms linear;
+  }
+  
+  .active-element:hover::before,
+  .active-element:focus::before {
+    opacity: 1;
+  }
+  
+  .active-element:hover::after,
+  .active-element:focus::after {
+    opacity: 1;
+  }
+  
+  .info-element:hover,
+  .active-element:focus,
+  .active-element {
+    color: hsl(198deg, 22%, 9%);
+    background: #48CBC5;
+    text-shadow: none;
+  }
+
+  @media screen and (max-width: 430px) {
+    .active-element::before {
+      left: 30%;
+      width: 50%;
+    }
+  }
