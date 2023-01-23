@@ -20,7 +20,13 @@
             {
                 "name": "Sobre nosotros",
                 "type": "Link",
-                "href": "/Sobre-nosotros"
+                "href": "/Sobre-nosotros",
+                "valOptions": "true",
+                "subOptions": 
+                  [
+                    { "name": "Filosofía", "href": "/" },
+                    { "name": "Áreas", "href": "/Areas" }
+                  ]
             },
             {
                 "name": "Contáctanos",
