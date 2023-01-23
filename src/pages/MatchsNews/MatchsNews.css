@@ -118,6 +118,23 @@
     text-shadow: none;
   }
 
+.news-container{
+  padding: 3rem;
+}
+
+.news-container__title{
+  text-align: center;
+  font-size: 4rem;
+  margin: 2rem 0;
+}
+
+.news-content{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-around;
+}
+
   @media screen and (max-width: 430px) {
     .active-element::before {
       left: 30%;

@@ -1,18 +1,18 @@
 import React from 'react'
-import "Match.css"
+import "./Match.css"
 
 const Match = ({ teams, status, winner }) => {
     return (
-        <div className="">
-            <h2 className="">
+        <div className="match-detail">
+            <h2 className="match-detail__teams">
                 {`${teams[0]} VS ${teams[1]}`}
             </h2>
-            <p className="">
-                {`${status}`}
-            </p>
-            <h3 className="">
+            <h3>
                 {`Ganador: ${winner}`}
             </h3>
+            <p>
+                {`${status}`}
+            </p>
         </div>
     )
 }

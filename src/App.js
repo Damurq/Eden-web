@@ -10,6 +10,7 @@ import Home from "./pages/Home/Home"
 import Navbar from "./components/Navbar/Navbar"
 import Results from "./pages/Results/Results"
 import Tournament from "./pages/Tournament/Tournament"
+import MatchsNews from "./pages/MatchsNews/MatchsNews"
 // Data
 import data from "./data/components.json"
 // Styles
@@ -33,13 +34,15 @@ function App() {
           <Route path="/Torneos-resultados">
             <Results />
           </Route>
+          <Route path="/Torneos-noticias">
+            <MatchsNews />
+          </Route>
           <Route path="/Areas">
             <Areas />
           </Route>
           <Route path="/">
             <Home />
           </Route>
-
         </Switch>
         <Footer data={data.Footer} />
       </Router>

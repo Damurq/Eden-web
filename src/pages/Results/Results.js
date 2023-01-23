@@ -4,7 +4,6 @@ import { weekResults } from '../../data/weekResults'
 import MatchGroup from '../../components/MatchGroup/MatchGroup'
 import './Results.css'
 
-
 const Results = () => {
     const sections = Object.keys(data)
     const [activeSection, setActiveSection] = useState(sections.length ? sections[0] : null)
@@ -27,10 +26,15 @@ const Results = () => {
                     </div>
                 ))}
             </div>
-            {weekResults
-                ? weekResults.map((item) => <MatchGroup
-                    tournament={item.tournament}
-                    data={item.data} />)
+
+            {weekResults[activeSection]
+                ? <div className="results-container">
+                    <h2 className="results-container__title">Resultados</h2>
+                    {weekResults[activeSection].map((item, index) => <MatchGroup
+                        tournament={item.tournament}
+                        data={item.data}
+                        key={`tournament-${index}`} />)}
+                </div>
                 : ""}
         </div>
     )

@@ -118,6 +118,16 @@
     text-shadow: none;
   }
 
+  .results-container {
+    padding: 3rem;
+}
+
+.results-container__title{
+  text-align: center;
+  font-size: 4rem;
+  margin: 2rem 0;
+}
+
   @media screen and (max-width: 430px) {
     .active-element::before {
       left: 30%;
