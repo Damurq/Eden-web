@@ -2,43 +2,27 @@ import React from 'react';
 
 //style
 import './Presentation.css';
+import PresentationCard  from '../PresentationCard/PresentationCard'
+import SeeMore  from '../SeeMore/SeeMore'
 
-
-const Presentation = () => {
-
-    const imageOne = "./Presentation/familyPicnic.png";
-    const imageTwo = "./Presentation/campingFriends.png";
+const Presentation = ({data}) => {
+    let {title, paragraphs} = data
 
     return (
-        <div className="presentation">
-
-            <div className="presentation__up">
-                <div className="presentation__left">
-                    <h1>¿Quienes somos?</h1>
-                    <p>Apucla es un club que busca promover las actividades recreativas en barquisimeto promoviendo el deporte</p>
-                    
-                    
-                </div>
-
-                <div className="presentation__right">
-                    <img src= {imageOne} alt="one"/>
-                </div>
-            </div>
-
-            <div className="presentation__down">
-                <div className="presentation__left">
-                    <img src={imageTwo} alt="two"/>
-                </div>
-
-                <div className="presentation__right">
-                    <p>Apucla es un club que busca promover las actividades recreativas en barquisimeto promoviendo el deporte</p>
-            
-                </div>
-
-            </div>
-
-
-
+        <div id="#presentation" className="presentation-section">
+            {title && <h2 className="title">{title}</h2>}
+            {paragraphs && paragraphs.map((paragraph, index) => { 
+                let orientation = (index)%2===0 ? "left": "right"
+                return(
+                    <PresentationCard 
+                    key={`presentation-${index}`}
+                    data={paragraph} 
+                    orientation={orientation} 
+                    />
+                )
+             }
+            )}
+            <SeeMore to="/Sobre-nosotros" />
         </div>
     )
 

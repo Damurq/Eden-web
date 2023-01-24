@@ -1,0 +1,77 @@
+{
+    "Navbar": {
+        "logo": "Eden.png",
+        "elements": [
+            {
+                "name": "Inicio",
+                "type": "Link",
+                "href": "/"
+            },
+            {
+                "name": "Eventos",
+                "type": "Link",
+                "href": "/Eventos"
+            },
+            {
+                "name": "Torneos",
+                "type": "Link",
+                "href": "/Torneos"
+            },
+            {
+                "name": "Sobre nosotros",
+                "type": "Link",
+                "href": "/Sobre-nosotros",
+                "valOptions": "true",
+                "subOptions": 
+                  [
+                    { "name": "Filosofía", "href": "/" },
+                    { "name": "Áreas", "href": "/Areas" }
+                  ]
+            },
+            {
+                "name": "Contáctanos",
+                "type": "a",
+                "href": "#Contacto"
+            }
+        ]
+    },
+    "Footer": {
+        "menu": [
+            {
+                "name": "Inicio",
+                "type": "Link",
+                "href": "/"
+            },
+            {
+                "name": "Eventos",
+                "type": "Link",
+                "href": "/Eventos"
+            },
+            {
+                "name": "Torneos",
+                "type": "Link",
+                "href": "/Torneos"
+            },
+            {
+                "name": "Sobre nosotros",
+                "type": "Link",
+                "href": "/Sobre-nosotros"
+            },
+            {
+                "name": "Contáctanos",
+                "type": "a",
+                "href": "#Contacto"
+            }
+        ],
+        "info": [
+            {
+                "icon": "email",
+                "data": "club@gmail.com"
+            },
+            {
+                "icon": "phone",
+                "data": "+58 416 654 78 92"
+            }
+        ]
+    }
+}
