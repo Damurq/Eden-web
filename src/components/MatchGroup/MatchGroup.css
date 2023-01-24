@@ -1,0 +1,22 @@
+.matchs-container {
+    padding: 1.5rem;
+}
+
+.matchs-container__tournament{
+    text-align: center;
+    font-size: 3rem;
+}
+
+.matchs-container__date{
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.matchs-group {
+    display: flex;
+    margin: 1rem;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+

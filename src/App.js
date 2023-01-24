@@ -2,12 +2,15 @@
 import React from "react"
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 // Local
-import Navbar from "./components/Navbar/Navbar"
+import AboutUs from "./pages/AboutUs/AboutUs"
+import Areas from "./pages/Areas/Areas"
+import Events from "./pages/Events/Events"
 import Footer from "./components/Footer/Footer"
 import Home from "./pages/Home/Home"
-import Events from "./pages/Events/Events"
+import Navbar from "./components/Navbar/Navbar"
+import Results from "./pages/Results/Results"
 import Tournament from "./pages/Tournament/Tournament"
-import AboutUs from "./pages/AboutUs/AboutUs"
+import MatchsNews from "./pages/MatchsNews/MatchsNews"
 // Data
 import data from "./data/components.json"
 // Styles
@@ -27,6 +30,15 @@ function App() {
           </Route>
           <Route path="/Torneos">
             <Tournament />
+          </Route>
+          <Route path="/Torneos-resultados">
+            <Results />
+          </Route>
+          <Route path="/Torneos-noticias">
+            <MatchsNews />
+          </Route>
+          <Route path="/Areas">
+            <Areas />
           </Route>
           <Route path="/">
             <Home />
