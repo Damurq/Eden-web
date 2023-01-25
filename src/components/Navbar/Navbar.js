@@ -149,7 +149,7 @@ const Navbar = ({ data }) => {
                                     <Link className={liClass}   to={section.href}>{section.name}</Link>      
                                 </li> 
                                 :  
-                                <li key={"nav-li-" + index}  >
+                                <li key={"nav-li-" + index }  >
                                     {
                                         section.type === "a" ? 
                                         (

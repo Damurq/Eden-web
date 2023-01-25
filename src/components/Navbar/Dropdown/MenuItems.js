@@ -1,7 +1,7 @@
 export const SubMenuAboutUs = [
   {
     title: 'Filosofía',
-    path: '/Filosofia',
+    path: '/Sobre-nosotros',
     cName: 'dropdown-link'
   },
   {
@@ -15,20 +15,20 @@ export const SubMenuAboutUs = [
 export const SubMenuEvents = [
   {
     title: 'Actuales',
-    path: '/Actuales',
+    path: '/Eventos',
     cName: 'dropdown-link'
   },
   {
     title: 'Noti-Eventos',
-    path: '/Noti-Eventos',
+    path: '/Noti-eventos',
     cName: 'dropdown-link'
   }
 ];
 
 export const SubMenuActivities = [
   {
-    title: 'Op1',
-    path: '/',
+    title: 'Actividades',
+    path: '/Activities',
     cName: 'dropdown-link'
   },
   {
