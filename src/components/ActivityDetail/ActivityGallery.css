@@ -1,0 +1,29 @@
+/* Título principal */
+.Title-carousel{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    font-weight: bolder;
+}
+.Galery{
+    width:80%;
+    margin-left: 10%;
+}
+
+.Carousel-Gallery{
+    width: 80%;
+    margin-left: 10%;
+}
+
+.Comments{
+    display: flex;
+}
+
+.Comment-list{
+    width: 50%;
+    margin-right: 5%;
+}
+.Comment{
+    width: 45%;
+}

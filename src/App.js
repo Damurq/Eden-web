@@ -12,6 +12,8 @@ import Results from "./pages/Results/Results"
 import Tournament from "./pages/Tournament/Tournament"
 import MatchsNews from "./pages/MatchsNews/MatchsNews"
 import FinishedEvents from "./pages/FinishedEvents/FinishedEvents"
+import ActivityDetail from "./pages/ActivityDetail/ActivityDetail"
+import Activities from "./pages/Activities/Activities"
 // Data
 import data from "./data/components.json"
 // Styles
@@ -43,6 +45,12 @@ function App() {
           </Route>
           <Route path="/Areas">
             <Areas />
+          </Route>
+          <Route path="/ActivityDetail">
+            <ActivityDetail />
+          </Route>
+          <Route path="/Activities">
+            <Activities />
           </Route>
           <Route path="/">
             <Home />
