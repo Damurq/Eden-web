@@ -22,9 +22,6 @@ function App() {
       <Router>
         <Navbar data={data.Navbar} />
         <Switch>
-          <Route path="/Eventos">
-            <Events />
-          </Route>
           <Route path="/Sobre-nosotros">
             <AboutUs />
           </Route>
@@ -36,6 +33,9 @@ function App() {
           </Route>
           <Route path="/Torneos-noticias">
             <MatchsNews />
+          </Route>
+          <Route path="/Eventos">
+            <Events />
           </Route>
           <Route path="/Areas">
             <Areas />
