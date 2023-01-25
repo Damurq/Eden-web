@@ -43,8 +43,8 @@
     position: relative;
     text-align: start;
   }
-  .menu-options-list li {
-    margin: 0.5rem auto;
+  .menu-options-list li  {
+    margin: 0.5rem;
 }
   .dropdown-link {
     display: block;
@@ -53,5 +53,6 @@
     text-decoration: none;
     color: #fff;
     padding: 5px;
+    border-bottom: 1px solid #5cabff;
   }
 }
