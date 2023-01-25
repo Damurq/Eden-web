@@ -9,8 +9,19 @@
             },
             {
                 "name": "Eventos",
-                "type": "Link",
-                "href": "/Eventos"
+                "type": "o",
+                "href": "",
+                "valOptions": "true",
+                "subOptions": 
+                  [
+                    { "name": "Actuales", "href": "/" },
+                    { "name": "NotiEventos", "href": "/" }
+                  ]
+            },
+            {
+                "name": "Actividades",
+                "type": "o",
+                "href": ""
             },
             {
                 "name": "Torneos",
@@ -19,8 +30,8 @@
             },
             {
                 "name": "Sobre nosotros",
-                "type": "Link",
-                "href": "/Sobre-nosotros",
+                "type": "o",
+                "href": "",
                 "valOptions": "true",
                 "subOptions": 
                   [
