@@ -20,15 +20,15 @@ export const SubMenuEvents = [
   },
   {
     title: 'Noti-Eventos',
-    path: '/Noti-eventos"',
+    path: '/Noti-eventos',
     cName: 'dropdown-link'
   }
 ];
 
 export const SubMenuActivities = [
   {
-    title: 'Op1',
-    path: '/',
+    title: 'Actividades',
+    path: '/Activities',
     cName: 'dropdown-link'
   },
   {
