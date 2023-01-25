@@ -11,6 +11,7 @@ import Navbar from "./components/Navbar/Navbar"
 import Results from "./pages/Results/Results"
 import Tournament from "./pages/Tournament/Tournament"
 import MatchsNews from "./pages/MatchsNews/MatchsNews"
+import FinishedEvents from "./pages/FinishedEvents/FinishedEvents"
 // Data
 import data from "./data/components.json"
 // Styles
@@ -33,6 +34,9 @@ function App() {
           </Route>
           <Route path="/Torneos-noticias">
             <MatchsNews />
+          </Route>
+          <Route path="/Noti-eventos">
+            <FinishedEvents />
           </Route>
           <Route path="/Eventos">
             <Events />
