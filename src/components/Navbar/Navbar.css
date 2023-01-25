@@ -284,7 +284,7 @@ header {
   }
 
   .menu-options__element:hover {
-    font-size: 28px;
+    font-size: 1.5rem;
   }
 }
 
@@ -300,6 +300,7 @@ header {
   header div.menu-options {
     padding: 3rem 12rem;
   }
+
 }
 
 @media (min-width: 800px) and (max-width: 992px) {
@@ -307,4 +308,5 @@ header {
     padding: 3rem 20rem;
     margin: 5rem 10rem;
   }
+
 }

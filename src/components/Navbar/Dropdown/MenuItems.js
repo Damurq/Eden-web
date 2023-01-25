@@ -1,4 +1,4 @@
-export const MenuItems = [
+export const SubMenuAboutUs = [
   {
     title: 'Filosofía',
     path: '/Filosofia',
@@ -10,3 +10,32 @@ export const MenuItems = [
     cName: 'dropdown-link'
   }
 ];
+
+
+export const SubMenuEvents = [
+  {
+    title: 'Actuales',
+    path: '/Actuales',
+    cName: 'dropdown-link'
+  },
+  {
+    title: 'Noti-Eventos',
+    path: '/Noti-Eventos',
+    cName: 'dropdown-link'
+  }
+];
+
+export const SubMenuActivities = [
+  {
+    title: 'Op1',
+    path: '/',
+    cName: 'dropdown-link'
+  },
+  {
+    title: 'Op2',
+    path: '/',
+    cName: 'dropdown-link'
+  }
+];
+
+
