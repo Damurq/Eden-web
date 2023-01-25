@@ -5,6 +5,7 @@ import CardContact      from "../../components/CardContact/CardContact.js"
 import Presentation      from "../../components/Presentation/Presentation.js"
 import Tournament      from "../../components/Tournament/Tournament.js"
 import InitialCard      from "../../components/InitialCard/InitialCard.js"
+import OfferCarrusel     from "../../components/OfferCarrusel/OfferCarrusel.js"
 import data             from "../../data/Home.json"
 
 const Home = ()=>{
@@ -15,7 +16,10 @@ const Home = ()=>{
             <Presentation data={data.components.Presentation} />
             <Tournament />
             <CarruselDiscover />
+            <OfferCarrusel />
             <CardContact data={data.components.Contact} />
+            
+            
         </div>
     )
 }
