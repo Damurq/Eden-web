@@ -1,14 +1,14 @@
-body {
+.portada {
     background-image: url('../../../public/InitialCard/background.png');
     background-repeat: no-repeat;
     background-size: cover;
-    background-attachment: fixed;
+    /* background-attachment: fixed; */
     background-position: center;
 }
 .TextInitialCard{
     width: 50%;
     margin-left: 5%;
-    margin-top: 8%;
+    padding-top: 3rem;
 }
 .Text1{
     width: 100%;
@@ -29,7 +29,7 @@ body {
 .Frame29{
     position: absolute;
     width: 10%;
-    margin-left: 92%;
+    margin-left: 90%;
     margin-bottom: 20%;
 
 }
@@ -40,18 +40,30 @@ body {
     transform: rotate(90deg);
 }
 
-.Group2 {
-    background: #48CBC5;
-    border-radius: 10px;
-    width: 15%;
+.button-container{
+    display: flex;
+    font-weight: 800;
+    justify-content: flex-end;
     margin-top:30%;
-    margin-left: 80%;
+    padding-bottom: 3rem;
 }
 
-.Exp{
-    font-style: normal;
+.button-yellow{
     font-weight: 800;
-    font-size: 1.5rem;
-    
-    color: #1B1D29;
 }
+
+.Group2 {
+    margin:2rem
+}
+
+@media screen and (max-width: 768px) {
+    .button-container{
+        margin-top: 70%;
+    }
+  }
+
+  /* @media screen and (max-width: 450px) {
+    .button-container{
+
+    }
+  } */
