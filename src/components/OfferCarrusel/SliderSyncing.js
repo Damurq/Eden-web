@@ -54,7 +54,7 @@ const SliderSyncing = () => {
   return (
     <>
         <div className="Title-carousel">
-          <h2>Areas e instalaciones</h2>
+          <h2>Areas</h2>
         </div>
         <section className="main-carousel">
           <div  className="carousel">

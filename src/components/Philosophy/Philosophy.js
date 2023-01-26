@@ -32,6 +32,13 @@ const Philosophy = () => {
                     <p>Nuestra visión siempre ha sido alentar el deporte en las generaciones futuras y ofrecer un espacio de recreacion para los distintos miembros.</p>
                 </div>
             </div>
+
+            <div className="philosophy__center">
+            <h2>¿Qué Ofrecemos?</h2>
+                <p>Ofrecemos mas que servicios, ofrecemos tiempo de calidad en familia</p>
+       
+            </div>
+
         </div>
     )
 }

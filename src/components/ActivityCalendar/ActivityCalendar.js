@@ -29,7 +29,7 @@ const ActivitiesCalendar= () => {
                                 <p className="text-detail">Todos los {activity.description} a las {activity.hour}</p>
                                 <p className="location">Lugar: {activity.Location}</p>
                                 <div className='SeeMore'>
-                                    <SeeMore to="/ActivityDetail" />
+                                    <SeeMore to="/Detalle-actividad" />
                                 </div>
                                 
                             </div>
