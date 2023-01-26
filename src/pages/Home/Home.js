@@ -16,6 +16,8 @@ const Home = ()=>{
             <Tournament />
             <CarruselDiscover />
             <CardContact data={data.components.Contact} />
+            
+            
         </div>
     )
 }

@@ -4,6 +4,7 @@ header {
   position: sticky;
   top: 0;
   z-index: 50;
+  background-color: #1B1D29;
 }
 
 /*general estyle*/
@@ -117,11 +118,11 @@ header {
   }
 
   header nav {
-    width: 50%;
+    min-width: 50%;
+    padding-right: 4rem;
   }
 
   header .navbar-Container {
-    width: 50%;
     transition: background-color 0.5s ease;
   }
 
@@ -163,7 +164,7 @@ header {
 
   .menu-options-list, header {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
   }
 }
 
