@@ -437,6 +437,7 @@
         left: 63%;
         transform: translateX(-50%);
       }
+
     
       .container-main{
         display: flex;
@@ -567,7 +568,9 @@
 
 
 
-
+    .slick-arrow{
+        margin-top: 0.5rem;
+    }
 
 
 
@@ -583,20 +586,23 @@
     {
         display: block;
         width: 75% !important;
+        height: 35rem;
+        margin-bottom: 3rem;
     }
 
     .slick-initialized{
         display: flex !important;
-       justify-content: center !important;
+        justify-content: center !important;
     }
 
     .slick-list
     {
         position: absolute;
-        display: flex;
+        display: block;
         overflow: hidden;
         margin: auto;
         padding: auto;
+        
     }
     .slick-list{
         width: 100%;
@@ -604,7 +610,7 @@
 
     .slick-track
     {
-        display: none;
+        display: block;
     }
     .slick-track:before,
     .slick-track:after
