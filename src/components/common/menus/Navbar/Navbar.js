@@ -25,9 +25,7 @@ const Navbar = ({ data }) => {
 
 
     const handleClickMenu = (props) => {
-        console.log("m-a",modal)
         setModal(props !== modal ? props : "");
-        console.log("--")
     }
 
     /**
@@ -83,7 +81,6 @@ const Navbar = ({ data }) => {
             linkR.addEventListener("click", clickHandlerRender);
         }
         document.addEventListener("click", (e) => {
-            console.log("manejando",!refOne?.current?.contains(e.target))
             if (!refOne?.current?.contains(e.target)) {
                 setModal("")
             }} , true);
