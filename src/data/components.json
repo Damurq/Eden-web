@@ -9,24 +9,64 @@
             },
             {
                 "name": "Eventos",
+                "type": "sub-menu",
+                "subMenu": [
+                    {
+                        "name": "Calendario",
+                        "href": "/Eventos",
+                        "type": "Link"
+                    },
+                    {
+                        "name": "Noti-Eventos",
+                        "href": "/Noti-eventos",
+                        "type": "Link"
+
+                    }
+                ]
+            },
+            {
+                "name": "Actividades",
                 "type": "Link",
-                "href": "/Eventos"
+                "href": "/Actividades"
             },
             {
                 "name": "Torneos",
-                "type": "Link",
-                "href": "/Torneos"
+                "type": "sub-menu",
+                "subMenu": [
+                    {
+                        "name": "Calendario",
+                        "href": "/Torneos",
+                        "type": "Link"
+                    },
+                    {
+                        "name": "Resultados",
+                        "href": "/Torneos-resultados",
+                        "type": "Link"
+
+                    },
+                    {
+                        "name": "Noti-Torneos",
+                        "href": "/Torneos-noticias",
+                        "type": "Link"
+
+                    }
+                ]
             },
             {
-                "name": "Sobre nosotros",
-                "type": "Link",
-                "href": "/Sobre-nosotros",
-                "valOptions": "true",
-                "subOptions": 
-                  [
-                    { "name": "Filosofía", "href": "/" },
-                    { "name": "Áreas", "href": "/Areas" }
-                  ]
+                "name": "Quienes somos",
+                "type": "sub-menu",
+                "subMenu": [
+                    {
+                        "name": "Filosofía",
+                        "href": "/Quienes-somos",
+                        "type": "Link"
+                    },
+                    {
+                        "name": "Áreas",
+                        "href": "/Areas",
+                        "type": "Link"
+                    }
+                ]
             },
             {
                 "name": "Contáctanos",

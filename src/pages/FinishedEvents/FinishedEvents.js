@@ -1,7 +1,7 @@
 import React            from "react"
 // Components
-import HeroEvents from './components/HeroEvents/HeroEvents';
-import CardsEvents from './components/CardsEvents/CardsEvents';
+import HeroEvents from '../../components/HeroEvents/HeroEvents';
+import CardsEvents from '../../components/CardsEvents/CardsEvents';
 
 const FinishedEvents = ()=>{
 

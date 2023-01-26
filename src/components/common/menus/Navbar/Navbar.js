@@ -1,17 +1,18 @@
 // Third party
-import { Link, useLocation, useHistory }    from "react-router-dom"
-import { useEffect, useState }              from "react"
+import React from 'react';
+import { useLocation, useHistory } from "react-router-dom"
+import { useEffect, useState, useRef } from "react"
 // Components
-import SocialMedia                             from "../SocialMedia/SocialMedia.js"
-import Dropdown                                from './Dropdown/Dropdown';
+import SocialMedia from "../../../SocialMedia/SocialMedia.js"
+import MenuElementComponent from "../MenuElementComponent/MenuElementComponent.js"
+import Dropdown from '../Dropdown/Dropdown.js';
 // Styles
 import "./Navbar.css";
-import './Dropdown/Dropdown.css';
+import '../Dropdown/Dropdown.css';
 
 const Navbar = ({ data }) => {
     // Declaration of the Hooks
     const [open, setOpen] = useState(false);
-    const [dropdown, setDropdown] = useState(false);
     const [modal, setModal] = useState("");
     const history = useHistory();
     let location = useLocation();
@@ -19,32 +20,16 @@ const Navbar = ({ data }) => {
     // Class that the li of the navigation bar will have
     const liClass = "menu-options__element"
     const logo = data.logo
+    //variable auxiliar
+    const refOne = useRef(null);
 
 
-    //Options Mouse
-    const onMouseEnter = () => {
-        if (window.innerWidth < 960) {
-          setDropdown(false);
-          setModal("");
-        } else {
-          setDropdown(true);
-        }
-      };
-      const onMouseLeave = () => {
-        if (window.innerWidth < 960) {
-          setDropdown(false);
-          setModal("");
-        } else {
-          setDropdown(false);
-          setModal("");
-        }
-      };
+    const handleClickMenu = (props) => {
+        console.log("m-a",modal)
+        setModal(props !== modal ? props : "");
+        console.log("--")
+    }
 
-    //functions to click in the options window
-    const [click, setClick] = useState(false);
-    const handleClick = () => setClick(!click);
-    
-    
     /**
      * Redirect in case of clicking on a tag "a" with href "#"
      * @param {object} e evento
@@ -64,7 +49,7 @@ const Navbar = ({ data }) => {
         });
         // If it is a screen with a drop-down menu, we make the menu appear
         const menuOptions = document.querySelector(".menu-options")
-        if (menuOptions.classList.contains('menu-options-list-dropdown--enable')) {
+        if (menuOptions?.classList.contains('menu-options-list-dropdown--enable')) {
             setOpen(false);
         }
     }
@@ -80,7 +65,7 @@ const Navbar = ({ data }) => {
         });
         // If it is a screen with a drop-down menu, we make the menu appear
         const menuOptions = document.querySelector(".menu-options")
-        if (menuOptions.classList.contains('menu-options-list-dropdown--enable')) {
+        if (menuOptions?.classList.contains('menu-options-list-dropdown--enable')) {
             setOpen(false);
         }
     }
@@ -97,10 +82,15 @@ const Navbar = ({ data }) => {
         for (const linkR of linksRender) {
             linkR.addEventListener("click", clickHandlerRender);
         }
+        document.addEventListener("click", (e) => {
+            console.log("manejando",!refOne?.current?.contains(e.target))
+            if (!refOne?.current?.contains(e.target)) {
+                setModal("")
+            }} , true);
     }, []);
 
     return (
-        <header className={`${open ? "header-open" : ""}`}>
+        <header className={`${open ? "header-open" : ""}`} >
             <div className="theme--1 navbar-Container">
                 <div className="navbar">
                     <button className="dropdown-menu-button" onClick={() => { setOpen(!open) }}>
@@ -109,36 +99,21 @@ const Navbar = ({ data }) => {
                         </div>
                     </button>
                     <div className={`logo-container ${open ? "menu-options-list-dropdown--disable" : ""}`}>
-                        <img className="logo" src ={logo} alt="logo" />
+                        <img className="logo" src={logo} alt="logo" />
                     </div>
                 </div>
             </div>
-            <nav className={`theme--1 ${open ? "menu-options-list-dropdown--enable" : ""}`}>
+            <nav className={`theme--1 ${open ? "menu-options-list-dropdown--enable" : ""}`}  >
                 <div className={`menu-options ${open ? "menu-options-list-dropdown--enable" : "menu-options-list-dropdown--disable"}`}>
-                    <img className="logo--dropdown logo title" src ={logo} alt="logo" />
-                    <ul className="menu-options-list">
+                    <img className="logo--dropdown logo title" src={logo} alt="logo" />
+                    <ul className="menu-options-list" ref={refOne} >
                         {data.elements && data.elements.map((section, index) => {
-                            return section.type === "Link" ? 
-                                <li key={"nav-li-" + index} onMouseLeave={onMouseLeave}>
-                                    <Link className={liClass}  onMouseEnter={onMouseEnter} onMouseOver={() => { setModal(section.name);}} to={section.href}>{section.name}</Link>
-                                    {
-                                        section.name === "Sobre nosotros" && dropdown ?
-                                        (
-                                            <>
-                                             {
-                                                modal === "Sobre nosotros" ? (
-                                                    <Dropdown/>
-                                                ):null
-                                             }
-                                            </>
-                                          ):null
-                                    }
-                                    
-                                </li> 
-                                : 
-                                <li key={"nav-li-" + index}>
-                                    <a className={liClass} href={section.href}>{section.name}</a>
-                                </li>
+                            return (<li key={"nav-li-" + index} >
+                                <MenuElementComponent section={section} className={liClass} handleClick={(section.type === "sub-menu") && handleClickMenu} />
+                                {(section.type === "sub-menu" && section.name === modal) && <div>
+                                    <Dropdown subMenu={section.subMenu} setOpen={setModal} />
+                                </div>}
+                            </li> )
                         })}
                     </ul>
                     <div className="SocialMedia">

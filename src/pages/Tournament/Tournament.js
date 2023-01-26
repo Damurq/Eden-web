@@ -1,7 +1,13 @@
+
+// Third party
 import React, {useState} from 'react'
-import data from "../../data/Tournaments.json"
-import './Tournament.css'
+// Local
 import TournamentsCalendar from "../../components/TournamentsCalendar/TournamentsCalendar"
+// Data
+import data from "../../data/Tournaments.json"
+// Styles
+import './Tournament.css'
+
 const Tournament = () => {
     const sections = Object.keys(data)
     const [activeSection, setActiveSection] = useState(sections.length ? sections[0] : null)

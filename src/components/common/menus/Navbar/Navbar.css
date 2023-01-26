@@ -4,6 +4,7 @@ header {
   position: sticky;
   top: 0;
   z-index: 50;
+  background-color: #1B1D29;
 }
 
 /*general estyle*/
@@ -117,11 +118,11 @@ header {
   }
 
   header nav {
-    width: 50%;
+    min-width: 50%;
+    padding-right: 4rem;
   }
 
   header .navbar-Container {
-    width: 50%;
     transition: background-color 0.5s ease;
   }
 
@@ -163,7 +164,7 @@ header {
 
   .menu-options-list, header {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
   }
 }
 
@@ -284,7 +285,7 @@ header {
   }
 
   .menu-options__element:hover {
-    font-size: 28px;
+    font-size: 1.5rem;
   }
 }
 
@@ -300,6 +301,7 @@ header {
   header div.menu-options {
     padding: 3rem 12rem;
   }
+
 }
 
 @media (min-width: 800px) and (max-width: 992px) {
@@ -307,4 +309,5 @@ header {
     padding: 3rem 20rem;
     margin: 5rem 10rem;
   }
+
 }
