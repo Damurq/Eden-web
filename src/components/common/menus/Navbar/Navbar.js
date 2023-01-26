@@ -3,12 +3,13 @@ import React from 'react';
 import { useLocation, useHistory } from "react-router-dom"
 import { useEffect, useState, useRef } from "react"
 // Components
-import SocialMedia from "../../../SocialMedia/SocialMedia.js"
+import SocialMedia from "../../../specific/SocialMedia/SocialMedia.js"
 import MenuElementComponent from "../MenuElementComponent/MenuElementComponent.js"
 import Dropdown from '../Dropdown/Dropdown.js';
+// Data
+import socialMedia from "../../../../data/socialMedia.json"
 // Styles
 import "./Navbar.css";
-import '../Dropdown/Dropdown.css';
 
 const Navbar = ({ data }) => {
     // Declaration of the Hooks
@@ -117,7 +118,7 @@ const Navbar = ({ data }) => {
                         <h3 className="text--center">
                             {'Social Media'}
                         </h3>
-                        <SocialMedia />
+                        {socialMedia && <SocialMedia data={socialMedia} componentName={"Navbar"} />}
                     </div>
                 </div>
             </nav>

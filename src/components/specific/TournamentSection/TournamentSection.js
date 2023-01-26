@@ -1,5 +1,6 @@
 import React from 'react'
 import "./TournamentSection.css"
+
 const TournamentSection = ({ data }) => {
   let tableHeader = data ? (data.games.lenth !== 0 ? Object.keys(data.games[0]) : null) : data
 

@@ -1,13 +1,13 @@
+// Third party
 import React, { useState, useEffect } from 'react';
-// Components
-import data from "../../data/Tournaments.json"
-//
-import './TournamentsCalendar.css'
-import TournamentSection from '../TournamentSection/TournamentSection';
-import {stringToDate} from "../../utilities/utilsDate"
 import { FaSearch } from "react-icons/fa"
 import moment from 'moment';
-import Comment from "../Comment/Comment"
+// Components
+import TournamentSection from '../TournamentSection/TournamentSection';
+// Data
+import data from "../../../data/Tournaments.json"
+// Style
+import './TournamentsCalendar.css'
 
 const TournamentsCalendar = ({discipline}) => {
     const [currentTournaments, setCurrentTournaments] = useState([])
@@ -100,9 +100,6 @@ const TournamentsCalendar = ({discipline}) => {
             {activetournament && <div>
                 <TournamentSection data={data[discipline].Tornaments[activetournament]} />
             </div>}
-            {/* <div className="">
-                <Comment />
-            </div> */}
         </div>
     )
 }

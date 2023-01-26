@@ -2,18 +2,20 @@
 import React from "react"
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 // Local
+// Pages
 import AboutUs from "./pages/AboutUs/AboutUs"
 import Activities from "./pages/Activities/Activities"
 import ActivityDetail from "./pages/ActivityDetail/ActivityDetail"
 import Areas from "./pages/Areas/Areas"
 import Events from "./pages/Events/Events"
 import FinishedEvents from "./pages/FinishedEvents/FinishedEvents"
-import Footer from "./components/Footer/Footer"
 import Home from "./pages/Home/Home"
 import MatchsNews from "./pages/MatchsNews/MatchsNews"
-import Navbar from "./components/common/menus/Navbar/Navbar"
 import Results from "./pages/Results/Results"
 import Tournament from "./pages/Tournament/Tournament"
+// Components
+import Footer from "./components/common/menus/Footer/Footer"
+import Navbar from "./components/common/menus/Navbar/Navbar"
 // Data
 import data from "./data/components.json"
 // Styles
