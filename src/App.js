@@ -13,6 +13,7 @@ import Home from "./pages/Home/Home"
 import MatchsNews from "./pages/MatchsNews/MatchsNews"
 import Results from "./pages/Results/Results"
 import Tournament from "./pages/Tournament/Tournament"
+import WhatWeOffer from "./pages/WhatWeOffer/WhatWeOffer"
 // Components
 import Footer from "./components/common/menus/Footer/Footer"
 import Navbar from "./components/common/menus/Navbar/Navbar"
@@ -38,6 +39,9 @@ function App() {
           </Route>
           <Route path="/Quienes-somos">
             <AboutUs />
+          </Route>
+          <Route path="/Que-ofrecemos">
+            <WhatWeOffer />
           </Route>
           <Route path="/Noti-eventos">
             <FinishedEvents />

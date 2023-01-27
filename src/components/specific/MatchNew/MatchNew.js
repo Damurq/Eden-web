@@ -12,6 +12,9 @@ const selectNew = (type, info) => {
         case "start":
             element = `El '${date}' inició el torneo '${tournament}', con el primer partido entre el equipo '${team1}' y '${team2}', donde el ganador fue el equipo '${winner}'.`
             break
+        case "created":
+            element = `El '${date}' iniciará el torneo '${tournament}', con el primer partido entre el equipo '${team1}' y '${team2}', no te lo pierdas.`
+            break
         default:
             break;
     }
