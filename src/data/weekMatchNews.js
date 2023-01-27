@@ -17,7 +17,16 @@ export const weekMatchNews = {
                 winner: "Aguilas",
                 team: ["Magallanes", "Aguilas"],
             }
+        },
+        {
+            type: "created",
+            info: {
+                tournament: "El clasico",
+                date: "23-01-2023",
+                team: ["Magallanes", "Aguilas"], 
+            }
         }
+
     ],
     bolas: [
         {

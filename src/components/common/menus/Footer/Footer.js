@@ -1,7 +1,9 @@
 import { Link }        from "react-router-dom"
 // Local
-import  SocialMedia                    from "../SocialMedia/SocialMedia.js"
-import IconsComponent               from '../IconsComponent/IconsComponent'
+import  SocialMedia                    from "../../../specific/SocialMedia/SocialMedia.js"
+import IconsComponent               from '../../../IconsComponent/IconsComponent.js'
+// Data
+import socialMedia from "../../../../data/socialMedia.json"
 // Styles
 import "./Footer.css"
 
@@ -28,7 +30,7 @@ const Footer = ({ data }) => {
                     <h3 className="text--center">
                         {'Redes sociales'}
                     </h3>
-                    <SocialMedia />
+                    {socialMedia && <SocialMedia data={socialMedia} componentName={"Footer"}/>}
                 </div>
                 <div className="footerSection--contact">
                     {data.info && data.info.map((info, index) => (
