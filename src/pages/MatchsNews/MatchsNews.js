@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
-import data from "../../data/Tournaments.json"
 
-import MatchNew from '../../components/MatchNew/MatchNew'
-import './MatchsNews.css'
+import MatchNew from '../../components/specific/MatchNew/MatchNew'
+import data from "../../data/Tournaments.json"
 import { weekMatchNews } from '../../data/weekMatchNews'
+import './MatchsNews.css'
 
 const MatchsNews = () => {
     const sections = Object.keys(data)
@@ -14,10 +14,8 @@ const MatchsNews = () => {
             <div className="information-elements section">
                 {sections && sections.map((section, i) => (
                     <div key={`${data[section].title}-${i}`} className="info-element--container" >
-                        <div className={`custom-button info-element ${activeSection === section
-                            ? "active-element"
-                            : ""
-                            }`}
+                        <div
+                            className={`custom-button info-element ${activeSection === section ? "active-element" : ""}`}
                             id={section}
                             onClick={e => {
                                 setActiveSection(e.currentTarget.id)
@@ -34,8 +32,7 @@ const MatchsNews = () => {
                 <div className="news-content">
                     {weekMatchNews[activeSection] && weekMatchNews[activeSection].map((item, index) => (
                         <MatchNew type={item.type} info={item.info} key={`news-${index}`} />
-                    )
-                    )}
+                    ))}
                 </div>
             </div>
         </div>
