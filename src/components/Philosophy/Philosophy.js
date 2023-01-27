@@ -10,7 +10,7 @@ const Philosophy = () => {
 
     return (
         <div className="philosophy">
-                    <h2 className='title'>Sobre nosotros</h2>
+            <h2 className='title'>Sobre nosotros</h2>
             <div className="philosophy__up">
                 <div className="philosophy__left">
                     <img src={imageOne} alt="one" />
@@ -32,13 +32,6 @@ const Philosophy = () => {
                     <p>Nuestra visión siempre ha sido alentar el deporte en las generaciones futuras y ofrecer un espacio de recreacion para los distintos miembros.</p>
                 </div>
             </div>
-
-            <div className="philosophy__center">
-            <h2>¿Qué Ofrecemos?</h2>
-                <p>Ofrecemos mas que servicios, ofrecemos tiempo de calidad en familia</p>
-       
-            </div>
-
         </div>
     )
 }

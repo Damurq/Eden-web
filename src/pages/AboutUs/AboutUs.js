@@ -6,7 +6,6 @@ const AboutUs = () => {
   return (
     <div className="Content section">
         <Philosophy />
-       
     </div>
   )
 }
