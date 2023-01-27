@@ -65,6 +65,11 @@
                         "name": "Áreas",
                         "href": "/Areas",
                         "type": "Link"
+                    },
+                    {
+                        "name": "Qué ofrecemos",
+                        "href": "/Que-ofrecemos",
+                        "type": "Link"
                     }
                 ]
             },
@@ -88,6 +93,11 @@
                 "href": "/Eventos"
             },
             {
+                "name": "Actividades",
+                "type": "Link",
+                "href": "/Actividades"
+            },
+            {
                 "name": "Torneos",
                 "type": "Link",
                 "href": "/Torneos"
@@ -95,7 +105,7 @@
             {
                 "name": "Sobre nosotros",
                 "type": "Link",
-                "href": "/Sobre-nosotros"
+                "href": "/Quienes-somos"
             },
             {
                 "name": "Contáctanos",
