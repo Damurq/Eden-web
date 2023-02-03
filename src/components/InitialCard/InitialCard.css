@@ -1,9 +1,5 @@
-.portada {
-    background-image: url('../../../public/InitialCard/background.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    /* background-attachment: fixed; */
-    background-position: center;
+.portada{
+    min-height: 80vh;
 }
 .TextInitialCard{
     width: 50%;
@@ -44,7 +40,7 @@
     display: flex;
     font-weight: 800;
     justify-content: flex-end;
-    margin-top:30%;
+    margin-top:35vh;
     padding-bottom: 3rem;
 }
 
