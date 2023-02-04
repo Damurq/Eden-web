@@ -37,9 +37,9 @@ function InitialCard() {
         {socialMedia ? <SocialMedia data={socialMedia} componentName="InitialCard" orientation="vertical" /> : <Skeleton />}
       </div>
       <div className='button-container'>
-        <button className='portada__button button-action'>
+        <a className='portada__button button-action' href="#presentation">
           Explorar
-        </button>
+        </a>
       </div>
     </div>
   );
