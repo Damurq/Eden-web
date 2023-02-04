@@ -1,0 +1,31 @@
+{
+        "Calendar": {
+            "title": "Calendario de eventos",
+            "events": [
+                {
+                    "id":"0",
+                    "title": "Partido de futbol",
+                    "date": "2022-11-17",
+                    "hour": "13:00 - 15:00",
+                    "location": "zona este - cancha de futbol", 
+                    "description": "Te esperamos el 17 de noviembre en el club para hacer el gran partido de futbol entre la Vinotinto y brasil."
+                },
+                {
+                    "id":"1",
+                    "title": "Bailoterapia",
+                    "date": "2022-11-18",
+                    "hour": "13:00 - 15:00",
+                    "location": "zona este - cancha de futbol", 
+                    "description": "Te esperamos el 17 de noviembre en el club para hacer el gran partido de futbol entre la Vinotinto y brasil."
+                },
+                {
+                    "id":"2",
+                    "title": "Bingo",
+                    "date": "2022-11-19",
+                    "hour": "13:00 - 15:00",
+                    "location": "zona este - cancha de futbol", 
+                    "description": "Te esperamos el 17 de noviembre en el club para hacer el gran partido de futbol entre la Vinotinto y brasil."
+                }
+            ]
+    }
+}

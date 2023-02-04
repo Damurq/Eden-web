@@ -1,0 +1,18 @@
+.match-new{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem;
+    border-radius: 15px;
+    background-color: #1b1d29;
+    color: #48CBC5;
+    width: 40%;
+}
+
+.match-new__title{
+    padding: 2rem;
+    border-top: #48CBC5 1px solid;
+    border-bottom: #48CBC5 1px solid;
+    text-align: justify;
+    font-size: 1.25rem;
+}

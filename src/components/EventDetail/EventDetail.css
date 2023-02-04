@@ -1,0 +1,50 @@
+.Container-section{
+    
+}
+
+.Event-container{
+    padding-top:3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    column-gap: 1rem;
+    row-gap: 1rem;
+}
+
+.Frame27{
+    margin: 2rem 0;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.Text_EventDetail{
+    text-align: center;
+}
+
+.ImageEventDetail{
+    width: 80%;    
+}
+
+.ImageEventDetail img{
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 15px;
+}
+
+
+.section-commentary{
+    display: flex;
+    max-height: 400;
+    padding-top: 2rem;
+}
+
+.Comment{
+    width: 45%;
+}
+
+.container-commentary{
+    width: 50%;
+    margin-right: 5%;
+    max-height: 250px;
+}

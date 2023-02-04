@@ -1,0 +1,34 @@
+.hero {
+    background-image: url('../../../public/HeroEvents/hero.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    
+}
+
+.hero__content {
+    width: 50%;
+    margin-left: 5%;
+    padding-top: 3rem;
+}
+
+.Text1 {
+    width: 100%;
+    left: 0%;
+    top: 0%;
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.5rem;
+    color: #FFFFFF;
+}
+
+.Text2 {
+    width: 100%;
+    margin-top: 2%;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2.5rem;
+    color: #FFFFFF;
+}
