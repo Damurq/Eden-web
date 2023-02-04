@@ -1,49 +1,6 @@
-/* Título principal */
-.Title-carousel{
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-    font-size: 2rem;
-    font-weight: bolder;
-}
-.text-detail{
-    font-size:xx-large;
-    text-align: center;
-    margin-top: 1rem;
-    margin-left: 1rem;
-}
-.Galery{
-    width:80%;
-    margin-left: 10%;
-}
-
-.Carousel-Gallery{
-    width: 90%;
-    margin-left: 5%;
-}
-
-.section-commentary{
-    display: flex;
-    max-height: 500;
-    padding-top: 2rem;
-}
-
 .container{
-    width: 50%;
-    margin-right: 5%;
-
-}
-.Comment{
-    width: 45%;
-}
-
-
-
-
-.container-commentary{
-    width: 50%;
-    margin-right: 5%;
-    max-height: 250px;
+    width: 100%;
+    max-height: 800px;
 }
 .activities-container{
     align-self: baseline;
@@ -61,7 +18,7 @@
     padding: 1rem;
     border-radius: 15px;
     gap: 1rem;
-    max-height: 350px;
+    max-height: 340px;
     overflow-y: auto;
 }
 
@@ -83,7 +40,6 @@
 .detail-comment hr{
     height: 1px;
     color: black;
-    padding-left: 1rem;
 }
 .autor {
     margin-top: 0;
@@ -94,16 +50,16 @@
     font-weight: bold
 }
 
-.commentary{
-    margin-top: 1rem;
+.comment{
+    width:100%;
+    margin-top: 0.5rem;
     text-align: center;
-    font-size: large;
 
 }
 
 .date{
-    margin-top: 1rem;
+    width:100%;
+    margin-top: 0;
     margin-bottom: 0.5rem;
     text-align: center;
-    padding-bottom: 1rem;
 }
