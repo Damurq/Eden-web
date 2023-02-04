@@ -7,7 +7,6 @@ import './EventsCalendar.css'
 import moment from 'moment';
 
 import EventDetail from "../EventDetail/EventDetail"
-import Comment from "../Comment/Comment"
 
 const EventsCalendar = () => {
     const today = new Date()
@@ -83,7 +82,7 @@ const EventsCalendar = () => {
                         {currentEvents.map((event) => (
                             <div key={`${event.id}-event`} className={`event-element${event.id === activeEvent
                                 ? " active-event"
-                                : ""}`}
+                                : ""}`} 
                                 onClick={() => { setActiveEvent(event.id) }}
                             >
                                 <p className="">{event.title}</p>
@@ -94,10 +93,7 @@ const EventsCalendar = () => {
                 </div>
             </div>
             <div className="">
-                <EventDetail />
-            </div>
-            <div className="">
-                <Comment />
+                <EventDetail id={activeEvent}/>
             </div>
         </div>
     )
