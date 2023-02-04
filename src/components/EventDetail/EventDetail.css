@@ -31,3 +31,20 @@
     margin: 0 auto;
     border-radius: 15px;
 }
+
+
+.section-commentary{
+    display: flex;
+    max-height: 400;
+    padding-top: 2rem;
+}
+
+.Comment{
+    width: 45%;
+}
+
+.container-commentary{
+    width: 50%;
+    margin-right: 5%;
+    max-height: 250px;
+}
