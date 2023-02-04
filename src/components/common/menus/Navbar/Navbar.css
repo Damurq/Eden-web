@@ -111,6 +111,14 @@ header {
   background-color: inherit;
 }
 
+.button-login{
+  padding: .75rem;
+  border: 2px solid #48CBC5;
+  color: #FFF;
+  text-decoration: none;
+  border-radius: 8px;
+}
+
 /*media query*/
 @media (min-width: 992px) {
   body {
@@ -140,13 +148,13 @@ header {
 
   .navbar {
     margin: 2rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
     margin-left: 3rem;
   }
 
   .menu-options {
     margin: 2rem 0;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
   }
 
   .dropdown-menu-button {
@@ -156,6 +164,7 @@ header {
   .menu-options-list {
     padding: 0;
     justify-content: center;
+    gap: 1rem;
   }
 
   .menu-options-list li {
@@ -165,6 +174,12 @@ header {
   .menu-options-list, header {
     display: flex;
     justify-content: space-between;
+  }
+}
+
+@media (min-width: 1240px) {
+  .menu-options-list {
+    gap: 2rem;
   }
 }
 

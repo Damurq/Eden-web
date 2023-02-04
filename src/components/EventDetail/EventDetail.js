@@ -1,17 +1,20 @@
 import './EventDetail.css'
+import data from '../../data/Events.json'
+import Comment from '../Comment/Comment'
+import CommentsActivity from '../Commentary/Commentary'
 
-function EventDetail() {
+const EventDetail = ({ id }) => {
     const image = "EventDetail/ImageEvent.jpg"
+    console.log(id)
     return (
         <div className="Container-section">
+            {data.Calendar.events.filter(event => event.id===id).map(filteredEvent=> (
             <div className='Event-container'>
 
-                <h2 className='title Text1_EventDetail'>Juego de futbol</h2>
-                <h2 className='Text2_EventDetail'>17-11-2022</h2>
-                <div className='Text3_EventDetail'>
-                    Te esperamos el 17 de noviembre en el club para hacer
-                    el gran partido de futbol entre la Vinotinto y brasil.
-                </div>
+                <h2 className='title Text1_EventDetail'>{filteredEvent.title}</h2>
+                <h2 className='Text2_EventDetail'>{filteredEvent.date}</h2>
+                <p className='Text3_EventDetail'>{filteredEvent.description}
+                </p>
                 <div className='ImageEventDetail'>
                     <img src={image} alt="juego" />
                 </div>
@@ -21,7 +24,7 @@ function EventDetail() {
                             Ubicación
                         </p>
                         <p>
-                            zona este - cancha de futbol
+                            {filteredEvent.location}
                         </p>
                     </h3>
                     <h3 className='Text_EventDetail'>
@@ -29,11 +32,25 @@ function EventDetail() {
                             Hora
                         </p>
                         <p>
-                            13:00 - 15:00
+                            {filteredEvent.hour}
                         </p>
                     </h3>
+
+                    <div className="section-commentary">
+                        <div className="container-commentary">
+                            <h2>Comentarios:</h2> 
+                            <CommentsActivity />
+                        </div>
+                        <div className="Comment">
+                            <Comment />
+                        </div>
+                    </div>
+
                 </div>
             </div>
+            
+            ))}
+            
         </div>
     );
 }

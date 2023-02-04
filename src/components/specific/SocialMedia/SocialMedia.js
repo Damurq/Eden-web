@@ -3,9 +3,9 @@ import IconsComponent from "../../IconsComponent/IconsComponent"
 // Style
 import "./SocialMedia.css"
 
-const SocialMedia = ({ data, componentName }) => {
+const SocialMedia = ({ data, componentName, orientation="horizontal" }) => {
     return (
-        <div className="icon--socialMedia">
+        <div className={`icon--socialMedia icon--${orientation}`}>
             {data && data.map((social, index) => {
                 return (<a 
                     key={`${social.name}-${index}-${componentName}`}
