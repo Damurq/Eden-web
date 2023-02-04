@@ -1,0 +1,157 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0; 
+}
+
+
+.cards-service {
+    margin: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+ /*-----FILA 1------*/
+.first__row-service{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+  
+    justify-content: space-evenly;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+/*-----cajita de la fila 1------*/
+.card__one-service{
+    width: 25%;
+    height: 10%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    background: #1B1D29;
+    border-radius: 25px;
+    padding: 1rem 1rem;
+    position: relative;
+    
+    
+}
+
+
+.card__one-service sub {
+    color: #FFFFFF;
+    text-align: left;
+    padding-bottom: 0.7rem;
+    display: flex;
+
+}
+/*tamaño de las imagenes*/
+.card__one-service img{
+    
+    width: 50%;
+    height: 150px;
+    border-radius: 15px;
+
+    
+}
+
+
+.descripcion-service{
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    
+    
+}
+
+.descripcion-service p{
+    margin: 20px 30px;
+ 
+  }
+
+
+
+/*-----cajita de la fila 2------*/
+.card__two-service {
+    width: 25%;
+    height: 10%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    background: #1B1D29;
+    border-radius: 25px;
+    padding: 1rem 1rem;
+    position: relative;
+    
+    
+}
+
+
+.card__two-service sub {
+    color: #FFFFFF;
+    text-align: left;
+    padding-bottom: 0.7rem;
+
+}
+
+.card__two-service img{
+    width: 50%;
+    height: 150px;
+    border-radius: 15px;
+    
+    
+}
+
+
+/*-----cajita de la fila 3------*/
+.card__three-service {
+    width: 25%;
+    height: 10%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    background: #1B1D29;
+    border-radius: 25px;
+    padding: 1rem 1rem;
+
+}
+
+
+.card__three-service sub {
+    color: #FFFFFF;
+    text-align: left;
+    padding-bottom: 0.7rem;
+
+}
+
+.card__three-service img {
+    width: 50%;
+    height: 150px;
+    border-radius: 15px;
+    
+}
+
+
+ /*-----FILA 2------*/
+.second__row-service {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    /*margin-bottom: 1rem;*/
+    justify-content: space-evenly;
+    margin-bottom: 2rem;
+ }
+
+ .title-service{
+    margin-top: 0;
+    padding-top: 4rem;
+    padding-left: 2.5rem;
+    text-align: center;
+}
+

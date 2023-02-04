@@ -23,7 +23,7 @@ import zum4 from '../assets/img2/z4.jpg'
 import zum5 from '../assets/img2/z5.jpg'
 import zum6 from '../assets/img2/z6.jpg'
 
-export const ActivityData= [
+export const ServiciosData= [
     {
         id:0,
         name: "Bailoterapia",
@@ -189,4 +189,5 @@ export const ActivityData= [
             }
         ],
     },
+    
 ]

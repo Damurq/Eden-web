@@ -65,6 +65,11 @@
                         "name": "Áreas",
                         "href": "/Areas",
                         "type": "Link"
+                    },
+                    {
+                        "name": "Qué ofrecemos",
+                        "href": "/Que-ofrecemos",
+                        "type": "Link"
                     }
                 ]
             },

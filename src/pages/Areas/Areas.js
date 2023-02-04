@@ -6,8 +6,8 @@ import {Resources} from "../../components/CarruselDiscover/Resources"
 const Areas = () => {
   return (
     <div className="Content">
-        <SliderSyncing/>
-        <Resources/>
+        <SliderSyncing component="Areas" />
+        <Resources component="Resources" />
     </div>
   )
 }
