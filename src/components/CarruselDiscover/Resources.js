@@ -14,7 +14,7 @@ import CardItemCarrusel from "./CardItemCarrusel";
 import { CarouselData2 } from '../../data/CarouselData2';
 
 
-export const Resources = () => {
+export const Resources = ({component="undefined"}) => {
 
     const settings = {
         dots: true,
@@ -50,10 +50,12 @@ export const Resources = () => {
                         },
                       ]}
                     >
-                        {CarouselData2.map((item) => (
+                        {CarouselData2.map((item, index) => (
                             <CardItemCarrusel
                             src={item.img}
-                            text={item.text1}/>
+                            text={item.text1}
+                            key={`${component}-${index}`}
+                            />
                             ))}
 
             </Glider>

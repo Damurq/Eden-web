@@ -14,7 +14,7 @@ const Home = () => {
             <InitialCard />
             <Presentation data={data.components.Presentation} />
             <Tournament />
-            <CarruselDiscover />
+            <CarruselDiscover component="Home-Events" />
             <CardContact data={data.components.Contact} />
         </div>
     )
