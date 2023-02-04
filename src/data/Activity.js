@@ -40,5 +40,4 @@ export const ActivityData= [
         imgPresentation: zum1,
         description: ""
     },
-
 ]

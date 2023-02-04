@@ -1,5 +1,6 @@
 // Third party
 import React from "react"
+import { SkeletonTheme } from 'react-loading-skeleton'
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 // Local
 // Pages
@@ -27,6 +28,7 @@ function App() {
     <div className="App">
       <Router>
         <Navbar data={data.Navbar} />
+        <SkeletonTheme baseColor="#1B1D29" highlightColor="#525252">
         <Switch>
           <Route path="/Torneos-resultados">
             <Results />
@@ -62,6 +64,7 @@ function App() {
             <Home />
           </Route>
         </Switch>
+         </SkeletonTheme>
         <Footer data={data.Footer} />
       </Router>
     </div>
