@@ -43,7 +43,7 @@ function App() {
           <Route path="/Que-ofrecemos">
             <WhatWeOffer />
           </Route>
-          <Route path="/Noti-eventos">
+          <Route path="/Eventos-finalizados">
             <FinishedEvents />
           </Route>
           <Route path="/Eventos">
