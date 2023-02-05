@@ -6,7 +6,7 @@ import "slick-carousel/slick/slick-theme.css";
 
 import { CarouselData } from '../../data/CarouselData';
 
-const CarruselDiscover = () => {
+const CarruselDiscover = ({component="undefined"}) => {
   return (
     <>
         <div className="Title-carousel">
@@ -37,8 +37,8 @@ const CarruselDiscover = () => {
               }}
               dotsClass="slick-dots custom-indicator"
               >
-              {CarouselData.map((item) => (
-                <div className="container-main">
+              {CarouselData.map((item, index) => (
+                <div className="container-main" key={`${component}-${index}`}>
                     <div className='row'>
                         <img src={item.img} className="img-main" alt="..." />
                         <div className='container-info2'>
