@@ -13,7 +13,7 @@ const GallerysOffer= () => {
     }, [])
    
     const infoService = async()=>{
-        const data = await fetch('https://medinajosedev.com/api/feed/actividades')   
+        const data = await fetch('https://medinajosedev.com/api/feed/eventosactividades/tipo/1')   
         const actividades = await data.json() 
 
         setService(actividades["data"])
