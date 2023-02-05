@@ -52,6 +52,9 @@ function App() {
             <Route path="/InstallationDetails/:instalacion">
               <InstallationDetails />
             </Route>
+             <Route path="/Eventos-finalizados">
+            <FinishedEvents />
+          </Route>
             <Route path="/Eventos">
               <Events />
             </Route>
