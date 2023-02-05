@@ -59,12 +59,6 @@ function App() {
             <Route path="/Areas">
               <Areas />
             </Route>
-            <Route path="/AreaDetails/:area">
-              <AreaDetails component={'AreaDetails'}/>
-            </Route>
-            <Route path="/InstallationDetails/:instalacion">
-              <InstallationDetails component={'InstallationDetails'}/>
-            </Route>
             <Route path="/Actividades">
               <Activities />
             </Route>
