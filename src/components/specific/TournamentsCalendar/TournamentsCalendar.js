@@ -53,7 +53,7 @@ const TournamentsCalendar = ({discipline}) => {
             <h2 className="title">{data[discipline].Calendar.title}</h2>
             <div className="calendar-header">
                 <div className="calendar-container">
-                    <h2 className="">Fechas de eventos</h2>
+                    <h2 className="">Fechas de torneos</h2>
                     <p>Introduzca el intervalo de fechas en el que desea buscar</p>
                     <div className="search-inputs">
                         <div className="input-box">

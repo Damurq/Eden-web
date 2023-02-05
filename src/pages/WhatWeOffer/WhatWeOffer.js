@@ -1,10 +1,11 @@
 import React from 'react'
+import GallerysOffer from '../../components/CardOffer/GalleryOffer';
+
 
 const WhatWeOffer = () => {
     return (
-        <div className="philosophy__center">
-            <h2>¿Qué Ofrecemos?</h2>
-            <p>Ofrecemos mas que servicios, ofrecemos tiempo de calidad en familia</p>
+        <div className="Content">
+            <GallerysOffer/>
         </div>
     )
 }

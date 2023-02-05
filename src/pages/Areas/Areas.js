@@ -1,11 +1,11 @@
 import React from 'react'
 // Components
-import SliderSyncing from "../../components/CarruselDiscover/SliderSyncing"
+import { GalleryArea } from "../../components/Areas/GalleryArea/GalleryArea"
 
 const Areas = () => {
   return (
     <div className="Content">
-        <SliderSyncing/>
+      <GalleryArea component="GalleryArea" />
     </div>
   )
 }

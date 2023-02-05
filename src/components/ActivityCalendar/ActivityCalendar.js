@@ -12,7 +12,6 @@ const ActivitiesCalendar= () => {
     const [activeActivity] = useState(null)
     return (
         <div className='container'>
-            <h2 className="title">Calendario de actividades</h2>
             <div className="activities-container">
                 <div className="activities-list">
                     {ActivityData.map((activity) => (
@@ -20,16 +19,16 @@ const ActivitiesCalendar= () => {
                             ? "active-activity"
                             : ""}`}
                         >
-                            
-                            <img className='img-activity' src={activity.url} alt="activity" />
+                            <img className='img-activity' src={activity.imgPresentation} alt="activity" />
                             
                             <div className='detail-activity'>
                                 <p className="main-title">{activity.name}</p>
                                 <hr></hr>
-                                <p className="text-detail">Todos los {activity.description} a las {activity.hour}</p>
-                                <p className="location">Lugar: {activity.Location}</p>
-                                <div className='SeeMore'>
-                                    <SeeMore to="/Detalle-actividad" />
+                                <p className='detail-act'>Todos los {activity.day} a las {activity.hour}</p>
+                                <p className="location">Lugar: {activity.location}</p>
+
+                                <div className='SeeMore-btn'>
+                                    <SeeMore to={"/Detalle-actividad/" + activity.id} />
                                 </div>
                                 
                             </div>

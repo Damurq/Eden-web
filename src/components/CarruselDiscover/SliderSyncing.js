@@ -34,7 +34,7 @@ function SamplePrevArrow(props) {
   );
 }
 
-const SliderSyncing = () => {
+const SliderSyncing = ({component="undefined"}) => {
 
   //Constantes para el carrousel
   const settings = {
@@ -81,8 +81,8 @@ const SliderSyncing = () => {
               }}
               dotsClass="slick-dots custom-indicator"
               >
-              {CarouselData2.map((item) => (
-                <div className="container-main">
+              {CarouselData2.map((item, index) => (
+                <div className="container-main" key={`${component}-${index}`}>
                     <div className='row'>
                         <img src={item.img} className="img-main" alt="..." />
                         <div className='container-info2'>

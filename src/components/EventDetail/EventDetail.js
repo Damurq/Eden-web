@@ -1,39 +1,70 @@
 import './EventDetail.css'
+//import data from '../../data/Events.json'
+import Comment from '../Comment/Comment'
+import CommentsActivity from '../Commentary/Commentary'
 
-function EventDetail() {
-    const image = "EventDetail/ImageEvent.jpg"
+import { data } from '../../data/Events'
+
+const EventDetail = ({ id }) => {
     return (
         <div className="Container-section">
+            
+            {data.filter(event => event.id===id).map(filteredEvent=> (
             <div className='Event-container'>
+                <div className="detail">
+                    <div className="Title-event">
+                        <div className='Name-event'>
+                            <h2>{filteredEvent.name}</h2>
+                        </div>
+                        <hr></hr>
+                        <p className='Description-event'>{filteredEvent.description}</p>
+                    </div> 
 
-                <h2 className='title Text1_EventDetail'>Juego de futbol</h2>
-                <h2 className='Text2_EventDetail'>17-11-2022</h2>
-                <div className='Text3_EventDetail'>
-                    Te esperamos el 17 de noviembre en el club para hacer
-                    el gran partido de futbol entre la Vinotinto y brasil.
+                    <div className='ImageEventDetail'>
+                        <img src={filteredEvent.imgPresentation} alt="juego" />
+                    </div>
+
+                    
+                    <div className='Detail-event'>
+                        <div className='Text1_EventDetail'>
+                            <p>
+                                Fecha
+                            </p>
+                            <h2 >{filteredEvent.date_start}</h2>
+                        </div>
+
+                        <div className='Text2_EventDetail'>
+                                <p>
+                                    Ubicación
+                                </p>
+                                <h2>{filteredEvent.location}</h2>
+                        </div>
+
+                        <div className='Text3_EventDetail'>
+                                <p>
+                                    Hora
+                                </p>
+                                <h2>{filteredEvent.hour}</h2>
+                        </div>
+                        
+
+                    </div>
                 </div>
-                <div className='ImageEventDetail'>
-                    <img src={image} alt="juego" />
+                <div className="section-commentary">
+                    <div className="container-commentary">
+                        <h2>Comentarios:</h2> 
+                        <CommentsActivity />
+                    </div>
+                    <div className="Comment">
+                        <Comment />
+                    </div>
                 </div>
-                <div className='Frame27'>
-                    <h3 className='Text_EventDetail'>
-                        <p>
-                            Ubicación
-                        </p>
-                        <p>
-                            zona este - cancha de futbol
-                        </p>
-                    </h3>
-                    <h3 className='Text_EventDetail'>
-                        <p>
-                            Hora
-                        </p>
-                        <p>
-                            13:00 - 15:00
-                        </p>
-                    </h3>
-                </div>
+
+
             </div>
+            
+            ))}
+            
         </div>
     );
 }

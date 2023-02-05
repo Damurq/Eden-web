@@ -24,10 +24,6 @@ body {
   margin-right: 1.5rem;
 }
 
-.Content {
-  background: linear-gradient(180deg, #132D46 5.21%, #016F6C 100%);
-}
-
 .grid {
   display: grid;
   gap: 1.5rem;
@@ -35,6 +31,9 @@ body {
 
 .Content {
   width: 100%;
+  background: linear-gradient(180deg, #132D46 5.21%, #016F6C 100%);
+  min-height: 30vh;
+  min-width: 100%;
 }
 
 /* Themes */
@@ -78,16 +77,17 @@ body {
 }
 
 /* Buttoms */
-.button-yellow {
+.button-action {
   font-size: 1.2rem;
   outline: none;
   border-radius: 10px;
-  background-color: #48CBC5;
-  color: hsl(198deg, 22%, 9%);
+  background-color: #1E9C98;
+  color: rgb(255, 255, 255);
   padding: 0.5rem 3.5rem;
   display: inline-block;
   /* box-shadow: 6px 6px 20px -1px hsla(198deg, 0%, 0%, 0.15); */
   border-width: 0;
+  cursor: pointer;
 }
 
 .button-dark {
@@ -101,8 +101,8 @@ body {
   transition: background-color 1s ease, color 1s ease;
 }
 
-.button-yellow:hover {
-  box-shadow: inset 4px 4px 10px -1px rgba(0, 0, 0, 0.15) inset -4px -4px 10px -1px #48CBC5;
+.button-action:hover {
+  box-shadow: inset 4px 4px 10px -1px rgba(255, 255, 255, 0.15) inset -4px -4px 10px -1px #48CBC5;
 }
 
 .button-dark:hover {

@@ -1,15 +1,17 @@
 // Third party
 import React from "react"
+import { SkeletonTheme } from 'react-loading-skeleton'
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
-// Local
 // Pages
 import AboutUs from "./pages/AboutUs/AboutUs"
 import Activities from "./pages/Activities/Activities"
 import ActivityDetail from "./pages/ActivityDetail/ActivityDetail"
+import AreaDetails from "./pages/Areas/AreaDetails"
 import Areas from "./pages/Areas/Areas"
 import Events from "./pages/Events/Events"
 import FinishedEvents from "./pages/FinishedEvents/FinishedEvents"
 import Home from "./pages/Home/Home"
+import InstallationDetails from "./pages/Areas/InstallationDetails"
 import MatchsNews from "./pages/MatchsNews/MatchsNews"
 import Results from "./pages/Results/Results"
 import Tournament from "./pages/Tournament/Tournament"
@@ -27,41 +29,52 @@ function App() {
     <div className="App">
       <Router>
         <Navbar data={data.Navbar} />
-        <Switch>
-          <Route path="/Torneos-resultados">
-            <Results />
-          </Route>
-          <Route path="/Torneos-noticias">
-            <MatchsNews />
-          </Route>
-          <Route path="/Torneos">
-            <Tournament />
-          </Route>
-          <Route path="/Quienes-somos">
-            <AboutUs />
-          </Route>
-          <Route path="/Que-ofrecemos">
-            <WhatWeOffer />
-          </Route>
-          <Route path="/Eventos-finalizados">
+        <SkeletonTheme baseColor="#1B1D29" highlightColor="#525252">
+          <Switch>
+            <Route path="/Torneos-resultados">
+              <Results />
+            </Route>
+            <Route path="/Torneos-noticias">
+              <MatchsNews />
+            </Route>
+            <Route path="/Torneos">
+              <Tournament />
+            </Route>
+            <Route path="/Quienes-somos">
+              <AboutUs />
+            </Route>
+            <Route path="/Que-ofrecemos">
+              <WhatWeOffer />
+            </Route>
+            <Route path="/Noti-eventos">
+              <FinishedEvents />
+            </Route>
+            <Route path="/InstallationDetails/:instalacion">
+              <InstallationDetails />
+            </Route>
+             <Route path="/Eventos-finalizados">
             <FinishedEvents />
           </Route>
-          <Route path="/Eventos">
-            <Events />
-          </Route>
-          <Route path="/Detalle-actividad">
-            <ActivityDetail />
-          </Route>
-          <Route path="/Areas">
-            <Areas />
-          </Route>
-          <Route path="/Actividades">
-            <Activities />
-          </Route>
-          <Route path="/">
-            <Home />
-          </Route>
-        </Switch>
+            <Route path="/Eventos">
+              <Events />
+            </Route>
+            <Route path="/Detalle-actividad/:id">
+              <ActivityDetail />
+            </Route>
+            <Route exact path="/Areas">
+              <Areas />
+            </Route>
+            <Route path="/AreaDetails/:area">
+              <AreaDetails />
+            </Route>
+            <Route path="/Actividades">
+              <Activities />
+            </Route>
+            <Route path="/">
+              <Home />
+            </Route>
+          </Switch>
+        </SkeletonTheme>
         <Footer data={data.Footer} />
       </Router>
     </div>

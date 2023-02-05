@@ -113,6 +113,11 @@ const Navbar = ({ data }) => {
                                 </div>}
                             </li> )
                         })}
+                        <li >
+                            <a href="https://medinajosedev.com/nova" className="button-login" target="_blank" rel="noreferrer" >
+                                Iniciar sesión
+                            </a>
+                        </li>
                     </ul>
                     <div className="SocialMedia">
                         <h3 className="text--center">
