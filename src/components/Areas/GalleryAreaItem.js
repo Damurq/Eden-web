@@ -15,21 +15,7 @@ import './Resources.css';
 
 const GalleryAreaItem = (props) => {
 
-  const [areas, setAreas] = useState([]);
 
-  const obtenerAreas = async() => {
-
-    const dataAreas = await fetch('https://medinajosedev.com/api/areas');
-    const are = dataAreas.json();
-    setAreas(are);
-
-    console.log(areas);
-}
-
-
-  useEffect(() => {
-    obtenerAreas();
-}, [])
 
 //console.log(actividades)
 
