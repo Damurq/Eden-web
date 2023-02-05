@@ -1,67 +1,59 @@
 import React from 'react';
-import Slider from "react-slick";
 import Glider from 'react-glider';
-
-//Estilos y diseño
-import './Resources.css'
-import 'glider-js/glider.min.css';
-
-
 //componentes
-import CardItemCarrusel from "./CardItemCarrusel";
-
+import GalleryAreaItem from "./GalleryAreaItem";
+//Estilos
+import 'glider-js/glider.min.css';
+import './GalleryArea.css';
 //datos
 import { CarouselData2 } from '../../data/CarouselData2';
 
 
-export const Resources = ({component="undefined"}) => {
 
-    const settings = {
-        dots: true,
-        infinite: true,
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        autoplay: true,
-        speed: 2000,
-        autoplaySpeed: 2000,
-        cssEase: "linear"
-      };
+
+export const GalleryArea = ({component="undefined"})  => {
+
+
 
   return (
-    <div>
+    <>
+
         <div className="Title-carousel">
-          <h6>Recursos disponibles</h6>
+          <h2>Areas de Club</h2>
         </div>
 
-        {/* */}
-        <div className='Carrusel__Container'>
-            <Glider
+    <div className='Carrusel__Container'>
+        
+        <Glider
                     draggable
                     hasArrows
-                    hasDots
+                    scrollLock
                     slidesToShow={1}
                     slidesToScroll={1}
                     responsive={[
                         {
                           breakpoint: 960,
                           settings: {
-                            slidesToShow: 3,
+                            slidesToShow: 1,
                           },
                         },
                       ]}
                     >
                         {CarouselData2.map((item, index) => (
-                            <CardItemCarrusel
+                            <GalleryAreaItem
+                            id={item.id}
                             src={item.img}
-                            text={item.text1}
+                            title={item.title}
+                            text={item.text2}
                             key={`${component}-${index}`}
+                            component={'GalleryAreaItem'}
                             />
+                            
                             ))}
-
+                        
             </Glider>
         </div>
         
-    </div>
-    
+    </>
   )
 }
