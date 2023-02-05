@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import './GalleryOffer.css';
+import './ComboServices.css';
 
 
 const ComboServices= () => {
@@ -25,7 +25,7 @@ const ComboServices= () => {
     
     <div className='cambo-contenedor'>
            
-            <select name='comboSer'>
+            <select name='comboSer' className='select-css'>
             
                 {
                     serviceG.map( item => (

@@ -24,23 +24,29 @@ const GallerysOffer= () => {
     return ( 
     
     <div className='cards-service'>
-            <h3 className="title-service">¿Qué Ofrecemos?</h3>
+           
+            <div className='combo'>
+                
             <ComboServices/>
-           
+            </div>
             <div className='first__row-service'>
-           
+              
             
                 {
                     serviceG.map( item => (
                     <div className='card__one-service' key={item.id} >
                     
+                    
+                    <div className='magia'>
+                            <div className='magia-2'>
                             <img src={item.imagen_principal} alt="image"/>
+                            </div>
                             <div className='descripcion-service'>
                                 <p >{item.nombre}</p>
                                 <sub>Descripción: {item.descripcion}</sub>
-                            </div>
+                             </div>
                          
-                  
+                    </div>
                     </div>
                 ))
                 
