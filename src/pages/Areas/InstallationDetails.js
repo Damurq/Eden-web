@@ -3,12 +3,15 @@ import Glider from 'react-glider';
 import { useParams } from "react-router-dom";
 //Data
 import { CarouselData2 } from '../../data/CarouselData2';
+//icon
+import { BsFillInfoCircleFill } from "react-icons/bs";
 
 const InstallationDetails = () => {
     
     const { instalacion } = useParams();
 
     const [installation, setInstallation] = useState([]);
+    const [installationD, setInstallationD] = useState([]);
     const [openImage, setOpenImage] = useState(false);
     const [img, setImg] = useState("");
 
@@ -29,31 +32,47 @@ const InstallationDetails = () => {
         setInstallation(compareData);
   }
 
+
+
+
+
+    const getInstallationImg = async()=> {
+
+        const response = await fetch('https://medinajosedev.com/api/instalaciones');
+        const res = await response.json();
+        let compareData = res.data.filter((e) => {
+            return e.nombre == instalacion;
+        })
+
+        setInstallationD(compareData);
+  }
+
+
+
+
   //use effects general
   useEffect(() => {
-      compare();
-      console.log()
+    getInstallationImg();
   }, [instalacion])
 
 
   return (
 <div className="Content">
 
-    
-
 
     <div className='Title-Areas'>
-            <h2>Instalación: {instalacion}</h2>
-        </div>
-        <div>
-        {installation.map((item, index ) => (
+        <h2>Instalación: {instalacion}</h2>
+    </div>
+       
+    <div>
+        {installationD.map((item, index ) => (
         <div key={`InstallationDetails-${index}`} className="Details__Area__container" >
 
                 <div className="Details__Area">
-                    <div className="Details__cont__img"  onClick={() => onOpenImage(item.img)}>
+                    <div className="Details__cont__img"  onClick={() => onOpenImage(item.imagen_principal)}>
                         {
                             img == '' ?
-                            (<img src={item.img} alt="" className="Details__img"/>):
+                            (<img src={item.imagen_principal} alt="" className="Details__img"/>):
                             (<img src={img} alt="" className="Details__img"/>)
                         } 
                     </div>
@@ -66,31 +85,45 @@ const InstallationDetails = () => {
                     </div>
                 </div>
 
-                {/*  Galería  de  instalaciones  */}
-                <div className='Galery__List__Area'>
-                    <div className='Galery__List__Area__container'>
-                        {item.gallery.map((sublink, index) => (
-                            <>
-                                <div key={`ListaAreas-${index}`}className='Galery__List__item'>
-                                    <a className='Galery__List__Link'  onClick={() => onOpenImage(sublink.nameImg)}>
-                                            <img 
-                                            className='Galery__List__Link__img'
-                                            alt=''
-                                            src={sublink.nameImg} />
-                                    </a>
+                {
+                            item.galeria.length ==  0 ? (
+                                <div>
+                                    <p> <BsFillInfoCircleFill /> Esta Instalación no tiene más fotos </p>
                                 </div>
-                                
-                            </>
-                    ))}
+                            ):
+                            (
+                                <div>
+                                    {/*  Galería  de  instalaciones  */}
+                                  <div className='Galery__List__Area'>
+                                      <div className='Galery__List__Area__container'>
+                                          {item.galeria.map((sublink, index) => (
+                                              <>
+                                                  <div key={`ListaAreas-${index}`}className='Galery__List__item'>
+                                                      <a className='Galery__List__Link'  onClick={() => onOpenImage(sublink.nameImg)}>
+                                                              <img 
+                                                              className='Galery__List__Link__img'
+                                                              alt=''
+                                                              src={sublink.nameImg} />
+                                                      </a>
+                                                  </div>
+                                                  
+                                              </>
+                                      ))}
 
-                    </div>         
-                </div>
+                                      </div>         
+                                  </div>
+                                </div>
+                            )
+                        }
+
+                
 
         </div>                        
         ))}              
         </div>
 
-        <div className='body-container'>
+
+    <div className='body-container'>
             {/* ----------- Recursos Disponibles ----------------*/}
         <div className='Installation__main__container' >
           <div className='Installation__cont'>
@@ -138,7 +171,7 @@ const InstallationDetails = () => {
 
           </div>
         </div>
-        </div>
+    </div>
         
 
 
