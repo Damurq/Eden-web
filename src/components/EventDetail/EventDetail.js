@@ -6,7 +6,6 @@ import CommentsActivity from '../Commentary/Commentary'
 import { data } from '../../data/Events'
 
 const EventDetail = ({ id }) => {
-    console.log(id)
     return (
         <div className="Container-section">
             

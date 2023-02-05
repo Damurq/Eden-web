@@ -16,7 +16,9 @@ const Gallery = () =>  {
 
     const param = useParams();
     let id =param.id;
-  
+    console.log('====================================');
+    console.log(ActivityData.filter(activity => activity.id === id));
+    console.log('====================================');
     return (
         
         <div className="Galery">
