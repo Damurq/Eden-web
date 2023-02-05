@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Glider from 'react-glider';
 //componentes
 import GalleryAreaItem from "./GalleryAreaItem";
@@ -13,6 +13,20 @@ import { CarouselData2 } from '../../data/CarouselData2';
 
 export const GalleryArea = ({component="undefined"})  => {
 
+
+  const [areas, setAreas] = useState([]);
+
+
+  const getAreas = async()=> {
+    const response = await fetch('https://medinajosedev.com/api/areas');
+    const res = await response.json();
+    setAreas(res);  
+}
+
+
+  useEffect(() => {
+    getAreas();
+  }, [])
 
 
   return (
@@ -39,12 +53,13 @@ export const GalleryArea = ({component="undefined"})  => {
                         },
                       ]}
                     >
-                        {CarouselData2.map((item, index) => (
+                        {areas.data && areas.data.map((item, index) => (
                             <GalleryAreaItem
                             id={item.id}
-                            src={item.img}
-                            title={item.title}
-                            text={item.text2}
+                            src={item.imagen_principal}
+                            title={item.nombre}
+                            text={item.descripcion}
+                            installation={item.instalaciones}
                             key={`${component}-${index}`}
                             component={'GalleryAreaItem'}
                             />

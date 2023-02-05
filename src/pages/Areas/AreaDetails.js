@@ -5,7 +5,8 @@ import { CarouselData2 } from '../../data/CarouselData2';
 //Estilos
 import './AreaDetails.css';
 import './Areas';
-
+//icon
+import { BsFillInfoCircleFill } from "react-icons/bs";
 
 
 
@@ -14,27 +15,33 @@ import './Areas';
     const { area } = useParams();
 
     const [areas, setAreas] = useState([]);
+    const [areasD, setAreasD] = useState([]);
     const [openImage, setOpenImage] = useState(false);
     const [img, setImg] = useState("");
+
+  
 
     const onOpenImage = (src) => {
         setImg(src)
         setOpenImage(true)
     }
 
-    const compare = () => {
-          let compareData = CarouselData2.filter((e) => {
-            return e.title == area;
-          })
-          setAreas(compareData);
+    const getAreaImg = async()=> {
+        const response = await fetch('https://medinajosedev.com/api/areas');
+        const res = await response.json();
+
+        let compareData = res.data.filter((e) => {
+            return e.nombre == area;
+        })
+        setAreasD(compareData);
     }
+
 
 
 
     //use effects general
     useEffect(() => {
-        compare();
-        console.log(area);
+        getAreaImg();
     }, [area])
 
 
@@ -44,13 +51,13 @@ import './Areas';
             <h2>Area: {area}</h2>
         </div>
         <div>
-        {areas.map((item, index ) => (
+        {areasD.map((item, index ) => (
         <div key={`${component}-${index}`} className="Details__Area__container" >
                 <div className="Details__Area">
-                    <div className="Details__cont__img"  onClick={() => onOpenImage(item.img)}>
+                    <div className="Details__cont__img"  onClick={() => onOpenImage(item.imagen_principal)}>
                         {
                             img == '' ?
-                            (<img src={item.img} alt="" className="Details__img"/>):
+                            (<img src={item.imagen_principal} alt="" className="Details__img"/>):
                             (<img src={img} alt="" className="Details__img"/>)
                         } 
                     </div>
@@ -62,21 +69,33 @@ import './Areas';
                     </div>
                 </div>
 
-                {/*  Galeria de Areas  */}
+                {/*  Galeria de fotos de Areas  */}
                 <div className='Galery__List__Area'>
                     <div className='Galery__List__Area__container'>
-                        {item.gallery.map((sublink, index) => (
-                            <>
-                                <div key={`ListaAreas-${index}`}className='Galery__List__item'>
-                                    <a className='Galery__List__Link'  onClick={() => onOpenImage(sublink.nameImg)}>
-                                            <img 
-                                            className='Galery__List__Link__img'
-                                            alt=''
-                                            src={sublink.nameImg} />
-                                    </a>
-                                </div> 
-                            </>
-                    ))}
+                        {
+                            item.galeria.length ==  0 ? (
+                                <div>
+                                    <p> <BsFillInfoCircleFill /> Esta Area no tiene más fotos </p>
+                                </div>
+                            ):
+                            (
+                                <div>
+                                    {item.galeria.map((sublink, index) => (
+                                    <>
+                                        <div key={`ListaAreas-${index}`}className='Galery__List__item'>
+                                            <a className='Galery__List__Link'  onClick={() => onOpenImage(sublink.nameImg)}>
+                                                    <img 
+                                                    className='Galery__List__Link__img'
+                                                    alt=''
+                                                    src={sublink.nameImg} />
+                                            </a>
+                                        </div> 
+                                    </>
+                                 ))}
+                                </div>
+                            )
+                        }
+                        
 
                     </div>         
                 </div>

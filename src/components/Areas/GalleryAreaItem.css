@@ -19,7 +19,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 80%;
+    width: 75%;
     margin: 0;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -31,7 +31,7 @@
     display: inline-block;
     flex-direction: column;
     width: 33rem;
-    margin-left: 4rem;
+    margin-left: 2rem;
     overflow: hidden;
   }
 
@@ -60,10 +60,10 @@
     display: inline-block;
     flex-direction: column;
     overflow: hidden;
-    width: 40rem;
+    width: 35rem;
     max-width: 600px;
+    margin-left: 0rem;
     margin-top: 0rem;
-    padding-left: 2rem;
     text-align: center;
     justify-content: center;
     align-content: center;
@@ -75,10 +75,13 @@
     color: #ffffff;
     font-size: 42px;
     line-height: 55px;
+    margin-left: 2rem;
   }
   
   .us-text{
     width: 80%;
+    margin-left: 2rem;
+    margin-right: 0rem;
   }
 
   .text-basic{
@@ -203,7 +206,7 @@
     
     .text-basic{
       text-align: center;
-      font-size: 15px;
+      font-size: 14px;
       line-height: 26px;
       font-family: "Poppins Regular";
       color: rgb(255, 255, 255);
@@ -229,14 +232,14 @@
       display: flex;
       justify-content: center;
       width: 100%;
-      padding: 1rem 3rem;
+      padding: 1.5rem 3rem !important;
       border: 2px solid #1E9C98;
       transition: all 0.3s ease-out;
       border-radius: 10px;
       text-decoration-line: none;
       outline: none;
       cursor: pointer;
-      margin-top: 1.5rem; 
+      margin-top: 2.5rem; 
       color: rgb(255, 255, 255);
       padding: 0.5rem 3.5rem;
       font-family: "Poppins", sans-serif;

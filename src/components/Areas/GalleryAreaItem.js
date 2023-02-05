@@ -8,16 +8,10 @@ import './Resources.css';
 
 
 
-
-
-
-
-
 const GalleryAreaItem = (props) => {
 
 
 
-//console.log(actividades)
 
   return (
     <>
@@ -26,11 +20,20 @@ const GalleryAreaItem = (props) => {
         {/* ----------- Areas ----------------*/}
         <div className='us-container' >
 
+          {/* Imagen Principal */}
+          <a className='us-wrap'>
+                <img
+                  className='us-img'
+                  alt={props.title}
+                  src={props.src}
+                />
+            </a>
+            
             {/* Info */}
             <div className='us-wrap-Info'>
 
                   <h1 className='title-basic-start'> 
-                    {props.title}
+                    {[props.title]}
                   </h1>
                   
                 <div className='us-text'>
@@ -45,14 +48,7 @@ const GalleryAreaItem = (props) => {
                 </div>
             </div>
 
-            {/* Imagen Principal */}
-            <a className='us-wrap'>
-                <img
-                  className='us-img'
-                  alt='Sede AgroMax'
-                  src={props.src}
-                />
-            </a>
+            
 
         </div>
 
@@ -83,15 +79,15 @@ const GalleryAreaItem = (props) => {
                         },
                       ]}
                     >  
-                    {CarouselData2.map((item, index) => (
+                    {props.installation.map((item, index) => (
                     <div key={`${props.component}-${index}`} className='Installation__Item'>
-                      <a className='Installation__Item__Link' href={`/InstallationDetails/${item.title}`}>
+                      <a className='Installation__Item__Link' href={`/InstallationDetails/${item.nombre}`}>
                             <img 
                             className='Installation__Item__img'
-                            alt=''
-                            src={item.img} />
+                            alt={item.nombre}
+                            src={item.imagen_principal} />
                         <div className='cards__item__info-two'>
-                          <h5 className='cards__item__text-two'>{item.title}</h5>
+                          <h5 className='cards__item__text-two'>{item.nombre}</h5>
                         </div>
                       </a>
                     </div>

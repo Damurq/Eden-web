@@ -253,6 +253,7 @@
 .cards__item__info-two {
     display: flex;
     justify-content: center;
+    margin: auto;
   }
   
   .cards__item__text-two {
