@@ -1,0 +1,316 @@
+.Title__Details__Area{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+
+}
+
+.Title-Areas {
+    display: flex;
+    justify-content: center;
+    padding-top: 35px;
+    margin-bottom: 35px;
+    font-size: 2rem;
+    font-weight: bolder;
+    text-align: center;
+}
+
+
+.Details__title{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.Details__Area__container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0.1rem;
+    padding-bottom: 3rem;
+}
+.Details__Area{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    margin: 0;
+    margin-bottom: 20px;
+}
+.Details__cont__img{
+    display: flex;
+    justify-content: center;
+    width: 800px;
+    height: 400px;
+}
+.Details__img{
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+.Details__galery{
+    display: flex;
+    width: 70%;
+    justify-content: flex-start;
+}
+.Title__Details__Area__Galery {
+    text-align: start;
+    margin-bottom: 1.5rem;
+}
+
+
+
+.Galery__List{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.Galery__List__container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0.1rem;
+    padding-bottom: 3rem;
+}
+
+
+
+
+
+/*-------------------------- Galerya de Area ------------------------*/
+
+.Galery__List__Area {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.Galery__List__Area__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    margin: 0;
+    margin-left: 3rem;
+  }
+
+
+  .Galery__List__item{
+    display: grid;
+    width: 400px;
+    grid-template-columns: 80% 40%;
+    grid-template-rows: 1fr;
+    column-gap: 10px;
+  }
+
+  /*Movimiento hacia arriba*/
+  .Galery__List__item:hover{
+    width: 400px;
+    bottom: 5rem;
+    padding-top: 0rem;
+    transition: all 0.5s ease-in-out;
+}
+
+.Galery__List__Link {
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+    overflow: hidden;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    color: #000000;
+    box-shadow: 0px 10px 10px rgb(0, 0, 0, 0.04);
+    background-color: #0e3d4f;
+    
+  }
+.Galery__List__Link:hover {
+    color: #000000;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Imagen */
+.Galery__List__Link__img {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+    object-fit: cover;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .Galery__List__Link__img:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+
+
+
+
+    /* Open img*/
+.modelOpen{
+    display: flex;
+    position: absolute;
+    
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0, 0.5);
+    padding: 3rem;
+}
+.modelClose{
+    display: none;
+}
+.onClickImage{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 20%;
+}
+.container_button-close{
+    display: flex;
+    justify-content: flex-end;
+}
+.button-close{
+    display: block;
+    position: absolute;
+    margin-right: 1rem;
+    margin-top: 1rem;
+}
+.button-close:hover{
+    transform: scale(1.2);
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 960px) {
+    .Details__Area__container{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 0.1rem;
+        padding-bottom: 3rem;
+        padding-left: 0rem;
+        padding-right: 0rem;
+
+    }
+    .Details__Area{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        margin: 0;
+    }
+    .Details__cont__img{
+        display: block;
+        width: 100%;
+        margin-top: 1rem;
+        height: 100%;
+    }
+    .Details__img{
+        width: 100%;
+    }
+
+    .Details__galery{
+        justify-content: center;
+    }
+
+    .Title__Details__Area {
+        text-align: center;
+        margin-top: 3rem;
+    }
+
+
+
+/*-------------------------- Galerya de Area ------------------------*/
+
+.Title__Details__Area__Galery {
+    text-align: center;
+    margin-top: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+    .Galery__List__Area {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+      }
+    
+      /*Contenedor Secundario*/
+      .Galery__List__Area__container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 90%;
+        margin: 0;
+        margin-top: 0px;
+        margin-left: 0rem;
+        margin-bottom: 20px;
+      }
+    .Galery__List__item{
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        height: 200px;
+        padding-top: 0.5rem;
+        margin-bottom: 1rem;
+        transition: all 0.3s ease-in-out;
+      }
+
+
+    
+      /*Movimiento hacia arriba*/
+      .Galery__List__item:hover{
+        width: 300px;
+    }
+    
+    .Galery__List__Link {
+        display: flex;
+        flex-flow: column;
+        width: 100%;
+        overflow: hidden;
+        text-decoration: none;
+        transition: all 0.3s ease-in-out;
+        color: #000000;
+        box-shadow: 0px 10px 10px rgb(0, 0, 0, 0.04);
+        background-color: #0e3d4f;
+        
+      }
+    .Galery__List__Link:hover {
+        color: #000000;
+        box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2);
+      }
+    
+      /* Imagen */
+    .Galery__List__Link__img {
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: block;
+        object-fit: cover;
+        transition: all 0.2s ease-in-out;
+      }
+      
+      .Galery__List__Link__img:hover {
+        transform: scale(1.1);
+        cursor: pointer;
+      }
+}

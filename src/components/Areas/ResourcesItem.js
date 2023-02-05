@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 
 //Estilos y diseño
-import './CarruselCatalogue.css'
+import './Resources.css'
 
 
-function CardItemCarrusel(props) {
+function ResourcesItem(props) {
 
   const [dropdown, setDropdown] = useState(false);
 
@@ -30,17 +30,18 @@ function CardItemCarrusel(props) {
 
   return (
     <>
+
       <div className='cards__item-two'
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
       >
-        <a className='cards__item__link-two' to={props.path}>
+        <a className='cards__item__link-two' href='/'>
               <img 
               className='cards__item__img-two'
-              alt={props.text}
+              alt={props.title}
               src={props.src} />
           <div className='cards__item__info-two'>
-            <h5 className='cards__item__text-two'>{props.text}</h5>
+            <h5 className='cards__item__text-two'>{props.title}</h5>
           </div>
         </a>
       </div>
@@ -48,4 +49,4 @@ function CardItemCarrusel(props) {
   );
 }
 
-export default CardItemCarrusel;
+export default ResourcesItem;

@@ -8,6 +8,8 @@ import AboutUs from "./pages/AboutUs/AboutUs"
 import Activities from "./pages/Activities/Activities"
 import ActivityDetail from "./pages/ActivityDetail/ActivityDetail"
 import Areas from "./pages/Areas/Areas"
+import AreaDetails from "./pages/Areas/AreaDetails"
+import InstallationDetails from "./pages/Areas/InstallationDetails"
 import Events from "./pages/Events/Events"
 import FinishedEvents from "./pages/FinishedEvents/FinishedEvents"
 import Home from "./pages/Home/Home"
@@ -56,6 +58,12 @@ function App() {
             </Route>
             <Route path="/Areas">
               <Areas />
+            </Route>
+            <Route path="/AreaDetails/:area">
+              <AreaDetails component={'AreaDetails'}/>
+            </Route>
+            <Route path="/InstallationDetails/:instalacion">
+              <InstallationDetails component={'InstallationDetails'}/>
             </Route>
             <Route path="/Actividades">
               <Activities />
