@@ -1,6 +1,6 @@
 /* Título principal */
 .Title-carousel{
-    display: flex;
+    align-content: center;
     justify-content: center;
     margin-bottom: 20px;
     font-size: 2rem;
