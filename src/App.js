@@ -59,6 +59,12 @@ function App() {
             <Route path="/Areas">
               <Areas />
             </Route>
+            <Route path="/AreaDetails/:area">
+              <AreaDetails />
+            </Route>
+            <Route path="/InstallationDetails/:instalacion">
+              <InstallationDetails />
+            </Route>
             <Route path="/Actividades">
               <Activities />
             </Route>

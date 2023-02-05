@@ -12,6 +12,8 @@ const InstallationDetails = () => {
     const [openImage, setOpenImage] = useState(false);
     const [img, setImg] = useState("");
 
+
+
     const onOpenImage = (src) => {
         setImg(src)
         setOpenImage(true)
@@ -30,6 +32,7 @@ const InstallationDetails = () => {
   //use effects general
   useEffect(() => {
       compare();
+      console.log()
   }, [instalacion])
 
 

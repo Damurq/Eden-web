@@ -29,9 +29,12 @@ import './Areas';
           setAreas(compareData);
     }
 
+
+
     //use effects general
     useEffect(() => {
         compare();
+        console.log(area);
     }, [area])
 
 
