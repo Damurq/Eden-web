@@ -37,8 +37,8 @@ const GallerysOffer= () => {
                     <div className='card__one-service' key={item.id} >
                     
                     
-                    <div className='magia'>
-                            <div className='magia-2'>
+                    <div className='card__two-service'>
+                            <div className='card-service-2'>
                             <img src={item.imagen_principal} alt="image"/>
                             </div>
                             <div className='descripcion-service'>

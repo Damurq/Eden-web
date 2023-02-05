@@ -43,12 +43,12 @@
     margin-bottom: 2rem;
 }
 
-.magia{
+.card__two-service{
     display: flex;
    
     
 }
-.magia-2{
+.card-service-2{
     display: flex;
     width: 100%;
     border-right: 1px solid  rgb(255, 255, 255);

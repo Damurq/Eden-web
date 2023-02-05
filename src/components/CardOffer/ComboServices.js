@@ -23,7 +23,7 @@ const ComboServices= () => {
     
     return ( 
     
-    <div className='cambo-contenedor'>
+    <div className='combo-conteiner'>
            
             <select name='comboSer' className='select-css'>
             
