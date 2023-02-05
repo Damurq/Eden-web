@@ -5,7 +5,7 @@ import './ComboServices.css';
 
 const ComboServices= () => {
   
-   const [serviceG, setService] = React.useState([])
+   const [serviceCombo, setServiceCombo] = React.useState([])
 
     React.useEffect( () =>{
         infoService() 
@@ -13,24 +13,30 @@ const ComboServices= () => {
     }, [])
    
     const infoService = async()=>{
-        const data = await fetch('https://medinajosedev.com/api/feed/actividades')   
-        const actividades = await data.json() 
+        const data = await fetch('https://medinajosedev.com/api/feed/tiposdeevento')   
+        const tipos = await data.json() 
 
-        setService(actividades["data"])
-        //console.log(maximo)
+        setServiceCombo(tipos)
+        console.log(tipos)
     }
     
-    
+    const handleSelectChange = ( event ) => {
+        event.preventDefault();
+        console.log(event.target.value);
+        //console.log(event.value);
+        //this.setState(event.value);
+    }
     return ( 
     
     <div className='combo-conteiner'>
            
-            <select name='comboSer' className='select-css'>
+            <select name='comboSer' className='select-css' onChange = { handleSelectChange }>
+            <option value={0} >Seleccionar Categoría</option>
             
                 {
-                    serviceG.map( item => (
+                    serviceCombo.map( item => (
                         
-                        <option key={item.id} value={item.id} >{item.id}</option>
+                        <option key={item.id} value={item.id} >{item.nombre}</option>
                        
                     
                 ))
