@@ -8,10 +8,10 @@ import 'glider-js/glider.min.css';
 
 
 //componentes
-import ResourcesItem from "./ResourcesItem";
+import ResourcesItem from "../ResourcesItem";
 
 //datos
-import { CarouselData2 } from '../../data/CarouselData2';
+import { CarouselData2 } from '../../../data/CarouselData2';
 
 
 export const Resources = ({component="undefined"}) => {
