@@ -1,11 +1,21 @@
-import React                                                                    from 'react'
-import { AiOutlineSend }                                                        from 'react-icons/ai'
-import { BsTelephone, BsInstagram, BsFacebook }                                 from 'react-icons/bs'
-import { FaLinkedinIn }                                                         from 'react-icons/fa'
-import { MdOutlineCollections }                                                 from 'react-icons/md'
-import { HiOutlineMail, HiOutlineLocationMarker }                               from 'react-icons/hi'
-import { MdOutlineWeb }                                                         from 'react-icons/md'
-import { SiAltiumdesigner }                                                     from 'react-icons/si'
+import React from 'react'
+import { AiOutlineSend } from 'react-icons/ai'
+import { FaLinkedinIn, FaTiktok, FaTumblr } from 'react-icons/fa'
+import { MdOutlineCollections } from 'react-icons/md'
+import { HiOutlineMail, HiOutlineLocationMarker } from 'react-icons/hi'
+import { MdOutlineWeb } from 'react-icons/md'
+import { SiAltiumdesigner } from 'react-icons/si'
+import {
+    BsTelephone,
+    BsInstagram,
+    BsFacebook,
+    BsTwitter,
+    BsYoutube,
+    BsReddit,
+    BsGithub,
+    BsPinterest,
+    BsSnapchat,
+} from 'react-icons/bs'
 
 
 const IconsComponent = ({ icon, className = '' }) => {
@@ -18,6 +28,33 @@ const IconsComponent = ({ icon, className = '' }) => {
                 break;
             case 'facebook':
                 element = <BsFacebook className={className} />
+                break;
+            case 'linkedin':
+                element = <FaLinkedinIn className={className} />
+                break;
+            case 'twitter':
+                element = <BsTwitter className={className} />
+                break;
+            case 'youtube':
+                element = <BsYoutube className={className} />
+                break;
+            case 'github':
+                element = <BsGithub className={className} />
+                break;
+            case 'reddit':
+                element = <BsReddit className={className} />
+                break;
+            case 'pinterest':
+                element = <BsPinterest className={className} />
+                break;
+            case 'snapchat':
+                element = <BsSnapchat className={className} />
+                break;
+            case 'tiktok':
+                element = <FaTiktok className={className} />
+                break;
+            case 'tumblr':
+                element = <FaTumblr className={className} />
                 break;
             case 'phone':
                 element = <BsTelephone className={className} />
@@ -36,10 +73,7 @@ const IconsComponent = ({ icon, className = '' }) => {
                 break;
             case 'area':
                 element = <SiAltiumdesigner className={className} />
-                break;    
-            case 'linkedin':
-                element = <FaLinkedinIn className={className} />
-                break;      
+                break;
             default:
                 element = <MdOutlineWeb className={className} />
                 break;

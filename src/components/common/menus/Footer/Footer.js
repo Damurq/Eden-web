@@ -1,14 +1,26 @@
-import { Link }        from "react-router-dom"
+import React, { useState, useEffect } from "react"
+import { Link } from "react-router-dom"
 // Local
-import  SocialMedia                    from "../../../specific/SocialMedia/SocialMedia.js"
-import IconsComponent               from '../../../IconsComponent/IconsComponent.js'
+import SocialMedia from "../../../specific/SocialMedia/SocialMedia.js"
+import IconsComponent from '../../../IconsComponent/IconsComponent.js'
 // Data
-import socialMedia from "../../../../data/socialMedia.json"
+import { SOCIAL_MEDIA } from '../../../../routes/index'
 // Styles
 import "./Footer.css"
 
 const Footer = ({ data }) => {
     const liClass = "menu-options__element menu-options__element--footer "
+
+    const [socialMedia, setSocialMedia] = useState([])
+    const getInfo = async () => {
+        const social = await fetch(`${process.env.REACT_APP_API_URL}${SOCIAL_MEDIA}`);
+        const res_social = await social.json();
+        setSocialMedia(res_social)
+    }
+
+    useEffect(() => {
+        getInfo();
+    }, [])
 
     return (
         <footer className="theme--2">
@@ -30,16 +42,16 @@ const Footer = ({ data }) => {
                     <h3 className="text--center">
                         {'Redes sociales'}
                     </h3>
-                    {socialMedia && <SocialMedia data={socialMedia} componentName={"Footer"}/>}
+                    {socialMedia.length && <SocialMedia data={socialMedia} componentName={"Footer"} />}
                 </div>
                 <div className="footerSection--contact">
                     {data.info && data.info.map((info, index) => (
                         <div key={`extra-inf-${index}`}>
-                        <h3  >
-                            <IconsComponent className="icon" icon={info.icon} />
-                            {info.data}
-                        </h3>
-                    </div>
+                            <h3  >
+                                <IconsComponent className="icon" icon={info.icon} />
+                                {info.data}
+                            </h3>
+                        </div>
                     ))}
                 </div>
             </div>

@@ -23,7 +23,7 @@ export const GalleryArea = ({ component = "undefined" }) => {
   }, [])
 
   return (
-    <>
+    <div className="area-section">
       <div className="Title-carousel">
         <h2>Areas de Club</h2>
       </div>
@@ -57,6 +57,6 @@ export const GalleryArea = ({ component = "undefined" }) => {
           ))}
         </Glider>
       </div>
-    </>
+    </div>
   )
 }
