@@ -15,7 +15,7 @@ const Tournament = () => {
     return (
         <div className="Content">
             <div className="information-elements section">
-                {sections && sections.map((section, i) => (
+                {sections.length && sections.map((section, i) => (
                     <div key={`${data[section].title}-${i}`} className="info-element--container" >
                         <div
                             className={`custom-button info-element ${activeSection === section ? "active-element" : ""}`}
