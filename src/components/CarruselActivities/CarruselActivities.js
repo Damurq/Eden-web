@@ -17,7 +17,7 @@ const CarruselActivities = () => {
     const [activities, setActivities] = useState([]);
 
     const getActivities = async () => {
-      const response = await fetch(`${process.env.REACT_APP_API_URL}feed/${ACTIVIDADES}`);
+      const response = await fetch(`${process.env.REACT_APP_API_URL}${ACTIVIDADES}`);
       const res = await response.json();
       setActivities(res.data);
       console.log(res.data);

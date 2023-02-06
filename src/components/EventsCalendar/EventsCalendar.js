@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { FaSearch } from "react-icons/fa"
 // Components
 import { data } from "../../data/Events.js"
@@ -8,7 +8,23 @@ import moment from 'moment';
 
 import EventDetail from "../EventDetail/EventDetail"
 
+import {EVENTOS} from '../../routes/index'
+
 const EventsCalendar = () => {
+
+    const [eventos, setEventos] = useState([]);
+
+    const getEventos = async () => {
+        const response = await fetch(`${process.env.REACT_APP_API_URL}${EVENTOS}`);
+        const res = await response.json();
+        setEventos(res.data);
+    }
+
+    useEffect(() => {
+        getEventos();
+    }, [])
+
+
     const today = new Date()
     const [currentEvents, setCurrentEvents] = useState(data.filter((event) => {
         let aux = new Date(event.date_start)

@@ -14,7 +14,7 @@ const CarruselDiscover = ({component="undefined"}) => {
   const [events, setEvents] = useState([]);
 
   const getEvents = async () => {
-    const response = await fetch(`${process.env.REACT_APP_API_URL}feed/${EVENTOS}`);
+    const response = await fetch(`${process.env.REACT_APP_API_URL}${EVENTOS}`);
     const res = await response.json();
     setEvents(res.data);
   }
