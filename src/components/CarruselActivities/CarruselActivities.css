@@ -1,5 +1,4 @@
-/* Título principal */
-.Title-carousel{
+.Title-carouselAct {
     display: flex;
     justify-content: center;
     padding-top: 35px;
@@ -7,21 +6,23 @@
     font-size: 3.5rem;
     font-weight: bolder;
 }
-.Title-carousel h2{
+.Title-carouselAct h2{
     margin: 0px;
-    font-size: larger;
+    font-size:larger;
 }
+
 .discover__container {
     display: flex;
     justify-content: center;
 }
-.EventCommentary{
+
+.ActivityCommentary{
     padding-left: 3rem;
 }
 
 
 /* Contenedor principal */
-  .main-carousel{
+  .main-carouselAct{
     display: block;
     position: relative;
     box-sizing: border-box;
@@ -163,14 +164,14 @@
     align-self:center;
 }
 
-.carousel-image{
+.carousel-imageAct{
     display: block;
     align-self:center;
     margin-right: 10px;
     padding-left: 10px;
 }
 
-.carousel-text{
+.carousel-textAct{
     display: block;
     align-items: center;
     justify-content: center;
@@ -430,7 +431,7 @@
 
 
 
-    .main-carousel{
+    .main-carouselAct{
         display: block;
         position: relative;
         box-sizing: border-box;
@@ -511,15 +512,15 @@
         display: none;
     }
 
-    .carousel-image{
+    .carousel-imageAct{
         display: none;
     }
 
-    .carousel-text{
+    .carousel-textAct{
         display: none;
     }
 
-    .carousel-text p{
+    .carousel-textAct p{
         display: none;
     }
 
@@ -640,22 +641,4 @@
         display: block;
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
   }

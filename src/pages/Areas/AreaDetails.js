@@ -1,109 +1,86 @@
 import React, { useEffect, useState } from 'react';
+import { BsFillInfoCircleFill } from "react-icons/bs";
 import { useParams } from "react-router-dom";
-//Data
-import { CarouselData2 } from '../../data/CarouselData2';
-//Estilos
+import Skeleton from 'react-loading-skeleton'
+// Styles
 import './AreaDetails.css';
 import './Areas';
-//icon
-import { BsFillInfoCircleFill } from "react-icons/bs";
+// Data
+import { AREAS } from '../../routes/index'
 
 
+const AreaDetails = ({ component = "undefined" }) => {
 
- const AreaDetails = ({component="undefined"}) => {
-
-    const { area } = useParams();
-
-    const [areas, setAreas] = useState([]);
-    const [areasD, setAreasD] = useState([]);
+    const { id } = useParams();
+    const [area, setArea] = useState({});
     const [openImage, setOpenImage] = useState(false);
     const [img, setImg] = useState("");
-
-  
 
     const onOpenImage = (src) => {
         setImg(src)
         setOpenImage(true)
     }
 
-    const getAreaImg = async()=> {
-        const response = await fetch('https://medinajosedev.com/api/areas');
+    const getArea = async (id) => {
+        const response = await fetch(`${process.env.REACT_APP_API_URL}${AREAS}/${id}`);
         const res = await response.json();
-
-        let compareData = res.data.filter((e) => {
-            return e.nombre === area;
-        })
-        setAreasD(compareData);
+        setArea(res.data);
     }
 
-
-
-
-    //use effects general
     useEffect(() => {
-        getAreaImg();
-    }, [area])
+        getArea(id);
+    }, [id])
 
 
-  return (
-    <div className="Content">
-        <div className='Title-Areas'>
-            <h2>Area: {area}</h2>
-        </div>
-        <div>
-        {areasD.map((item, index ) => (
-        <div key={`${component}-${index}`} className="Details__Area__container" >
-                <div className="Details__Area">
-                    <div className="Details__cont__img"  onClick={() => onOpenImage(item.imagen_principal)}>
-                        {
-                            img == '' ?
-                            (<img src={item.imagen_principal} alt="" className="Details__img"/>):
-                            (<img src={img} alt="" className="Details__img"/>)
-                        } 
+    return (
+        <div className="Content">
+            <div className='Title-Areas'>
+                <h2>Area: {area.nombre || <Skeleton />}</h2>
+            </div>
+            <div>
+                <div className="Details__Area__container" >
+                    <div className="Details__Area">
+                        <div className="Details__cont__img" onClick={() => onOpenImage(area.imagen_principal)}>
+                            {img === ""
+                                ? (<img src={area.imagen_principal} alt="" className="Details__img" />)
+                                : (<img src={img} alt="" className="Details__img" />)
+                            }
+                        </div>
                     </div>
-                </div>
-                {/*  Titulo Galería de Imagenes  */}
-                <div className='Details__galery'>
-                    <div className="Title__Details__Area__Galery">
-                        <h2>Explorar fotos </h2>
+                    {/*  Titulo Galería de Imagenes  */}
+                    <div className='Details__galery'>
+                        <div className="Title__Details__Area__Galery">
+                            <h2>Explorar fotos </h2>
+                        </div>
                     </div>
-                </div>
-
-                {/*  Galeria de fotos de Areas  */}
-                <div className='Galery__List__Area'>
-                    <div className='Galery__List__Area__container'>
-                        {
-                            item.galeria.length ==  0 ? (
-                                <div>
-                                    <p> <BsFillInfoCircleFill /> Esta Area no tiene más fotos </p>
-                                </div>
-                            ):
-                            (
-                                <div>
-                                    {item.galeria.map((sublink, index) => (
-                                    <>
-                                        <div key={`ListaAreas-${index}`}className='Galery__List__item'>
-                                            <a className='Galery__List__Link'  onClick={() => onOpenImage(sublink.nameImg)}>
-                                                    <img 
-                                                    className='Galery__List__Link__img'
-                                                    alt=''
-                                                    src={sublink.nameImg} />
-                                            </a>
-                                        </div> 
-                                    </>
-                                 ))}
-                                </div>
-                            )
-                        }
-                        
-
-                    </div>         
-                </div>
-
-
-                {/* Imagen abrir */}
-                {/* 
-                <div className={openImage ? "modelOpen" : "modelClose"}>
+                    {/*  Galeria de fotos de Areas  */}
+                    <div className='Galery__List__Area'>
+                        <div className='Galery__List__Area__container'>
+                            {area.galeria
+                                ? area.galeria.length === 0
+                                    ? (<div>
+                                        <p> <BsFillInfoCircleFill /> Esta Area no tiene más fotos </p>
+                                    </div>)
+                                    : (<div>
+                                        {area.galeria.map((sublink, index) => (
+                                            <>
+                                                <div key={`ListaAreas-${index}`} className='Galery__List__areasD'>
+                                                    <div className='Galery__List__Link' onClick={() => onOpenImage(sublink.nameImg)}>
+                                                        <img
+                                                            className='Galery__List__Link__img'
+                                                            alt=''
+                                                            src={sublink.nameImg} />
+                                                    </div>
+                                                </div>
+                                            </>
+                                        ))}
+                                    </div>)
+                                : <Skeleton />
+                            }
+                        </div>
+                    </div>
+                    {/* Imagen abrir */}
+                    {/* <div className={openImage ? "modelOpen" : "modelClose"}>
                     <div className='onClickImage'>
                         <div className='container_button-close'>
                             <div className='button-close' onClick={() => setOpenImage(false)}>
@@ -112,15 +89,12 @@ import { BsFillInfoCircleFill } from "react-icons/bs";
                             </div>
                                 <img src={img} alt='' />  
                             </div>
+                    </div>*/}
                 </div>
-                 */}
-
-        </div>                        
-        ))}              
+            </div>
         </div>
-    </div>
-    
-  )
+
+    )
 }
 
 export default AreaDetails;

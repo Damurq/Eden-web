@@ -50,7 +50,7 @@ function App() {
             <Route path="/Noti-eventos">
               <FinishedEvents />
             </Route>
-            <Route path="/InstallationDetails/:instalacion">
+            <Route path="/InstallationDetails/:id">
               <InstallationDetails />
             </Route>
              <Route path="/Eventos-finalizados">
@@ -68,7 +68,7 @@ function App() {
             <Route exact path="/Areas">
               <Areas />
             </Route>
-            <Route path="/AreaDetails/:area">
+            <Route path="/AreaDetails/:id">
               <AreaDetails />
             </Route>
             <Route path="/Actividades">
