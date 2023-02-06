@@ -1,15 +1,33 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react';
 import Slider from "react-slick";
 import './CarruselDiscover.css'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import SeeMore from '../SeeMore/SeeMore';
 
-import { CarouselData } from '../../data/CarouselData';
+// Data
+import { EVENTOS } from '../../routes/index'
 
 const CarruselDiscover = ({component="undefined"}) => {
+
+
+  const [events, setEvents] = useState([]);
+
+  const getEvents = async () => {
+    const response = await fetch(`${process.env.REACT_APP_API_URL}feed/${EVENTOS}`);
+    const res = await response.json();
+    setEvents(res.data);
+  }
+
+  useEffect(() => {
+    getEvents();
+  }, [])
+
+
+
   return (
     <>
+    
         <div className="Title-carousel">
           <h2>Eventos</h2>
         </div>
@@ -24,13 +42,13 @@ const CarruselDiscover = ({component="undefined"}) => {
               infinite
               customPaging={(i)=>{
                 return (
-                  <div className="carousel-box" key={(CarouselData[i].id)} >
+                  <div className="carousel-box" key={(events[i].id)} >
                     <div className="box-info">
                         <div className="carousel-image">
-                            <img src={(CarouselData[i].imgg)}  alt="" style={{width:"60px", height:"80px", objectFit:"cover" , borderRadius:"10px"}} />
+                            <img src={(events[i].imagen_principal)}  alt="" style={{width:"60px", height:"80px", objectFit:"cover" , borderRadius:"10px"}} />
                         </div>
                         <div className="carousel-text">
-                            <p  className="">{(CarouselData[i].title)}</p>
+                            <p  className="">{(events[i].nombre)}</p>
                         </div>
                     </div>
                   </div>
@@ -38,24 +56,16 @@ const CarruselDiscover = ({component="undefined"}) => {
               }}
               dotsClass="slick-dots custom-indicator"
               >
-              {CarouselData.map((item, index) => (
+              {events.filter((item, idx) => idx < 4).map((item, index) => (
                 <div className="container-main" key={`${component}-${index}`}>
                     <div className='row'>
-                        <img src={item.img} className="img-main" alt="..." />
-                        <div className='container-info2'>
+                        <img src={item.imagen_principal} className="img-main" alt="..." />
+                        <div className='container-infoEvent'>
                             <div  className="container-title" >
                                 <div className="mini-text">
-                                    <p className="card-text-1 mb-3">{item.text1}</p>
-                                    <p className="card-text-2 mb-4">{item.text2}</p>
-                                </div>
-                                {/*
-
-                                <a href={item.href}>
-                                  <button className="btn">Ver más</button>
-                                </a>
-                                
-                                */}
-                                
+                                    <h1 className="card-text-1 mb-3">{item.nombre}</h1>
+                                    <p className="card-text-2 mb-4">{item.descripcion}</p>
+                                </div>                   
                             </div>
                         </div>
                         
