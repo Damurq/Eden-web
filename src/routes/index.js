@@ -1,11 +1,11 @@
 const AREAS = "areas"
 const INSTALACIONES = "instalaciones"
-const EVENTOS = "eventos"
-const ACTIVIDADES = "actividades"
+const ACTIVIDADES = "feed/actividades"
+const EVENTOS = "feed/eventos"
 
 module.exports = {
     AREAS,
     INSTALACIONES,
-    EVENTOS,
-    ACTIVIDADES
+    ACTIVIDADES,
+    EVENTOS
 }
