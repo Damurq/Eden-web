@@ -7,6 +7,9 @@ const INITIAL_CARD = "seccioninformacion/initial_card"
 const PREVIEW_TORUNAMENT_1 = "seccioninformacion/preview_tournament_1"
 const PREVIEW_TORUNAMENT_2 = "seccioninformacion/preview_tournament_2"
 const CONTACTO ="club/contactos"
+const OFRECEMOS ="feed/eventosactividades/tipo/"
+const CATEGORIA_EVENTOS ="feed/tiposdeevento"
+const FEED = "feed"
 
 module.exports = {
     AREAS,
@@ -17,5 +20,8 @@ module.exports = {
     INITIAL_CARD,
     PREVIEW_TORUNAMENT_1,
     PREVIEW_TORUNAMENT_2,
-    CONTACTO
+    CONTACTO,
+    OFRECEMOS,
+    CATEGORIA_EVENTOS,
+    FEED
 }
