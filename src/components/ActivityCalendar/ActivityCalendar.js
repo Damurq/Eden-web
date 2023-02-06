@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import './ActivityCalendar.css'
 
-import SeeMore  from '../SeeMore/SeeMore'
+import SeeMore from '../SeeMore/SeeMore'
 import { ACTIVIDADES } from '../../routes/index';
 
 
 
-const ActivitiesCalendar= () => {
+const ActivitiesCalendar = () => {
 
     const [activeActivity] = useState(null)
 
@@ -22,37 +22,39 @@ const ActivitiesCalendar= () => {
         getActividades();
     }, [])
 
-    console.log(actividades)
-
     return (
         <div className='container'>
             <div className="activities-container">
                 <div className="activities-list">
-                    {actividades.map((activity) => (
-                        <div key={`${activity.id}-activity`} className={`activity-element${activity.id === activeActivity
-                            ? "active-activity"
-                            : ""}`}
-                        >
-                            <img className='img-activity' src={activity.imagen_principal} alt="activity" />
-                            
-                            <div className='detail-activity'>
-                                <p className="main-title">{activity.nombre}</p>
-                                <hr></hr>
-                                <p className='detail-act'>{activity.descripcion}</p>
-                                <p className="location">Lugar: {activity.instalacion.nombre}</p>
+                    {actividades.map((activity) => {
+                        let start_date = new Date(activity.fecha_inicio)
+                        return (
+                            <div key={`${activity.id}-activity`} className={`activity-element${activity.id === activeActivity
+                                ? "active-activity"
+                                : ""}`}
+                            >
+                                <img className='img-activity' src={activity.imagen_principal} alt="activity" />
 
-                                <div className='SeeMore-btn'>
-                                    <SeeMore to={"/Detalle-actividad/" + activity.id} />
+                                <div className='detail-activity'>
+                                    <p className="main-title">{activity.nombre}</p>
+                                    <hr></hr>
+                                    <p className='detail-act'>{activity.descripcion}</p>
+                                    <p className='detail-act'>{start_date.toLocaleDateString()}</p>
+                                    <p className="location">Lugar: {activity.instalacion.nombre}</p>
+
+                                    <div className='SeeMore-btn'>
+                                        <SeeMore to={"/Detalle-actividad/" + activity.id} />
+                                    </div>
+
                                 </div>
-                                
+
+
                             </div>
-                            
-                            
-                        </div>
-                    ))} 
+                        )
+                    })}
                 </div>
-            </div> 
-        </div>       
+            </div>
+        </div>
     )
 }
 

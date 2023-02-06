@@ -1,14 +1,14 @@
 [
     {
-        "name":"instagram",
-        "href":"https://www.instagram.com/"
+        "tipo":"instagram",
+        "url":"https://www.instagram.com/"
     },
     {
-        "name":"linkedin",
-        "href":"https://www.linkedin.com/"
+        "tipo":"linkedin",
+        "url":"https://www.linkedin.com/"
     },
     {
-        "name":"facebook",
-        "href":"https://facebook.com/"
+        "tipo":"facebook",
+        "url":"https://facebook.com/"
     }
 ]
