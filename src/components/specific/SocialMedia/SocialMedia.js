@@ -8,12 +8,12 @@ const SocialMedia = ({ data, componentName, orientation="horizontal" }) => {
         <div className={`icon--socialMedia icon--${orientation}`}>
             {data && data.map((social, index) => {
                 return (<a 
-                    key={`${social.name}-${index}-${componentName}`}
-                    className={`${social.name.toLowerCase()} social`} 
-                    href={social.href} 
+                    key={`${social.tipo}-${index}-${componentName}`}
+                    className={`${social.tipo.toLowerCase()} social`} 
+                    href={social.url} 
                     target="_blank" 
                     rel="noopener noreferrer">
-                        <IconsComponent className="icon" icon={social.name.toLowerCase()}/>
+                        <IconsComponent className="icon" icon={social.tipo.toLowerCase()}/>
                     </a>)
             })}
         </div>
