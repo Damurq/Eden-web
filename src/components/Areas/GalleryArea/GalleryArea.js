@@ -6,7 +6,7 @@ import GalleryAreaItem from "../GalleryAreaItem";
 import 'glider-js/glider.min.css';
 import './GalleryArea.css';
 // Data
-import AREAS from '../../../routes/index'
+import { AREAS } from '../../../routes/index'
 
 export const GalleryArea = ({ component = "undefined" }) => {
 
@@ -16,9 +16,6 @@ export const GalleryArea = ({ component = "undefined" }) => {
     const response = await fetch(`${process.env.REACT_APP_API_URL}${AREAS}`);
     const res = await response.json();
     setAreas(res);
-    console.log('====================================');
-    console.log(res);
-    console.log('====================================');
   }
 
   useEffect(() => {
