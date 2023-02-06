@@ -5,6 +5,7 @@ import CardContact from "../../components/CardContact/CardContact.js"
 import Presentation from "../../components/Presentation/Presentation.js"
 import Tournament from "../../components/Tournament/Tournament.js"
 import InitialCard from "../../components/InitialCard/InitialCard.js"
+import CarruselActivities from "../../components/CarruselActivities/CarruselActivities"
 import data from "../../data/Home.json"
 
 const Home = () => {
@@ -15,6 +16,7 @@ const Home = () => {
             <Presentation data={data.components.Presentation} />
             <Tournament />
             <CarruselDiscover component="Home-Events" />
+            <CarruselActivities />
             <CardContact data={data.components.Contact} />
         </div>
     )
