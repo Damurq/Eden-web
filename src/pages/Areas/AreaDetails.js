@@ -80,8 +80,7 @@ const AreaDetails = ({ component = "undefined" }) => {
                         </div>
                     </div>
                     {/* Imagen abrir */}
-                    {/* 
-                <div className={openImage ? "modelOpen" : "modelClose"}>
+                    {/* <div className={openImage ? "modelOpen" : "modelClose"}>
                     <div className='onClickImage'>
                         <div className='container_button-close'>
                             <div className='button-close' onClick={() => setOpenImage(false)}>
@@ -90,8 +89,7 @@ const AreaDetails = ({ component = "undefined" }) => {
                             </div>
                                 <img src={img} alt='' />  
                             </div>
-                </div>
-                 */}
+                    </div>*/}
                 </div>
             </div>
         </div>
