@@ -61,8 +61,8 @@ const GalleryAreaItem = (props) => {
                   ]}
                 >
                   {props.installation.map((item, index) => (
-                    <div key={`${props.component}-${index}`} className='Installation__Item'>
-                      <a className='Installation__Item__Link' href={`/InstallationDetails/${item.nombre}`}>
+                    <div key={`${props.component}-${index}-${item.id}`} className='Installation__Item'>
+                      <Link className='Installation__Item__Link' to={`/InstallationDetails/${item.id}`}>
                         <img
                           className='Installation__Item__img'
                           alt={item.nombre}
@@ -70,21 +70,15 @@ const GalleryAreaItem = (props) => {
                         <div className='cards__item__info-two'>
                           <h5 className='cards__item__text-two'>{item.nombre}</h5>
                         </div>
-                      </a>
+                      </Link>
                     </div>
                   ))}
-
                 </Glider>
               </div>
             </div>
-
           </div>
         </div>
-
-
-
       </div>
-
     </>
   )
 }

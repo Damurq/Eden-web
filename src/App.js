@@ -49,7 +49,7 @@ function App() {
             <Route path="/Noti-eventos">
               <FinishedEvents />
             </Route>
-            <Route path="/InstallationDetails/:instalacion">
+            <Route path="/InstallationDetails/:id">
               <InstallationDetails />
             </Route>
              <Route path="/Eventos-finalizados">
