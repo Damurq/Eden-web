@@ -95,12 +95,10 @@ const InstallationDetails = () => {
         {/* ----------- Recursos Disponibles ----------------*/}
         <div className='Installation__main__container' >
           <div className='Installation__cont'>
-
             {/*  Titulo de Instalaciones  */}
             <div className="Title__carousel__start">
-              <h2>Recursos de {id} </h2>
+              <h2>Recursos de {installationD.nombre || <Skeleton />} </h2>
             </div>
-
             {/*  Lista  de Instalaciones  */}
             <div className='Installation__List'>
               <div className='Installation__container'>
@@ -121,7 +119,7 @@ const InstallationDetails = () => {
                 >
                   {CarouselData2.map((item, index) => (
                     <div key={`InstallationDetails-${index}`} className='Installation__Item'>
-                      <a className='Installation__Item__Link'>
+                      <div className='Installation__Item__Link'>
                         <img
                           className='Installation__Item__img'
                           alt=''
@@ -129,14 +127,12 @@ const InstallationDetails = () => {
                         <div className='cards__item__info-two'>
                           <h5 className='cards__item__text-two'>{item.title}</h5>
                         </div>
-                      </a>
+                      </div>
                     </div>
                   ))}
-
                 </Glider>
               </div>
             </div>
-
           </div>
         </div>
       </div>
