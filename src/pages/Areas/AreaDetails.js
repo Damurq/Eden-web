@@ -31,7 +31,7 @@ import { BsFillInfoCircleFill } from "react-icons/bs";
         const res = await response.json();
 
         let compareData = res.data.filter((e) => {
-            return e.nombre == area;
+            return e.nombre === area;
         })
         setAreasD(compareData);
     }

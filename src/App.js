@@ -2,17 +2,16 @@
 import React from "react"
 import { SkeletonTheme } from 'react-loading-skeleton'
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
-// Local
 // Pages
 import AboutUs from "./pages/AboutUs/AboutUs"
 import Activities from "./pages/Activities/Activities"
 import ActivityDetail from "./pages/ActivityDetail/ActivityDetail"
-import Areas from "./pages/Areas/Areas"
 import AreaDetails from "./pages/Areas/AreaDetails"
-import InstallationDetails from "./pages/Areas/InstallationDetails"
+import Areas from "./pages/Areas/Areas"
 import Events from "./pages/Events/Events"
 import FinishedEvents from "./pages/FinishedEvents/FinishedEvents"
 import Home from "./pages/Home/Home"
+import InstallationDetails from "./pages/Areas/InstallationDetails"
 import MatchsNews from "./pages/MatchsNews/MatchsNews"
 import Results from "./pages/Results/Results"
 import Tournament from "./pages/Tournament/Tournament"
@@ -50,20 +49,23 @@ function App() {
             <Route path="/Noti-eventos">
               <FinishedEvents />
             </Route>
+            <Route path="/InstallationDetails/:instalacion">
+              <InstallationDetails />
+            </Route>
+             <Route path="/Eventos-finalizados">
+            <FinishedEvents />
+          </Route>
             <Route path="/Eventos">
               <Events />
             </Route>
-            <Route path="/Detalle-actividad">
+            <Route path="/Detalle-actividad/:id">
               <ActivityDetail />
             </Route>
-            <Route path="/Areas">
+            <Route exact path="/Areas">
               <Areas />
             </Route>
             <Route path="/AreaDetails/:area">
               <AreaDetails />
-            </Route>
-            <Route path="/InstallationDetails/:instalacion">
-              <InstallationDetails />
             </Route>
             <Route path="/Actividades">
               <Activities />

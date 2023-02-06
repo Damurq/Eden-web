@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import Glider from 'react-glider';
-//datos
-import { CarouselData2 } from '../../data/CarouselData2';
 //Estilos y diseño
 import './GalleryAreaItem.css';
 import './Resources.css';
+import { Link } from 'react-router-dom';
 
 
 
@@ -40,11 +39,9 @@ const GalleryAreaItem = (props) => {
                     <p className='text-basic'>
                         {props.text}
                     </p>
-                    <a href={`/AreaDetails/${props.title}`} className=''>
-                      <button className='btn-outline'
-                          >Ver más
-                      </button>
-                    </a>
+                    <Link to={`/AreaDetails/${props.title}`} className='btn-outline'>
+                        Ver más
+                    </Link>
                 </div>
             </div>
 
