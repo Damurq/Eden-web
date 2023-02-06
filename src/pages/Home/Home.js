@@ -1,4 +1,4 @@
-import React, { useEffect , useState } from "react"
+import React from "react"
 // Components
 import CarruselDiscover from "../../components/CarruselDiscover/CarruselDiscover"
 import { GalleryArea } from "../../components/Areas/GalleryArea/GalleryArea"
@@ -17,9 +17,9 @@ const Home = () => {
             <Presentation data={data.components.Presentation} />
             <Tournament />
             <CarruselDiscover component="Home-Events" />
-            <GalleryArea component="GalleryArea-home"/>
-            <CarruselActivities />
-            <CardContact data={data.components.Contact} />
+            <GalleryArea component="GalleryArea-home" />
+            <CarruselActivities component="Home-Activity" />
+            <CardContact />
         </div>
     )
 }

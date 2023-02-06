@@ -1,4 +1,9 @@
 /* Título principal */
+.event-section{
+    margin: 0;
+    padding: 0 3rem;
+}
+
 .Title-carousel{
     display: flex;
     justify-content: center;
