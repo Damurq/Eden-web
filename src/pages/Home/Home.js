@@ -18,8 +18,8 @@ const Home = () => {
             <Tournament />
             <CarruselDiscover component="Home-Events" />
             <GalleryArea component="GalleryArea-home" />
-            <CarruselActivities />
-            <CardContact data={data.components.Contact} />
+            <CarruselActivities component="Home-Activity" />
+            <CardContact />
         </div>
     )
 }
