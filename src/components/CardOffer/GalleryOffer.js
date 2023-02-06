@@ -6,11 +6,17 @@ import './GalleryOffer.css';
 const GallerysOffer= () => {
   
    const [serviceG, setService] = React.useState([])
+   const [serviceCategory, setServiceCategory] = React.useState([])
 
     React.useEffect( () =>{
         infoService() 
       
     }, [])
+
+    const newfunction = (dato) =>{
+        console.log(dato);
+        
+    };
    
     const infoService = async()=>{
         const data = await fetch('https://medinajosedev.com/api/feed/eventosactividades/tipo/1')   
@@ -18,7 +24,9 @@ const GallerysOffer= () => {
 
         setService(actividades["data"])
         //console.log(maximo)
-    }
+        
+    };
+    
     
     
     return ( 
@@ -27,7 +35,7 @@ const GallerysOffer= () => {
            
             <div className='combo'>
                 
-            <ComboServices/>
+            <ComboServices newfunction ={newfunction}/>
             </div>
             <div className='first__row-service'>
               
