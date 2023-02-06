@@ -9,6 +9,9 @@ const PREVIEW_TORUNAMENT_2 = "seccioninformacion/preview_tournament_2"
 const CONTACTO ="club/contactos"
 const PRESENTATION_1 = "seccioninformacion/presentation_1"
 const PRESENTATION_2 = "seccioninformacion/presentation_2"
+const OFRECEMOS ="feed/eventosactividades/tipo/"
+const CATEGORIA_EVENTOS ="feed/tiposdeevento"
+const FEED = "feed"
 
 module.exports = {
     AREAS,
@@ -21,5 +24,8 @@ module.exports = {
     PREVIEW_TORUNAMENT_2,
     CONTACTO,
     PRESENTATION_1,
-    PRESENTATION_2
+    PRESENTATION_2,
+    OFRECEMOS,
+    CATEGORIA_EVENTOS,
+    FEED,
 }
