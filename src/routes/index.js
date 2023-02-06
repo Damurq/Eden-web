@@ -1,4 +1,7 @@
-const AREAS="areas"
+const AREAS = "areas"
+const INSTALACIONES = "instalaciones"
+
 module.exports = {
-    AREAS
+    AREAS,
+    INSTALACIONES
 }
