@@ -82,7 +82,7 @@ const EventsCalendar = () => {
                         {currentEvents.map((event) => (
                             <div key={`${event.id}-event`} className={`event-element${event.id === activeEvent
                                 ? " active-event"
-                                : ""}`} 
+                                : ""}`}
                                 onClick={() => { setActiveEvent(event.id) }}
                             >
                                 <p className="">{event.name}</p>
@@ -93,7 +93,7 @@ const EventsCalendar = () => {
                 </div>
             </div>
             <div className="">
-                <EventDetail id={activeEvent}/>
+                {activeEvent && <EventDetail id={activeEvent} />}
             </div>
         </div>
     )

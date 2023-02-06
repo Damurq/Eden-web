@@ -114,7 +114,7 @@ const Navbar = ({ data }) => {
                             </li> )
                         })}
                         <li >
-                            <a href="https://www.google.com.mx/" className="button-login" target="_blank" rel="noreferrer" >
+                            <a href="https://medinajosedev.com/nova" className="button-login" target="_blank" rel="noreferrer" >
                                 Iniciar sesión
                             </a>
                         </li>
