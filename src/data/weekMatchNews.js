@@ -1,5 +1,5 @@
 export const weekMatchNews = {
-    domino: [
+    D: [
         {
             type: "end",
             info: {
@@ -28,7 +28,7 @@ export const weekMatchNews = {
         }
 
     ],
-    bolas: [
+    B: [
         {
             type: "end",
             info: {
