@@ -1,6 +1,6 @@
 import React from 'react'
 import { AiOutlineSend } from 'react-icons/ai'
-import { FaLinkedinIn, FaTiktok, FaTumblr } from 'react-icons/fa'
+import { FaLinkedinIn, FaTiktok, FaTumblr, FaFax } from 'react-icons/fa'
 import { MdOutlineCollections } from 'react-icons/md'
 import { HiOutlineMail, HiOutlineLocationMarker } from 'react-icons/hi'
 import { MdOutlineWeb } from 'react-icons/md'
@@ -56,9 +56,13 @@ const IconsComponent = ({ icon, className = '' }) => {
             case 'tumblr':
                 element = <FaTumblr className={className} />
                 break;
-            case 'phone':
+            case 'telefono':
                 element = <BsTelephone className={className} />
                 break;
+            case 'fax':
+                element = <FaFax className={className} />
+                break;
+
             case 'location':
                 element = <HiOutlineLocationMarker className={className} />
                 break;

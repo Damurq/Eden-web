@@ -19,7 +19,7 @@ const Home = () => {
             <CarruselDiscover component="Home-Events" />
             <GalleryArea component="GalleryArea-home" />
             <CarruselActivities component="Home-Activity" />
-            <CardContact data={data.components.Contact} />
+            <CardContact />
         </div>
     )
 }
