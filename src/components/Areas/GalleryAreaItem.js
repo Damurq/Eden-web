@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import Glider from 'react-glider';
-//datos
-import { CarouselData2 } from '../../data/CarouselData2';
 //Estilos y diseño
 import './GalleryAreaItem.css';
 import './Resources.css';

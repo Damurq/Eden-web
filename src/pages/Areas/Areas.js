@@ -1,12 +1,11 @@
 import React from 'react'
 // Components
-
-import {GalleryArea} from "../../components/Areas/GalleryArea"
+import { GalleryArea } from "../../components/Areas/GalleryArea/GalleryArea"
 
 const Areas = () => {
   return (
     <div className="Content">
-        <GalleryArea component="GalleryArea"/>
+      <GalleryArea component="GalleryArea" />
     </div>
   )
 }

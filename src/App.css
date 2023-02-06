@@ -24,10 +24,6 @@ body {
   margin-right: 1.5rem;
 }
 
-.Content {
-  background: linear-gradient(180deg, #132D46 5.21%, #016F6C 100%);
-}
-
 .grid {
   display: grid;
   gap: 1.5rem;
@@ -35,6 +31,9 @@ body {
 
 .Content {
   width: 100%;
+  background: linear-gradient(180deg, #132D46 5.21%, #016F6C 100%);
+  min-height: 30vh;
+  min-width: 100%;
 }
 
 /* Themes */
