@@ -3,6 +3,7 @@ import Slider from "react-slick";
 import './CarruselDiscover.css'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import SeeMore from '../SeeMore/SeeMore';
 
 import { CarouselData } from '../../data/CarouselData';
 
@@ -63,8 +64,12 @@ const CarruselDiscover = ({component="undefined"}) => {
               ))}
             </Slider>
           </div>
-
+        
         </section>
+
+        <div className="EventCommentary">
+          <SeeMore to={"/Eventos"}/>
+        </div>
 
     </>
     

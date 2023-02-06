@@ -9,12 +9,15 @@
 }
 .Title-carousel h2{
     margin: 0px;
+    font-size: larger;
 }
 .discover__container {
     display: flex;
     justify-content: center;
 }
-
+.EventCommentary{
+    padding-left: 3rem;
+}
 
 
 /* Contenedor principal */
