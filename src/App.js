@@ -10,6 +10,7 @@ import AreaDetails from "./pages/Areas/AreaDetails"
 import Areas from "./pages/Areas/Areas"
 import Events from "./pages/Events/Events"
 import FinishedEvents from "./pages/FinishedEvents/FinishedEvents"
+import FinishedEventDetail from "./pages/FinishedEventDetail/FinishedEventDetail"
 import Home from "./pages/Home/Home"
 import InstallationDetails from "./pages/Areas/InstallationDetails"
 import MatchsNews from "./pages/MatchsNews/MatchsNews"
@@ -57,6 +58,9 @@ function App() {
           </Route>
             <Route path="/Eventos">
               <Events />
+            </Route>
+            <Route path="/Detalle-evento/:id">
+              <FinishedEventDetail />
             </Route>
             <Route path="/Detalle-actividad/:id">
               <ActivityDetail />
