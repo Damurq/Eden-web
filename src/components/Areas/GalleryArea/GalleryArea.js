@@ -55,6 +55,7 @@ export const GalleryArea = ({ component = "undefined" }) => {
               text={item.descripcion}
               installation={item.instalaciones}
               key={`${component}-${index}`}
+              conditions={component}
               component={'GalleryAreaItem'}
             />
 

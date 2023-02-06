@@ -26,7 +26,7 @@ const GalleryAreaItem = (props) => {
                   alt={props.title}
                   src={props.src}
                 />
-            </a>
+          </a>
             
             {/* Info */}
             <div className='us-wrap-Info'>
@@ -44,58 +44,63 @@ const GalleryAreaItem = (props) => {
                     </Link>
                 </div>
             </div>
-
-            
-
         </div>
 
-        {/* ----------- Instalaciones Disponibles ----------------*/}
-        <div className='Installation__main__container' >
-          <div className='Installation__cont'>
+        {
+          props.conditions== "GalleryArea" ?(
+            <>
+            {/* ----------- Instalaciones Disponibles ----------------*/}
+            <div className='Installation__main__container' >
+              <div className='Installation__cont'>
 
-             {/*  Titulo de Instalaciones  */}
-            <div className="Title__carousel__start">
-                <h2>Instalaciones</h2>
-            </div>
+                {/*  Titulo de Instalaciones  */}
+                <div className="Title__carousel__start">
+                    <h2>Instalaciones</h2>
+                </div>
 
-          {/*  Lista  de Instalaciones  */}
-          <div className='Installation__List'>
-            <div className='Installation__container'>
-            <Glider
-                        draggable
-                        hasDots
-                        scrollLock
-                        slidesToShow={1}
-                        slidesToScroll={1}
-                        responsive={[
-                            {
-                            breakpoint: 960,
-                            settings: {
-                            slidesToShow: 3,
-                          },
-                        },
-                      ]}
-                    >  
-                    {props.installation.map((item, index) => (
-                    <div key={`${props.component}-${index}`} className='Installation__Item'>
-                      <a className='Installation__Item__Link' href={`/InstallationDetails/${item.nombre}`}>
-                            <img 
-                            className='Installation__Item__img'
-                            alt={item.nombre}
-                            src={item.imagen_principal} />
-                        <div className='cards__item__info-two'>
-                          <h5 className='cards__item__text-two'>{item.nombre}</h5>
+              {/*  Lista  de Instalaciones  */}
+              <div className='Installation__List'>
+                <div className='Installation__container'>
+                <Glider
+                            draggable
+                            hasDots
+                            scrollLock
+                            slidesToShow={1}
+                            slidesToScroll={1}
+                            responsive={[
+                                {
+                                breakpoint: 960,
+                                settings: {
+                                slidesToShow: 3,
+                              },
+                            },
+                          ]}
+                        >  
+                        {props.installation.map((item, index) => (
+                        <div key={`${props.component}-${index}`} className='Installation__Item'>
+                          <a className='Installation__Item__Link' href={`/InstallationDetails/${item.nombre}`}>
+                                <img 
+                                className='Installation__Item__img'
+                                alt={item.nombre}
+                                src={item.imagen_principal} />
+                            <div className='cards__item__info-two'>
+                              <h5 className='cards__item__text-two'>{item.nombre}</h5>
+                            </div>
+                          </a>
                         </div>
-                      </a>
-                    </div>
-              ))}
+                  ))}
 
-              </Glider>
-            </div>         
-          </div>
+                  </Glider>
+                </div>         
+              </div>
 
-          </div>
-        </div>
+              </div>
+            </div>
+            </>
+          ):null
+        }
+
+        
 
 
       
