@@ -64,7 +64,7 @@ function App() {
             <Route exact path="/Areas">
               <Areas />
             </Route>
-            <Route path="/AreaDetails/:area">
+            <Route path="/AreaDetails/:id">
               <AreaDetails />
             </Route>
             <Route path="/Actividades">
