@@ -3,7 +3,7 @@ import Gallery from '../../components/ActivityDetail/ActivityGallery';
 
 const Activities = () => {
   return (
-    <div className="Content" >
+    <div className="Content" style={{height:"1200px"}}>
         <Gallery/>
     </div>
   )

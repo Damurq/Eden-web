@@ -24,7 +24,7 @@ const ActivitiesCalendar= () => {
                             <div className='detail-activity'>
                                 <p className="main-title">{activity.name}</p>
                                 <hr></hr>
-                                <p className='detail'>Todos los {activity.day} a las {activity.hour}</p>
+                                <p className='detail-act'>Todos los {activity.day} a las {activity.hour}</p>
                                 <p className="location">Lugar: {activity.location}</p>
 
                                 <div className='SeeMore-btn'>
