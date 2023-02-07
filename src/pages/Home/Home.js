@@ -14,7 +14,7 @@ const Home = () => {
     return (
         <div className="Content">
             <InitialCard />
-            <Presentation data={data.components.Presentation} />
+            <Presentation />
             <Tournament />
             <CarruselDiscover component="Home-Events" />
             <GalleryArea component="GalleryArea-home" />
