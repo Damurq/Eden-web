@@ -34,6 +34,7 @@
   -moz-transform: scale(1.2);
   -o-transform: scale(1.2);
   z-index: 5;
+  background-color: #3b5998;
 }
 
 /*Colores de los iconos al hacer hover*/
