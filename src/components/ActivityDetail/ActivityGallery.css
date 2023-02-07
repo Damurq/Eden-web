@@ -27,6 +27,9 @@
     margin-left: 5%;
 }
 
+.img_gallery{
+    width: 10%;
+}
 .section-commentary{
     display: flex;
     max-height: 500;
@@ -35,6 +38,7 @@
 .Description{
     margin-top: 2rem;
 }
+
 .Description h2{
     text-align: center;
 }

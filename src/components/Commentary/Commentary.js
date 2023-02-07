@@ -18,29 +18,38 @@ const CommentsActivity = ({id})  => {
       getEvento();
     }, [])
 
-    console.log(evento)
+    console.log(evento);
 
     const [activeComments] = useState(null)
     return (
         
         <div className='container'>
             <div className="comments-container"></div>
-                <div className="comments-list">
-                    {data.map(coment => (
-                        <div key={`${coment.id}-activity`} className={`comments-element${coment.id === activeComments
-                            ? "active-activity"
-                            : ""}`}
-                        > 
-                            <div className='detail-comment'>
-                                <p className="autor">{coment.author_name}, {coment.author_age} años </p>
-                                <hr></hr>
-                                <p className="comment">{coment.comment}</p>
-                                <p className="date">{coment.date} a las {coment.hour}</p>
+               <div className="comments-list">
+                    {evento?.comentarios?.length > 0 ? (evento?.calendarios.map(comment => (
+
+                    <div>
+                        {comment.map(comentario => (
+
+                            <div key={`${comentario.id}-activity`} className={`comments-element${comentario.id === activeComments
+                                ? "active-activity"
+                                : ""}`}
+                            > 
+                                <div className='detail-comment'>
+                                    <p className="autor">{comentario.nombre}, {comentario.edad} años </p>
+                                    <hr></hr>
+                                    <p className="comment">{comentario.commentario}</p>
+                                    <p className="date">{comentario.nombre} a las {comentario.edad}</p>
+                                </div>
+                                
                             </div>
                             
-                        </div>
-                    ))} 
-                </div>
+                        ))}
+                    </div>
+
+                    )))
+                    : evento?.comentarios ? <h2 className='Sin_comentarios'>No hay comentarios...</h2> : null}
+                </div>     
             </div> 
     )
 }

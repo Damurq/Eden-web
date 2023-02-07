@@ -51,21 +51,23 @@ const Gallery = () => {
                                 </div>
                             )}
                         </Carousel>)))
-                        : evento?.imagen_principal ? <img src={evento?.imagen_principal} alt={evento?.nombre} /> : null}
+                        : evento?.imagen_principal ? <img src={evento?.imagen_principal} alt={evento?.nombre} style={{width:'80%', marginLeft:'10%'}}/> : null}
                 </div>
                 <div className="Description">
                     <h2>{evento.descripcion}</h2>
                 </div>
-                <div className="section-commentary">
+                
+               { /*<div className="section-commentary">
                     <div className='container-commentary'>
                         <h2>Comentarios:</h2>
-                        <CommentsActivity id={evento.id} />
+                        <CommentsActivity id={evento.id}/>
                     </div>
 
                     <div className="Comment">
                         <Comment />
                     </div>
-                </div>
+                </div>*/}
+                
             </div>)}
         </div>
 

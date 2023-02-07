@@ -35,13 +35,13 @@ const ActivitiesCalendar = () => {
                                 ? "active-activity"
                                 : ""}`}
                             >
-                                <img className='img-activity' src={activity.imagen_principal} alt="activity" />
-
+                                <div className='img_calendar'>
+                                    <img className='img-activity' src={activity.imagen_principal} alt="activity" />
+                                </div>
                                 <div className='detail-activity'>
                                     <p className="main-title">{activity.nombre}</p>
                                     <hr></hr>
-                                    <p className='detail-act'>{activity.descripcion}</p>
-                                    <p className='detail-act'>{start_date.toLocaleDateString()}</p>
+                                    <p className='detail-act'>Fecha: {start_date.toLocaleDateString()}</p>
                                     <p className="location">Lugar: {activity.instalacion.nombre}</p>
 
                                     <div className='SeeMore-btn'>
