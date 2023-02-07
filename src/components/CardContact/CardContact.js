@@ -18,7 +18,7 @@ const CardContact = () => {
 
     useEffect(() => {
         getInfo();
-    },)
+    },[])
 
     return (
         <div id="Contacto" className="Contact contact section" >

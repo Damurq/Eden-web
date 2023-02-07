@@ -1,5 +1,5 @@
 {
-    "domino": {
+    "D": {
         "title": "Dominó",
         "Calendar": {
             "title": "Calendario de torneos de dominó",
@@ -90,7 +90,7 @@
             }
         }
     },
-    "bolas": {
+    "B": {
         "title": "Bolas criollas",
         "Calendar": {
             "title": "Calendario de torneos de bolas criollas",
