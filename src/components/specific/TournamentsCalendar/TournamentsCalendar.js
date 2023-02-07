@@ -10,6 +10,9 @@ import { TOURNAMET, TOURNAMET_DATE } from '../../../routes/index'
 // Style
 import './TournamentsCalendar.css'
 
+import PopUpCard from '../TournamentDetail/PopUpCard/PopUpCard'
+import TournamentDetail from '../TournamentDetail/TournamentDetail'
+
 const getTournaments = async (discipline, setState, start = null, end = null) => {
     let url = (start && end)
         ? `${process.env.REACT_APP_API_URL}${TOURNAMET_DATE}/${start}/${end}/${discipline}`
@@ -97,7 +100,7 @@ const TournamentsCalendar = ({ discipline }) => {
                                 <div key={`${tournament.id}-tournament`} className={`tournament-element${tournament.id === activetournament
                                     ? " active-tournament"
                                     : ""}`}
-                                    onClick={() => { setActivetournament(tournament.id) }}
+                                    onClick={() => { setActivetournament(tournament) }}
                                 >
                                     <p>{tournament.nombre}</p>
                                     <p>{start_date.toLocaleDateString()}</p>
@@ -107,9 +110,10 @@ const TournamentsCalendar = ({ discipline }) => {
                     </div>
                 </div>
             </div>
-            {activetournament && <div>
+            {(activetournament && activetournament?.id) && <TournamentDetail tounamentData={activetournament} />}
+            {/* {activetournament && <div>
                 <TournamentSection data={data[discipline].Tornaments[activetournament]} />
-            </div>}
+            </div>} */}
         </div>
     )
 }

@@ -1,10 +1,11 @@
 import React from 'react'
 import { AiOutlineSend } from 'react-icons/ai'
 import { FaLinkedinIn, FaTiktok, FaTumblr, FaFax } from 'react-icons/fa'
-import { MdOutlineCollections } from 'react-icons/md'
+import { MdOutlineCollections, MdOutlineBurstMode } from 'react-icons/md'
 import { HiOutlineMail, HiOutlineLocationMarker } from 'react-icons/hi'
 import { MdOutlineWeb } from 'react-icons/md'
 import { SiAltiumdesigner } from 'react-icons/si'
+import { VscFileSubmodule } from 'react-icons/vsc'
 import {
     BsTelephone,
     BsInstagram,
@@ -66,6 +67,13 @@ const IconsComponent = ({ icon, className = '' }) => {
             case 'location':
                 element = <HiOutlineLocationMarker className={className} />
                 break;
+            case 'phase':
+                element = <VscFileSubmodule className={className} />
+                break;
+            case 'mode':
+                element = <MdOutlineBurstMode className={className} />
+                break;
+
             case 'email':
                 element = <HiOutlineMail className={className} />
                 break;
