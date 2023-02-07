@@ -12,7 +12,8 @@
     justify-content: space-between;
     flex-direction: column;
     flex-wrap: wrap;
-    
+    text-align: center;
+   
 }
 
  /*-----FILA 1------*/
@@ -35,7 +36,7 @@
     justify-content: space-around;
     align-items: center;
     flex-direction: row;
-    background: #1B1D29;
+    background:  #016f6c;
     border-radius: 25px;
     padding: 1rem 1.5rem;
    
