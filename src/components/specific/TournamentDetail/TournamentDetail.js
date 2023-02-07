@@ -68,8 +68,39 @@ const TournamentDetail = ({ tounamentData }) => {
               </div>
             </div>
           </PopUpCardActive>}
+          <div className="table-container">
+            <table className='game-table'>
+              <thead>
+                <tr>
+                  <th>
+                    Logo
+                  </th>
+                  <th>
+                    Nombre
+                  </th>
+                  <th>
+                    Abreviatura
+                  </th>
+                  <th>
+                    Abreviatura
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                {(fase?.equipo?.length) && fase?.equipo?.map((group, index) => {
+                  return (<tr key={`${index}-group-${group?.nombre}`}>
+                    <td><img className='logo-equipo' src={group?.logo} alt={group?.nombre} /></td>
+                    <td>{group?.nombre}</td>
+                    <td>{group?.abreviatura}</td>
+                    <td>{group?.jugadores?.length}</td>
+                  </tr>)
+                }
+                )}
+              </tbody>
+            </table>
+          </div>
         </div>)
-        ): null}
+        ) : null}
 
       </div>
     </div>

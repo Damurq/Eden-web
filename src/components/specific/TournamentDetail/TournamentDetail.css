@@ -23,4 +23,30 @@
     flex-direction: row;
     gap: 2rem;
     justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.logo-equipo{
+    width: 50px;
+}
+
+.table-container{
+    min-width: 80vw;
+    margin: 2rem auto;
+    overflow-x: auto;
+}
+
+.game-table{
+    margin: 0 auto;
+    border: 1px solid #ffffff;
+}
+
+.table-container th{
+    background-color: #ffffff45;
+    padding: .75rem;
+}
+
+.table-container td{
+    background-color: #ffffff15;
+    padding: .75rem;
 }
