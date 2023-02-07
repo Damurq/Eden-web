@@ -22,6 +22,8 @@ const ActivitiesCalendar = () => {
         getActividades();
     }, [])
 
+    console.log(actividades)
+
     return (
         <div className='container'>
             <div className="activities-container">

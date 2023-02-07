@@ -12,6 +12,7 @@ const PRESENTATION_2 = "seccioninformacion/presentation_2"
 const OFRECEMOS = "feed/eventosactividades/tipo/"
 const CATEGORIA_EVENTOS = "feed/tiposdeevento"
 const FEED = "feed"
+const EVENTO = "eventos/"
 const TOURNAMET = "feed/torneos/disciplina/"
 const TOURNAMET_DATE = "torneos"
 const CLUB = "club/info"
@@ -36,6 +37,7 @@ module.exports = {
     FEED,
     TOURNAMET,
     TOURNAMET_DATE,
+    EVENTO,
     CLUB,
     CLUB_FILOSOFIA,
     CLUB_MISION_EXTRA,
