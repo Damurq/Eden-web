@@ -18,6 +18,8 @@ import Results from "./pages/Results/Results"
 import Tournament from "./pages/Tournament/Tournament"
 import WhatWeOffer from "./pages/WhatWeOffer/WhatWeOffer"
 import EventDetail from "./components/EventDetail/EventDetail"
+
+import CommentsActivity from "./components/Commentary/Commentary"
 // Components
 import Footer from "./components/common/menus/Footer/Footer"
 import Navbar from "./components/common/menus/Navbar/Navbar"
@@ -65,6 +67,9 @@ function App() {
             </Route>
             <Route path="/Detalle-actividad/:id">
               <ActivityDetail />
+            </Route>
+            <Route exact path="/comentary">
+              <CommentsActivity id={1} />
             </Route>
             <Route exact path="/Areas">
               <Areas />
