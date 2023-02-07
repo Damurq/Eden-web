@@ -10,6 +10,7 @@ const CONTACTO ="club/contactos"
 const OFRECEMOS ="feed/eventosactividades/tipo/"
 const CATEGORIA_EVENTOS ="feed/tiposdeevento"
 const FEED = "feed"
+const EVENTO_DETALLE = "eventos"
 
 module.exports = {
     AREAS,
@@ -23,5 +24,6 @@ module.exports = {
     CONTACTO,
     OFRECEMOS,
     CATEGORIA_EVENTOS,
-    FEED
+    FEED,
+    EVENTO_DETALLE
 }
