@@ -8,10 +8,13 @@ import moment from 'moment';
 
 import EventDetail from "../EventDetail/EventDetail"
 
-import { EVENTO } from '../../routes/index';
+import { EVENTO, EVENTOS } from '../../routes/index';
 
 const getEventos = async (setState, start = null, end = null) => {
-    const response = await fetch(`${process.env.REACT_APP_API_URL}${EVENTO}${start}/${end}`);
+    let url = (start && end)
+        ? `${process.env.REACT_APP_API_URL}${EVENTO}${start}/${end}`
+        : `${process.env.REACT_APP_API_URL}${EVENTOS}`
+    const response = await fetch(url);
     const res = await response.json();
     setState(res?.data ? res.data : res);
 }
@@ -25,16 +28,16 @@ const EventsCalendar = () => {
         start: "",
         end: "",
     });
-    
+
     useEffect(() => {
-        getEventos(setActiveEvent);
+        getEventos(setCurrentEvents);
         setValues({
             start: "",
             end: "",
         })
         setActiveEvent(null)
     }, [])
-    
+
     const handleDateChange = (event) => {
         const { name, value } = event.target;
         setValues({
@@ -93,30 +96,28 @@ const EventsCalendar = () => {
                     <div className="event-list">
                         {currentEvents.map((event) => {
                             let start_date = new Date(event.fecha_inicio)
-                            return(
-                            <div key={`${event.id}-event`} className={`event-element${event.id === activeEvent
-                                ? " active-event"
-                                : ""}`} 
-                                onClick={() => { setActiveEvent(event.id) }}
-                            >
-                                <p className="">{event.nombre}</p>
+                            return (
+                                <div key={`${event.id}-event`} className={`event-element${event.id === activeEvent
+                                    ? " active-event"
+                                    : ""}`}
+                                    onClick={() => { setActiveEvent(event.id) }}
+                                >
+                                    <p className="">{event.nombre}</p>
 
-                                <p className="">{start_date.toLocaleDateString()}</p>
-                            </div>
+                                    <p className="">{start_date.toLocaleDateString()}</p>
+                                </div>
                             )
-                            
-                       })}
+
+                        })}
 
                     </div>
                 </div>
             </div>
-
-            
-                <h2>{activeEvent}</h2>
             <div>
-                <EventDetail id={activeEvent} />
+            {(activeEvent !== null) && activeEvent}
+            {(activeEvent !== null) && <EventDetail id={activeEvent} />}
             </div>
-             
+
         </div>
     )
 }
