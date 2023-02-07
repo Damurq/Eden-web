@@ -40,19 +40,21 @@ function InitialCard() {
     let imgUrl = res.data?.imagen;
     setData(res.data);
     setSocialMedia(res_social)
-    setPortadaStyle({ ...portadaStyle, backgroundImage: 'url(' + imgUrl + ')' })
+    if (imgUrl){
+      setPortadaStyle({ ...portadaStyle, backgroundImage: 'url(' + imgUrl + ')' })
+    }
   }
 
   useEffect(() => {
     getInfo();
-  },)
+  },[])
 
   return (
     <div className='portada' style={portadaStyle}>
-      <div className='portada-text-container'>
+      {data ? <div className='portada-text-container'>
         <sub className='portada-text-container__title'>{data.titulo || <Skeleton />}</sub>
         <h1 className='portada-text-container__subtitle'>{data.descripcion || <Skeleton />}</h1>
-      </div>
+      </div> : <div className='portada-text-container'></div>}
       <div className='portada-social-media'>
         {socialMedia.length
           ? <>

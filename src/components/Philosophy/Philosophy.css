@@ -1,3 +1,53 @@
+.club{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 3rem 4rem 3rem;
+    gap: 2rem;
+}
+
+.club .club-img{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 1rem;
+}
+.club .club-img img{
+    
+    width: 50%;
+    border-radius: 15px;
+}
+
+.club .club-text{
+    width: 55%;
+    flex-direction: column;
+    margin-top: 30px;
+    vertical-align: middle;
+    max-height: 400px;
+}
+
+.club-text h2{
+    text-align: center;
+    font-size: xx-large;
+    padding-bottom: 0.7rem;
+    font-weight: bold;
+}
+
+.club-text p{
+    font-size:large;
+    text-align: center;
+}
+
+.club-text h3{
+    text-align: center;
+    margin-top: 0.5rem;
+
+}
+
+
 .traject{
     display: flex;
     width: 100%;
