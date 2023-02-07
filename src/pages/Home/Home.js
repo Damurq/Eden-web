@@ -7,7 +7,6 @@ import Presentation from "../../components/Presentation/Presentation.js"
 import Tournament from "../../components/Tournament/Tournament.js"
 import InitialCard from "../../components/InitialCard/InitialCard.js"
 import CarruselActivities from "../../components/CarruselActivities/CarruselActivities"
-import data from "../../data/Home.json"
 
 const Home = () => {
 
