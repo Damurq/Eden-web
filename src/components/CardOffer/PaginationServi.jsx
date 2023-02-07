@@ -24,7 +24,7 @@ const PaginationServi = ({ servicePerPage, totalService, currentPage, setCurrent
         <div className='conteiner-pag'> 
             <div className="pagination" >
                  
-                 <a  onClick={onPreviusPage}>Previo</a>
+                 <a className={`pagination-previus ${currentPage === 1 ? 'is-disabled' : ''}`}  onClick={onPreviusPage}>Previo</a>
                 
   
                             
@@ -40,7 +40,7 @@ const PaginationServi = ({ servicePerPage, totalService, currentPage, setCurrent
                                     )
                                 }
                             
-                <a  onClick={onNextPage} >Siguiente</a>      
+                <a  className={`pagination-next ${currentPage >= pageNumbers.length ? 'is-disabled' : ''}`}  onClick={onNextPage} >Siguiente</a>      
             </div>
             </div>
             )
