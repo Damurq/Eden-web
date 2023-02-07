@@ -1,41 +1,40 @@
 import React, { useState, useEffect } from 'react';
 import { FaSearch } from "react-icons/fa"
 // Components
-import { data } from "../../data/Events.js"
+import data from "../../data/Events.json"
 //
 import './EventsCalendar.css'
 import moment from 'moment';
 
 import EventDetail from "../EventDetail/EventDetail"
 
-import {EVENTOS} from '../../routes/index'
+import { EVENTO } from '../../routes/index';
+
+const getEventos = async (setState, start = null, end = null) => {
+    const response = await fetch(`${process.env.REACT_APP_API_URL}${EVENTO}${start}/${end}`);
+    const res = await response.json();
+    setState(res?.data ? res.data : res);
+}
 
 const EventsCalendar = () => {
 
-    const [eventos, setEventos] = useState([]);
-
-    const getEventos = async () => {
-        const response = await fetch(`${process.env.REACT_APP_API_URL}${EVENTOS}`);
-        const res = await response.json();
-        setEventos(res.data);
-    }
-
-    useEffect(() => {
-        getEventos();
-    }, [])
-
-
-    const today = new Date()
-    const [currentEvents, setCurrentEvents] = useState(data.filter((event) => {
-        let aux = new Date(event.date_start)
-        return aux.getMonth() === today.getMonth() && aux.getFullYear() === today.getFullYear()
-    }))
     const [activeEvent, setActiveEvent] = useState(null)
+    const [currentEvents, setCurrentEvents] = useState([]);
+
     const [values, setValues] = useState({
         start: "",
         end: "",
     });
-
+    
+    useEffect(() => {
+        getEventos(setActiveEvent);
+        setValues({
+            start: "",
+            end: "",
+        })
+        setActiveEvent(null)
+    }, [])
+    
     const handleDateChange = (event) => {
         const { name, value } = event.target;
         setValues({
@@ -49,10 +48,7 @@ const EventsCalendar = () => {
         const start = moment(values.start, "YYYY-MM-DD");
         const end = moment(values.end, "YYYY-MM-DD");
         if (values.start !== null && values.end !== null && start.isBefore(end)) {
-            setCurrentEvents(data.filter((item) => {
-                const date = moment(item.date_start, "YYYY-MM-DD");
-                return date.isSameOrAfter(values["start"]) && date.isSameOrBefore(values["end"]);
-            }))
+            getEventos(setCurrentEvents, values.start, values.end)
 
         } else {
             alert("Ingresa fechas válidas y asegura que la fecha inicial sea anterior a la final");
@@ -61,7 +57,7 @@ const EventsCalendar = () => {
 
     return (
         <div id="CalendarSection" className="CalendarSection section">
-            <h2 className="title">Calendario de eventos</h2>
+            <h2 className="title">{data.Calendar.title}</h2>
             <div className="calendar-header">
                 <div className="calendar-container">
                     <h2 className="">Fechas de eventos</h2>
@@ -95,22 +91,32 @@ const EventsCalendar = () => {
                 <div className="event-container">
                     <h2 className="">Lista de eventos</h2>
                     <div className="event-list">
-                        {currentEvents.map((event) => (
+                        {currentEvents.map((event) => {
+                            let start_date = new Date(event.fecha_inicio)
+                            return(
                             <div key={`${event.id}-event`} className={`event-element${event.id === activeEvent
                                 ? " active-event"
-                                : ""}`}
+                                : ""}`} 
                                 onClick={() => { setActiveEvent(event.id) }}
                             >
-                                <p className="">{event.name}</p>
-                                <p className="">{event.date_start}</p>
+                                <p className="">{event.nombre}</p>
+
+                                <p className="">{start_date.toLocaleDateString()}</p>
                             </div>
-                        ))}
+                            )
+                            
+                       })}
+
                     </div>
                 </div>
             </div>
-            <div className="">
-                {activeEvent && <EventDetail id={activeEvent} />}
+
+            
+                <h2>{activeEvent}</h2>
+            <div>
+                <EventDetail id={activeEvent} />
             </div>
+             
         </div>
     )
 }

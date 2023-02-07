@@ -1,25 +1,41 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Commentary.css'
 import data from '../../data/comentarios.json'
 
-const CommentsActivity = ()  => {
+import { EVENTO } from "../../routes/index";
+
+const CommentsActivity = ({id})  => {
+
+    const [evento, setEvento] = useState([]);
+
+    const getEvento = async () => {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}${EVENTO}${id}`);
+      const res = await response.json();
+      setEvento(res.data);
+    }
+  
+    useEffect(() => {
+      getEvento();
+    }, [])
+
+    console.log(evento)
+
     const [activeComments] = useState(null)
-    console.log(data)
     return (
         
         <div className='container'>
             <div className="comments-container"></div>
                 <div className="comments-list">
-                    {data.map(commentario => (
-                        <div key={`${commentario.id}-activity`} className={`comments-element${commentario.id === activeComments
+                    {data.map(coment => (
+                        <div key={`${coment.id}-activity`} className={`comments-element${coment.id === activeComments
                             ? "active-activity"
                             : ""}`}
                         > 
                             <div className='detail-comment'>
-                                <p className="autor">{commentario.author_name}, {commentario.author_age} años </p>
+                                <p className="autor">{coment.author_name}, {coment.author_age} años </p>
                                 <hr></hr>
-                                <p className="comment">{commentario.comment}</p>
-                                <p className="date">{commentario.date} a las {commentario.hour}</p>
+                                <p className="comment">{coment.comment}</p>
+                                <p className="date">{coment.date} a las {coment.hour}</p>
                             </div>
                             
                         </div>

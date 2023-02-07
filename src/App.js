@@ -17,6 +17,7 @@ import MatchsNews from "./pages/MatchsNews/MatchsNews"
 import Results from "./pages/Results/Results"
 import Tournament from "./pages/Tournament/Tournament"
 import WhatWeOffer from "./pages/WhatWeOffer/WhatWeOffer"
+import EventDetail from "./components/EventDetail/EventDetail"
 // Components
 import Footer from "./components/common/menus/Footer/Footer"
 import Navbar from "./components/common/menus/Navbar/Navbar"
@@ -54,8 +55,8 @@ function App() {
               <InstallationDetails />
             </Route>
              <Route path="/Eventos-finalizados">
-            <FinishedEvents />
-          </Route>
+              <FinishedEvents />
+            </Route>
             <Route path="/Eventos">
               <Events />
             </Route>
