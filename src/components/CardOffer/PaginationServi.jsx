@@ -26,8 +26,13 @@ const PaginationServi = ({ servicePerPage, totalService, currentPage, setCurrent
     return(
         <div className='conteiner-pag'> 
             <div className="pagination" >
+<<<<<<< HEAD
             <button className={`pagination-previus ${currentPage === 1 ? 'is-disabled' : ''}`} onClick={onPreviusPage}>Previo</button>
                 
+=======
+                 
+                 <a className={`pagination-previus ${currentPage === 1 ? 'is-disabled' : ''}`}  onClick={onPreviusPage}>Previo</a>
+>>>>>>> 20e9ecd8850b39df7249da15a2f24be702295f14
                 
   
                             
@@ -43,9 +48,14 @@ const PaginationServi = ({ servicePerPage, totalService, currentPage, setCurrent
 
                                     )
                                 }
+<<<<<<< HEAD
                             <button className={`pagination-next ${currentPage >= pageNumbers.length ? 'is-disabled' : ''}`} onClick={onNextPage} >Siguiente</button>
                 
     
+=======
+                            
+                <a  className={`pagination-next ${currentPage >= pageNumbers.length ? 'is-disabled' : ''}`}  onClick={onNextPage} >Siguiente</a>      
+>>>>>>> 20e9ecd8850b39df7249da15a2f24be702295f14
             </div>
             </div>
             )
