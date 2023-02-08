@@ -36,7 +36,7 @@ module.exports = {
     OFRECEMOS,
     CATEGORIA_EVENTOS,
     FEED,
-    EVENTO_DETALLE
+    EVENTO_DETALLE,
     TOURNAMET,
     TOURNAMET_DATE,
     EVENTO,

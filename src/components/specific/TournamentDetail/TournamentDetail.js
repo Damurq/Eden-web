@@ -82,7 +82,7 @@ const TournamentDetail = ({ tounamentData }) => {
                     Abreviatura
                   </th>
                   <th>
-                    Abreviatura
+                    Jugadores
                   </th>
                 </tr>
               </thead>
