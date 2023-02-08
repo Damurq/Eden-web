@@ -1,10 +1,6 @@
 .conteiner-pag {
-<<<<<<< HEAD
     
     font-family: "Poppins", sans-serif;
-=======
-    font-family:"Poppins", sans-serif;
->>>>>>> 20e9ecd8850b39df7249da15a2f24be702295f14
     display: flex;
     padding: 15px;
     margin: 15px;
@@ -20,12 +16,8 @@
     display: flex;
     position: relative;
     overflow: hidden;
-<<<<<<< HEAD
     margin: 0 auto;
 
-=======
-     margin: 0 auto;
->>>>>>> 20e9ecd8850b39df7249da15a2f24be702295f14
 }
 
 .pagination-previus{

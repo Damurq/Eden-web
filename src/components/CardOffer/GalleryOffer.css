@@ -81,7 +81,8 @@
 
 .card-service-2 img{
    
-    
+    max-width: 450px;
+    max-height: 300px;
     position: relative;
     display: block;
     width: 100%;
