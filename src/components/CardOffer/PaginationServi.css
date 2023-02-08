@@ -1,12 +1,14 @@
 .conteiner-pag {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    display: inline-block;
+    
+    font-family: "Poppins", sans-serif;
+    display: flex;
     padding: 15px;
     margin: 15px;
     text-align: center;
     cursor:pointer;
     align-items:  center;
     justify-content: center;
+    padding-bottom: 25px;
 }
 
 .pagination{
@@ -14,9 +16,26 @@
     display: flex;
     position: relative;
     overflow: hidden;
+    margin: 0 auto;
+
 }
 
+.pagination-previus{
+    background-color: #016f6c;
+    border: none;
+    cursor: pointer;
+}
 
+.pagination-next{
+    background-color: #016f6c;
+    border: none;
+    cursor: pointer;
+}
+.buttoninterno{
+    background-color: #016f6c;
+    border: none;
+    cursor: pointer;
+}
 
 .pagination a {
 width:  100px;
@@ -31,8 +50,25 @@ transition: .2s linear;
 
 }
 
+.pagination button {
+    width:  100px;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    font-weight: 700;
+    transition: .2s linear;
+        
+    
+    }
 .pagination a:hover {
     background-color: #1B1D29;
    color:#ffffff;
     }
+
+.pagination button:hover {
+    background-color: #1B1D29;
+    color:#ffffff;
+}
 

@@ -4,8 +4,8 @@ import GallerysOffer from '../../components/CardOffer/GalleryOffer';
 
 const WhatWeOffer = () => {
     return (
-        <div className="Content">
-             <h3 className="title-service">¿Qué Ofrecemos?</h3>
+        <div className="Content" style={{height:"auto"}}>
+             <h2 className="title" style={{paddingTop: "4rem", paddingLeft: "5.5rem", marginBottom: "2rem"}}>¿Qué Ofrecemos?</h2>
             <GallerysOffer/>
         </div>
     )

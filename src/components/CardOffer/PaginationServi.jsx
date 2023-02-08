@@ -14,33 +14,38 @@ const PaginationServi = ({ servicePerPage, totalService, currentPage, setCurrent
     }
     const onNextPage = ()=> {
         setCurrentPage(currentPage +1)
+        
     }
     const onSpecifiPage = (n)=> {
         setCurrentPage(n)
+        
     }
-
+  
+    
 
     return(
         <div className='conteiner-pag'> 
             <div className="pagination" >
-                 
-                 <a  onClick={onPreviusPage}>Previo</a>
+            <button className={`pagination-previus ${currentPage === 1 ? 'is-disabled' : ''}`} onClick={onPreviusPage}>Previo</button>
+                
                 
   
                             
                                 {
                                     pageNumbers.map(noPage => (
                                         <a key={noPage}>
-                                            <a className={`pagination-link ${noPage === currentPage ? 'is-current' : ''}`} onClick = { ()  => onSpecifiPage(noPage)}>
+                                            <button className='buttoninterno'
+                                            onClick = { ()  => onSpecifiPage(noPage)}>
                                             {noPage}
-                                            </a>
+                                            </button>
                                         </a>
                                     )
 
                                     )
                                 }
-                            
-                <a  onClick={onNextPage} >Siguiente</a>      
+                            <button className={`pagination-next ${currentPage >= pageNumbers.length ? 'is-disabled' : ''}`} onClick={onNextPage} >Siguiente</button>
+                
+    
             </div>
             </div>
             )

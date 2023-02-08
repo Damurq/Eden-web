@@ -28,20 +28,26 @@ const GallerysOffer = () => {
 
     return (
         <>
-        <div className='combo'>
+       
+        <div className='combo' >
                 <ComboServices select={setCategory} />
-            </div>
-        <div className='cards-service'>
+        </div>
+        
+        <div className='conteiner-service' >
+
+            
             <div className='first__row-service'>
                 {serviceG.map(item => (
+                    
                     <div className='card__one-service' key={item.id} >
+
                         <div className='card__two-service'>
                             <div className='card-service-2'>
                                 <img src={item.imagen_principal} alt={item.nombre} />
                             </div>
                             <div className='descripcion-service'>
                                 <p >{item.nombre}</p>
-                                <sub>Descripción: {item.descripcion}</sub>
+                                <sub>{item.descripcion}</sub>
                             </div>
                         </div>
                     </div>
@@ -49,7 +55,8 @@ const GallerysOffer = () => {
             </div>
             
         </div>
-       
+        
+
         <PaginationServi servicePerPage={servicePerPage} currentPage={currentPage} setCurrentPage={setCurrentPage} totalService ={totalService}/>
      
         </>
