@@ -2,15 +2,11 @@
 import React, { useState, useEffect } from 'react';
 import { FaSearch } from "react-icons/fa"
 import moment from 'moment';
-// Components
-import TournamentSection from '../TournamentSection/TournamentSection';
 // Data
 import data from "../../../data/Tournaments.json"
 import { TOURNAMET, TOURNAMET_DATE } from '../../../routes/index'
 // Style
 import './TournamentsCalendar.css'
-
-import PopUpCard from '../TournamentDetail/PopUpCard/PopUpCard'
 import TournamentDetail from '../TournamentDetail/TournamentDetail'
 
 const getTournaments = async (discipline, setState, start = null, end = null) => {

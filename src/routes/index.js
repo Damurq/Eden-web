@@ -20,6 +20,7 @@ const CLUB = "club/info"
 const CLUB_FILOSOFIA = "seccioninformacion/filosofia"
 const CLUB_MISION_EXTRA = "seccioninformacion/mision_extra"
 const CLUB_VISION_EXTRA = "seccioninformacion/vision_extra"
+const DIRECTIVOS = "directivos"
 
 module.exports = {
     AREAS,
@@ -44,4 +45,5 @@ module.exports = {
     CLUB_FILOSOFIA,
     CLUB_MISION_EXTRA,
     CLUB_VISION_EXTRA,
+    DIRECTIVOS
 }

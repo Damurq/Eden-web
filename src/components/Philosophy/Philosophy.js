@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Directivos from './Directivos/Directivos'
 // Data
 import {
     CLUB,
@@ -109,6 +110,7 @@ const Philosophy = () => {
                 <div>
                 </div>
             </div>}
+            <Directivos />
         </div>
     )
 }
