@@ -10,6 +10,7 @@ const Directivos = () => {
     const fetchData = async (url) => {
         const response = await fetch(url);
         const res = await response.json();
+        console.log(res);
         return res
     }
 
@@ -29,11 +30,13 @@ const Directivos = () => {
                 <h2 className='directivos-title'>Directivos</h2>
                 <div className="directivos-container">
                 {directivos?.map((direc) => {
-                    return (<PersonalCard
+                    return (direc?.usuario ?
+                    <PersonalCard
                         name={`${direc?.usuario?.nombres} ${direc?.usuario?.apellidos}`}
                         imgSrc={direc?.usuario?.foto}
                         cargo={direc?.usuario?.directivo?.descripcion}
-                    />)
+                    />
+                    :null)
                 })}
                 </div>
             </>
