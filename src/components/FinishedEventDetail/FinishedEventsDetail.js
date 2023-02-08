@@ -27,9 +27,6 @@ const Gallery = ({ component = "undefined" }) => {
         getFinishedEvent(id);
     }, [id])
 
-    /*console.log(finishedEvent);*/
-
-
     const filteredComments = finishedEvent.comentarios ? finishedEvent.comentarios.filter(comment => {
         const createdCommentDate = new Date(finishedEvent.comentarios.creado);
         const finishEventDate = new Date(finishedEvent.fecha_finalizacion);
@@ -72,7 +69,11 @@ const Gallery = ({ component = "undefined" }) => {
                         }
 
                     </div>
-
+                        <div className="">
+                            <p>
+                            {finishedEvent.descripcion || ""}
+                            </p>
+                        </div>
 
 
                     <div className="container__comentary__section">
