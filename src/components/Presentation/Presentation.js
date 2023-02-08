@@ -41,7 +41,7 @@ const Presentation = () => {
             data={data2}
             orientation={"right"}
           />
-          <SeeMore to="/Sobre-nosotros" />
+          <SeeMore to="/Quienes-somos" />
         </>}
     </div>
   )
