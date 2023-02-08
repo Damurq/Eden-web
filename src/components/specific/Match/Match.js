@@ -15,7 +15,6 @@ const Match = ({ teams, status, winner}) => {
                 </div>}
                     {`${teams[1]?.nombre} `}
             </h2>
-            {/* {`${teams[0]} VS ${teams[1]}`} */}
             <h3>
                 {`Ganador: ${winner}`}
             </h3>

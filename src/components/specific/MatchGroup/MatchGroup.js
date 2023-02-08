@@ -1,4 +1,6 @@
 import React from 'react'
+import moment from 'moment';
+
 import Match from '../Match/Match'
 import "./MatchGroup.css"
 
@@ -10,18 +12,22 @@ const MatchGroup = ({ tournament, data }) => {
                 {tournament}
             </h2>
             {data?.length && data?.map((match, index) => {
-                return (<div key={`${tournament}-${index}`}>
-                    <h2 className="matchs-container__date">
-                        {match.date}
-                    </h2>
-                    <div className="matchs-group">
-                        {match?.teams && <Match
-                            teams={match.teams}
-                            status={match.status}
-                            winner={match.winner} />
-                        }
-                    </div>
-                </div>)
+                const date = match?.date
+                    ? moment(match.date, "DD-MM-YYYY")
+                    : null;
+                    return (<div key={`${tournament}-${index}`}>
+                        <h2 className="matchs-container__date">
+                            {date ? date.format('DD-MM-YYYY') : null}
+                        </h2>
+                        <div className="matchs-group">
+                            {match?.teams && <Match
+                                teams={match?.teams}
+                                status={match?.status}
+                                winner={match?.winner}
+                            />
+                            }
+                        </div>
+                    </div>)
             })}
         </div>
     )

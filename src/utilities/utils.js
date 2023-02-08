@@ -22,6 +22,7 @@ const filterResult = (data) => {
                          { nombre: game?.equipo_b?.nombre, logo: game?.equipo_a?.logo  }],
                     status: "Finalizado",
                     winner: game?.equipo_ganador?.nombre,
+                    date: game?.equipo_ganador?.creado,
                 }
                 return obj_final
             })
