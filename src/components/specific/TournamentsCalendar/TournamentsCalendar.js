@@ -31,12 +31,13 @@ const TournamentsCalendar = ({ discipline }) => {
     });
 
     useEffect(() => {
-        getTournaments(discipline, setCurrentTournaments)
+        setActivetournament(null)
+        setActivetournament(null)
         setValues({
             start: "",
             end: "",
         })
-        setActivetournament(null)
+        getTournaments(discipline, setCurrentTournaments)
     }, [discipline])
 
     const handleDateChange = (event) => {
