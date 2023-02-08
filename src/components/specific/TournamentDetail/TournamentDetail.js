@@ -94,8 +94,7 @@ const TournamentDetail = ({ tounamentData }) => {
                     <td>{group?.abreviatura}</td>
                     <td>{group?.jugadores?.length}</td>
                   </tr>)
-                }
-                )}
+                })}
               </tbody>
             </table>
           </div>
