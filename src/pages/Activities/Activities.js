@@ -3,7 +3,7 @@ import ActivitiesCalendar from '../../components/ActivityCalendar/ActivityCalend
 
 const Activities = () => {
   return (
-    <div className="Content" style={{height:"750px"}}>
+    <div className="Content" style={{height:"850px"}}>
         <h2 className="title" style={{paddingTop: "4rem", paddingLeft: "5.5rem", marginBottom: "2rem"}}>Calendario de actividades</h2>
         <ActivitiesCalendar/>
     </div>
