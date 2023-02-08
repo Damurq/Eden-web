@@ -1,15 +1,20 @@
 /* Título principal */
 .Title-carousel{
-    display: flex;
+    align-content: center;
     justify-content: center;
+    padding-top: 1rem;
     margin-bottom: 20px;
     font-size: 2rem;
     font-weight: bolder;
 }
+.Title-carousel h3{
+    width: 40%;
+    text-align: center;
+}
 .text-detail{
+    width: 50%;
     font-size:xx-large;
     text-align: center;
-    margin-top: 1rem;
     margin-left: 1rem;
 }
 .Galery{
@@ -22,88 +27,27 @@
     margin-left: 5%;
 }
 
+.img_gallery{
+    width: 10%;
+}
 .section-commentary{
     display: flex;
     max-height: 500;
-    padding-top: 2rem;
+    margin-left: 2.5rem;
+}
+.Description{
+    margin-top: 2rem;
 }
 
-.container{
-    width: 50%;
-    margin-right: 5%;
-
+.Description h2{
+    text-align: center;
 }
-.Comment{
-    width: 45%;
-}
-
-
-
-
 .container-commentary{
     width: 50%;
-    margin-right: 5%;
     max-height: 250px;
-}
-.activities-container{
-    align-self: baseline;
-    align-self: baseline;
-    display: flex;
-    flex-direction: column;
-    margin-top: 0;
-}
-.comments-list{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    background-color: rgba(255, 255, 255, 0.10);
-    margin-top: 1rem;
-    padding: 1rem;
-    border-radius: 15px;
-    gap: 1rem;
-    max-height: 350px;
-    overflow-y: auto;
-}
-
-.comments-element{
-    display: flex;
-    flex-wrap: wrap;
-    background-color: rgba(255, 255, 255, 0.10);
-    justify-content: space-between;
-    padding: 1rem 1.5rem;
-    border-radius: 15px;
-    cursor:pointer;
-}
-
-.detail-comment{
-    width: 100%;
-    background-color: rgba(255, 255, 255, 0.39);
-    border-radius: 15px;
-}
-.detail-comment hr{
-    height: 1px;
-    color: black;
-    padding-left: 1rem;
-}
-.autor {
-    margin-top: 0;
-    padding-bottom: 1rem;
-    padding-top: 1rem;
-    font-size: x-large;
-    text-align: center;
-    font-weight: bold
-}
-
-.commentary{
-    margin-top: 1rem;
-    text-align: center;
-    font-size: large;
 
 }
 
-.date{
-    margin-top: 1rem;
-    margin-bottom: 0.5rem;
-    text-align: center;
-    padding-bottom: 1rem;
+.comment{
+    width: 50%;
 }

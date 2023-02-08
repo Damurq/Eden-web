@@ -1,5 +1,5 @@
 export const weekResults = {
-    domino: [
+    D: [
         {
             tournament: "El decisivo",
             data: [
@@ -46,7 +46,7 @@ export const weekResults = {
             ]
         }
     ],
-    bolas: [
+    B: [
         {
             tournament: "El clásico",
             data: [

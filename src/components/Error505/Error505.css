@@ -1,0 +1,26 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.Error505__container{
+
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background: linear-gradient(180deg, #132D46 60.94%, #016F6C 100%);
+    
+
+}
+
+.Error505__container__image{
+    width: 80%;
+
+}
+
+.Error505__container__image image{
+    width: 100%;
+
+}

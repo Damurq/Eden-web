@@ -4,13 +4,13 @@ import IconsComponent   from '../IconsComponent/IconsComponent'
 import './InformationCard.css'
 
 const InformationCard = ({data}) => {
-    const {label, icon, info} = data
+    const {tipo, contacto} = data
     return (
         <div className="contact__information">
-            <IconsComponent icon={icon} className={`uil contact__icon`}/>
+            <IconsComponent icon={tipo.toLowerCase()} className={`uil contact__icon`}/>
             <div>
-                <h3 className="contact__title">{label}</h3>
-                <span className="contact__subtitle">{info}</span>
+                <h3 className="contact__title">{tipo}</h3>
+                <span className="contact__subtitle">{contacto}</span>
             </div>
         </div>
     )

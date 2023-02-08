@@ -12,54 +12,77 @@
     justify-content: space-between;
     flex-direction: column;
     flex-wrap: wrap;
+    text-align: center;
+   
 }
 
  /*-----FILA 1------*/
 .first__row-service{
     display: flex;
-    width: 100%;
+    width: 80%;
     flex-wrap: wrap;
-  
+    position: relative;
     justify-content: space-evenly;
     margin-top: 1rem;
     margin-bottom: 2rem;
 }
+
+
 /*-----cajita de la fila 1------*/
 .card__one-service{
-    width: 25%;
+    width: 60%;
     height: 10%;
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-direction: row;
-    background: #1B1D29;
+    background:  #016f6c;
     border-radius: 25px;
-    padding: 1rem 1rem;
-    position: relative;
-    
-    
+    padding: 1rem 1.5rem;
+   
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
 }
 
+.card__two-service{
+    display: flex;
+   
+    
+}
+.card-service-2{
+    display: flex;
+    width: 100%;
+    border-right: 1px solid  rgb(255, 255, 255);
+   
+   
+}
 
 .card__one-service sub {
     color: #FFFFFF;
-    text-align: left;
+    text-align: center;
     padding-bottom: 0.7rem;
     display: flex;
 
 }
 /*tamaño de las imagenes*/
-.card__one-service img{
-    
-    width: 50%;
+
+.card-service-2 img{
+   
+    margin-top: 4px;
+    margin-bottom: 4px;
+    margin-left: 2px;
+    margin-right: 4px;
+    position: relative;
+    display: block;
+    width: 250px;
     height: 150px;
     border-radius: 15px;
-
+    
     
 }
 
-
 .descripcion-service{
+    
     padding: 20px;
     text-align: center;
     position: relative;
@@ -74,84 +97,18 @@
 
 
 
-/*-----cajita de la fila 2------*/
-.card__two-service {
-    width: 25%;
-    height: 10%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: row;
-    background: #1B1D29;
-    border-radius: 25px;
-    padding: 1rem 1rem;
-    position: relative;
-    
-    
-}
-
-
-.card__two-service sub {
-    color: #FFFFFF;
-    text-align: left;
-    padding-bottom: 0.7rem;
-
-}
-
-.card__two-service img{
-    width: 50%;
-    height: 150px;
-    border-radius: 15px;
-    
-    
-}
-
-
-/*-----cajita de la fila 3------*/
-.card__three-service {
-    width: 25%;
-    height: 10%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: row;
-    background: #1B1D29;
-    border-radius: 25px;
-    padding: 1rem 1rem;
-
-}
-
-
-.card__three-service sub {
-    color: #FFFFFF;
-    text-align: left;
-    padding-bottom: 0.7rem;
-
-}
-
-.card__three-service img {
-    width: 50%;
-    height: 150px;
-    border-radius: 15px;
-    
-}
-
-
- /*-----FILA 2------*/
-.second__row-service {
-    display: flex;
-    width: 100%;
-    flex-wrap: wrap;
-    justify-content: center;
-    /*margin-bottom: 1rem;*/
-    justify-content: space-evenly;
-    margin-bottom: 2rem;
- }
 
  .title-service{
+    position: relative;
     margin-top: 0;
     padding-top: 4rem;
     padding-left: 2.5rem;
     text-align: center;
+}
+
+.combo{
+
+    position: absolute;
+    right: 20px;
 }
 

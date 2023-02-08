@@ -38,8 +38,13 @@
     cursor:pointer;
 }
 
-.img-activity{
+.img_calendar{
     width: 40%;
+    display: flex;
+    align-self:center ;
+}
+.img-activity{
+    width: 100%;
     background-color: white;
     border-radius: 15px;
 }
@@ -65,7 +70,7 @@
 }
 
 
-.detail{
+.detail-act{
     font-size: large;
     text-align: center;
     margin-top: 0.5rem;
@@ -81,4 +86,27 @@
     width: 95%;
     margin-left: 0;
     margin-bottom: 0.5rem;
+}
+
+@media (max-width: 568px) {
+    .activity-element{
+        flex-direction: column;
+    }
+    .img-activity{
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+    .detail-activity{
+        width: 100%;
+    }
+    .activities-container{
+        width: 95%;
+    }
+}
+
+@media (max-width: 992px) {
+    .activities-list{
+        width: 90%;
+        margin-left: 5%;
+    }
 }

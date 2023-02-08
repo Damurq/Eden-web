@@ -43,12 +43,6 @@
                         "href": "/Torneos-resultados",
                         "type": "Link"
 
-                    },
-                    {
-                        "name": "Noti-Torneos",
-                        "href": "/Torneos-noticias",
-                        "type": "Link"
-
                     }
                 ]
             },
@@ -72,11 +66,6 @@
                         "type": "Link"
                     }
                 ]
-            },
-            {
-                "name": "Contáctanos",
-                "type": "a",
-                "href": "#Contacto"
             }
         ]
     },

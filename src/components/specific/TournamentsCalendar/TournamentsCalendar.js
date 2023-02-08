@@ -2,14 +2,23 @@
 import React, { useState, useEffect } from 'react';
 import { FaSearch } from "react-icons/fa"
 import moment from 'moment';
-// Components
-import TournamentSection from '../TournamentSection/TournamentSection';
 // Data
 import data from "../../../data/Tournaments.json"
+import { TOURNAMET, TOURNAMET_DATE } from '../../../routes/index'
 // Style
 import './TournamentsCalendar.css'
+import TournamentDetail from '../TournamentDetail/TournamentDetail'
 
-const TournamentsCalendar = ({discipline}) => {
+const getTournaments = async (discipline, setState, start = null, end = null) => {
+    let url = (start && end)
+        ? `${process.env.REACT_APP_API_URL}${TOURNAMET_DATE}/${start}/${end}/${discipline}`
+        : `${process.env.REACT_APP_API_URL}${TOURNAMET}${discipline}`
+    const response = await fetch(url);
+    const res = await response.json();
+    setState(res?.data ? res.data : res);
+}
+
+const TournamentsCalendar = ({ discipline }) => {
     const [currentTournaments, setCurrentTournaments] = useState([])
     const [activetournament, setActivetournament] = useState(null)
     const [values, setValues] = useState({
@@ -18,14 +27,15 @@ const TournamentsCalendar = ({discipline}) => {
     });
 
     useEffect(() => {
-        setCurrentTournaments([])
+        setActivetournament(null)
+        setActivetournament(null)
         setValues({
             start: "",
             end: "",
         })
-        setActivetournament(null)
+        getTournaments(discipline, setCurrentTournaments)
     }, [discipline])
-    
+
     const handleDateChange = (event) => {
         const { name, value } = event.target;
         setValues({
@@ -39,21 +49,18 @@ const TournamentsCalendar = ({discipline}) => {
         const start = moment(values.start, "YYYY-MM-DD");
         const end = moment(values.end, "YYYY-MM-DD");
         if (values.start !== null && values.end !== null && start.isBefore(end)) {
-            setCurrentTournaments(data[discipline].Calendar.tournaments.filter((item) => {
-                const date = moment(item.date, "YYYY-MM-DD");
-                return date.isSameOrAfter(values["start"]) && date.isSameOrBefore(values["end"]);
-            }))
+            getTournaments(discipline, setCurrentTournaments, values.start, values.end)
         } else {
             alert("Ingresa fechas válidas y asegura que la fecha inicial sea anterior a la final");
         }
     }
-    
+
     return (
         <div id="CalendarSection" className="CalendarSection section">
             <h2 className="title">{data[discipline].Calendar.title}</h2>
             <div className="calendar-header">
                 <div className="calendar-container">
-                    <h2 className="">Fechas de eventos</h2>
+                    <h2 className="">Fechas de torneos</h2>
                     <p>Introduzca el intervalo de fechas en el que desea buscar</p>
                     <div className="search-inputs">
                         <div className="input-box">
@@ -84,22 +91,26 @@ const TournamentsCalendar = ({discipline}) => {
                 <div className="tournament-container">
                     <h2>Lista de torneos</h2>
                     <div className="tournament-list">
-                    {currentTournaments.map((tournament) => (
-                        <div key={`${tournament.id}-tournament`} className={`tournament-element${tournament.id === activetournament
-                            ? " active-tournament"
-                            : ""}`}
-                        onClick={() => { setActivetournament(tournament.id) }}
-                        >
-                            <p>{tournament.title}</p>
-                            <p>{tournament.date}</p>
-                        </div>
-                    ))}
+                        {currentTournaments.map((tournament) => {
+                            let start_date = new Date(tournament.fecha_inicio)
+                            return (
+                                <div key={`${tournament.id}-tournament`} className={`tournament-element${tournament.id === activetournament
+                                    ? " active-tournament"
+                                    : ""}`}
+                                    onClick={() => { setActivetournament(tournament) }}
+                                >
+                                    <p>{tournament.nombre}</p>
+                                    <p>{start_date.toLocaleDateString()}</p>
+                                </div>
+                            )
+                        })}
                     </div>
                 </div>
             </div>
-            {activetournament && <div>
+            {(activetournament && activetournament?.id) && <TournamentDetail tounamentData={activetournament} />}
+            {/* {activetournament && <div>
                 <TournamentSection data={data[discipline].Tornaments[activetournament]} />
-            </div>}
+            </div>} */}
         </div>
     )
 }

@@ -13,3 +13,13 @@
     border-top: #48CBC5 1px solid;
     border-bottom: #48CBC5 1px solid;
 }
+
+.logo-equipo {
+    width: 50px;
+}
+.dfr{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    flex-wrap: wrap;
+}

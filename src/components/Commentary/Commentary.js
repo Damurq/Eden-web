@@ -1,30 +1,55 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Commentary.css'
 import data from '../../data/comentarios.json'
 
-const CommentsActivity = ()  => {
+import { EVENTO } from "../../routes/index";
+
+const CommentsActivity = ({id})  => {
+
+    const [evento, setEvento] = useState([]);
+
+    const getEvento = async () => {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}${EVENTO}${id}`);
+      const res = await response.json();
+      setEvento(res.data);
+    }
+  
+    useEffect(() => {
+      getEvento();
+    }, [])
+
+    console.log(evento);
+
     const [activeComments] = useState(null)
-    console.log(data)
     return (
         
         <div className='container'>
             <div className="comments-container"></div>
-                <div className="comments-list">
-                    {data.map(commentario => (
-                        <div key={`${commentario.id}-activity`} className={`comments-element${commentario.id === activeComments
-                            ? "active-activity"
-                            : ""}`}
-                        > 
-                            <div className='detail-comment'>
-                                <p className="autor">{commentario.author_name}, {commentario.author_age} años </p>
-                                <hr></hr>
-                                <p className="comment">{commentario.comment}</p>
-                                <p className="date">{commentario.date} a las {commentario.hour}</p>
+               <div className="comments-list">
+                    {evento?.comentarios?.length > 0 ? (evento?.calendarios.map(comment => (
+
+                    <div>
+                        {comment.map(comentario => (
+
+                            <div key={`${comentario.id}-activity`} className={`comments-element${comentario.id === activeComments
+                                ? "active-activity"
+                                : ""}`}
+                            > 
+                                <div className='detail-comment'>
+                                    <p className="autor">{comentario.nombre}, {comentario.edad} años </p>
+                                    <hr></hr>
+                                    <p className="comment">{comentario.commentario}</p>
+                                    <p className="date">{comentario.nombre} a las {comentario.edad}</p>
+                                </div>
+                                
                             </div>
                             
-                        </div>
-                    ))} 
-                </div>
+                        ))}
+                    </div>
+
+                    )))
+                    : evento?.comentarios ? <h2 className='Sin_comentarios'>No hay comentarios...</h2> : null}
+                </div>     
             </div> 
     )
 }

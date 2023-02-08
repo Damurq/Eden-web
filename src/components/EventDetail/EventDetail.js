@@ -1,56 +1,78 @@
+import React, { useState, useEffect } from 'react';
 import './EventDetail.css'
-import data from '../../data/Events.json'
+//import data from '../../data/Events.json'
 import Comment from '../Comment/Comment'
 import CommentsActivity from '../Commentary/Commentary'
 
+import { EVENTO } from '../../routes/index'
+
 const EventDetail = ({ id }) => {
-    const image = "EventDetail/ImageEvent.jpg"
-    console.log(id)
+    const [evento, setEvento] = useState(null);
+
+    const getEvento = async () => {
+        const response = await fetch(`${process.env.REACT_APP_API_URL}${EVENTO}${id}`);
+        const res = await response.json();
+        setEvento(res?.data ? res.data : res);
+    }
+
+    useEffect(() => {
+        getEvento();
+    }, [id])
+
     return (
         <div className="Container-section">
-            {data.Calendar.events.filter(event => event.id===id).map(filteredEvent=> (
-            <div className='Event-container'>
+            {(evento && evento?.nombre) && <div className='Event-container'>
 
-                <h2 className='title Text1_EventDetail'>{filteredEvent.title}</h2>
-                <h2 className='Text2_EventDetail'>{filteredEvent.date}</h2>
-                <p className='Text3_EventDetail'>{filteredEvent.description}
-                </p>
-                <div className='ImageEventDetail'>
-                    <img src={image} alt="juego" />
-                </div>
-                <div className='Frame27'>
-                    <h3 className='Text_EventDetail'>
-                        <p>
-                            Ubicación
-                        </p>
-                        <p>
-                            {filteredEvent.location}
-                        </p>
-                    </h3>
-                    <h3 className='Text_EventDetail'>
-                        <p>
-                            Hora
-                        </p>
-                        <p>
-                            {filteredEvent.hour}
-                        </p>
-                    </h3>
-
-                    <div className="section-commentary">
-                        <div className="container-commentary">
-                            <h2>Comentarios:</h2> 
-                            <CommentsActivity />
+                <div className="detail">
+                    <div className="Title-event">
+                        <div className='Name-event'>
+                            <h2>{evento.nombre}</h2>
                         </div>
-                        <div className="Comment">
-                            <Comment />
-                        </div>
+                        <hr></hr>
+                        <p className='Description-event'>{evento.descripcion}</p>
                     </div>
 
+                    <div className='ImageEventDetail'>
+                        <img src={evento.imagen_principal} alt="juego" />
+                    </div>
+
+
+                    <div className='Detail-event'>
+                        <div className='Text1_EventDetail'>
+                            <p>
+                                Fecha Inicio
+                            </p>
+                            <h2 >{evento.fecha_inicio}</h2>
+                        </div>
+
+                        <div className='Text2_EventDetail'>
+                            <p>
+                                Ubicación
+                            </p>
+                            <h2>{evento.name}</h2>
+                        </div>
+
+                        <div className='Text3_EventDetail'>
+                            <p>
+                                Hora
+                            </p>
+                            <h2>{evento.fecha_inicio}</h2>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            
-            ))}
-            
+
+                { evento?.comentarios?.length && (<div className="section-commentary">
+                    <div className="container-commentary">
+                        <h2>Comentarios:</h2>
+                        <CommentsActivity />
+                    </div>
+                    <div className="Comment">
+                        <Comment />
+                    </div>
+                </div>) }
+
+
+            </div>}
         </div>
     );
 }

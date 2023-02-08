@@ -117,6 +117,15 @@ header {
   color: #FFF;
   text-decoration: none;
   border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+}
+.button-login:hover{
+  padding: .75rem;
+  border: 2px solid #48CBC5;
+  background-color: #48CBC5;;
+  color: #FFF;
+  text-decoration: none;
+  border-radius: 8px;
 }
 
 /*media query*/

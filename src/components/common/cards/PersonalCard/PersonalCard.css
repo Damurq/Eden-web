@@ -1,0 +1,32 @@
+.card-personal {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    width: 30%;
+}
+
+.card-personal:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container-personal {
+    padding: 1rem 16px;
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+}
+
+.img-container-personal-photo{
+    width: 100%;
+}
+
+.img-container-personal-photo img{
+    width: 100%;
+}
+
+
+@media (max-width: 992px) {
+    .card-personal {
+        width: 80%;
+    }
+  }
+
