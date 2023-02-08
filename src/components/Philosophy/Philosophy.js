@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Directivos from './Directivos/Directivos'
+import LoadData from '../LoadData/LoadData'
 // Data
 import {
     CLUB,
@@ -44,7 +45,7 @@ const Philosophy = () => {
                 Sobre Nosotros
             </h2>
             {/* Información del club*/}
-            {(data && data?.nombre) && <div className="club">
+            {(data && data?.nombre) ? <div className="club">
                 <div className="club-text">
                     <div className='philosophy-hr'>
                         <hr></hr>
@@ -57,7 +58,7 @@ const Philosophy = () => {
                 <div className="club-img">
                     <img src={data.logo} alt="logo" />
                 </div>
-            </div>}
+            </div>: <LoadData />}
             {/* Filosofia*/}
             {(philosophy && philosophy?.descripcion) && <div className="traject">
                 <div className="traject-img">

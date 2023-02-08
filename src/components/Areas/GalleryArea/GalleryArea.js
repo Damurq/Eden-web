@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Glider from 'react-glider';
 // Componentes
 import GalleryAreaItem from "../GalleryAreaItem/GalleryAreaItem";
+import LoadData from '../../LoadData/LoadData'
 // Styles
 import 'glider-js/glider.min.css';
 import './GalleryArea.css';
@@ -43,7 +44,7 @@ export const GalleryArea = ({ component = "undefined" }) => {
             },
           ]}
         >
-          {areas && areas.map((item, index) => (
+          {areas?.length ? areas.map((item, index) => (
             <GalleryAreaItem
               id={item.id}
               src={item.imagen_principal}
@@ -54,7 +55,7 @@ export const GalleryArea = ({ component = "undefined" }) => {
               conditions={component}
               component={'GalleryAreaItem'}
             />
-          ))}
+          )):<LoadData />}
         </Glider>
       </div>
     </div>
