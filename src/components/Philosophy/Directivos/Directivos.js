@@ -10,7 +10,6 @@ const Directivos = () => {
     const fetchData = async (url) => {
         const response = await fetch(url);
         const res = await response.json();
-        console.log(res);
         return res
     }
 
