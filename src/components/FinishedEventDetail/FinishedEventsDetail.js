@@ -21,7 +21,6 @@ const Gallery = ({ component = "undefined" }) => {
         const getFinishedEvent = async (id) => {
             const response = await fetch(`${process.env.REACT_APP_API_URL}${EVENTO}${id}`);
             const res = await response.json();
-            console.log(res.data);
             setFinishedEvent(res.data);
         }
 
@@ -48,10 +47,7 @@ const Gallery = ({ component = "undefined" }) => {
                     </div>
 
                     <div className="Carousel-Gallery-event">
-
-
-
-                        {(finishedEvent?.galeria?.lenght) ? <Carousel className="Carousel-Gallery-event" autoPlay interval="5000" transitionTime="500" infiniteLoop style={{ with: '50%' }}>
+                        {(finishedEvent?.galeria?.length) ? <Carousel className="Carousel-Gallery-event" autoPlay interval="5000" transitionTime="500" infiniteLoop style={{ with: '50%' }}>
 
                             {finishedEvent?.galeria ? finishedEvent.galeria.map((gal) => {
 
@@ -69,9 +65,9 @@ const Gallery = ({ component = "undefined" }) => {
 
 
                         </Carousel>
-                            : (finishedEvent?.imagen_principal) ? <div className='Content-img'>
+                            : (finishedEvent?.imagen_principal) ? (<div className='Content-img'>
                                 <img src={finishedEvent?.imagen_principal} alt={finishedEvent?.nombre} />
-                            </div>
+                            </div>)
                                 : null
                         }
 
