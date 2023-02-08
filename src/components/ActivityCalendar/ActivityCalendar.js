@@ -79,13 +79,14 @@ const ActivitiesCalendar = () => {
                             </div>
                         )
                     })}
-                    {nextPages && <div className="">
-                        <button onClick={ loadMoreData }>
+                    {nextPages && <div className="Btn_pagination">
+                        <button className="button-79" role="button" onClick={ loadMoreData }>
                             Cargar más actividades
                         </button>
                     </div>}
                 </div>
             </div>
+            
         </div>
     )
 }

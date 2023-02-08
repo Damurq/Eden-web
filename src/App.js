@@ -19,6 +19,7 @@ import Tournament from "./pages/Tournament/Tournament"
 import WhatWeOffer from "./pages/WhatWeOffer/WhatWeOffer"
 import EventDetail from "./components/EventDetail/EventDetail"
 import Error404 from "./components/Error404/Error404"
+import LoadData from "./components/LoadData/LoadData"
 // Components
 import Footer from "./components/common/menus/Footer/Footer"
 import Navbar from "./components/common/menus/Navbar/Navbar"
@@ -54,9 +55,6 @@ function App() {
             </Route>
             <Route path="/InstallationDetails/:id">
               <InstallationDetails />
-            </Route>
-            <Route path="/Error">
-              <Error404 />
             </Route>
              <Route path="/Eventos-finalizados">
               <FinishedEvents />

@@ -7,7 +7,7 @@ const Error404 = () =>{
     return(
         <div className="Container_Error404">
             <div className="Error404">
-                <img className='../../assets/Error404/Error404.png' src='' alt="Error" />
+                <img className='' src={error} alt="Error" />
             </div>
         </div>
     )
