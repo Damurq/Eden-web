@@ -72,11 +72,6 @@
                         "type": "Link"
                     }
                 ]
-            },
-            {
-                "name": "Contáctanos",
-                "type": "a",
-                "href": "#Contacto"
             }
         ]
     },

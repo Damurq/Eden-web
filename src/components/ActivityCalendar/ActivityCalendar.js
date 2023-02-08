@@ -9,8 +9,8 @@ import { ACTIVIDADES } from '../../routes/index';
 const ActivitiesCalendar = () => {
 
     const [activeActivity] = useState(null)
-
     const [actividades, setActividades] = useState([]);
+    const [nextPages, setNextPages] = useState(null)
 
     const totalActividades = actividades.length
     console.log(totalActividades)
@@ -19,14 +19,25 @@ const ActivitiesCalendar = () => {
     const getActividades = async () => {
         const response = await fetch(`${process.env.REACT_APP_API_URL}${ACTIVIDADES}`);
         const res = await response.json();
-        setActividades(res.data);
+        setNextPages(res?.next_page_url)
+        setActividades(res?.data);
+    }
+
+    const loadMoreData = (e) => {
+        if (nextPages){
+            fetch(nextPages).then((response) => { 
+                response.json().then((res) => { 
+                    const datos = Object.values(res?.data)
+                    setNextPages(res?.next_page_url)
+                    setActividades([...actividades,...datos]);
+                 })
+             })
+        }
     }
 
     useEffect(() => {
         getActividades();
     }, [])
-
-    console.log(actividades)
 
     return (
         <div className='container'>
@@ -35,7 +46,7 @@ const ActivitiesCalendar = () => {
                     {actividades.map((activity) => {
                         let start_date = new Date(activity.fecha_inicio)
                         return (
-                            <div key={`${activity.id}-activity`} className={`activity-element${activity.id === activeActivity
+                            <div key={`${activity?.id}-activity-${activity?.nombre}`} className={`activity-element${activity.id === activeActivity
                                 ? "active-activity"
                                 : ""}`}
                             >
@@ -68,6 +79,11 @@ const ActivitiesCalendar = () => {
                             </div>
                         )
                     })}
+                    {nextPages && <div className="">
+                        <button onClick={ loadMoreData }>
+                            Cargar más actividades
+                        </button>
+                    </div>}
                 </div>
             </div>
         </div>

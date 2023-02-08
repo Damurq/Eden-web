@@ -1,0 +1,54 @@
+.container-tournament-details{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    padding: 2rem 3rem;
+    align-items: center;
+    padding-bottom: 0;
+}
+
+
+.container-cards{
+    position: relative;
+    display: flex;
+    padding: 80px 40px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 80px;
+    padding-bottom: 0;
+}
+
+.PopUpCardActive-container{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.logo-equipo{
+    width: 50px;
+}
+
+.table-container{
+    min-width: 80vw;
+    margin: 2rem auto;
+    overflow-x: auto;
+}
+
+.game-table{
+    margin: 0 auto;
+    border: 1px solid #ffffff;
+}
+
+.table-container th{
+    background-color: #ffffff45;
+    padding: .75rem;
+}
+
+.table-container td{
+    background-color: #ffffff15;
+    padding: .75rem;
+}
