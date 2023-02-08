@@ -1,0 +1,38 @@
+.conteiner-pag {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    display: inline-block;
+    padding: 15px;
+    margin: 15px;
+    text-align: center;
+    cursor:pointer;
+    align-items:  center;
+    justify-content: center;
+}
+
+.pagination{
+    background-color: #016f6c;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+.pagination a {
+width:  100px;
+height: 80px;
+line-height: 80px;
+text-align: center;
+color: rgb(255, 255, 255);
+font-size: 15px;
+font-weight: 700;
+transition: .2s linear;
+    
+
+}
+
+.pagination a:hover {
+    background-color: #1B1D29;
+   color:#ffffff;
+    }
+

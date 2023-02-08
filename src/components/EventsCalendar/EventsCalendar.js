@@ -114,10 +114,8 @@ const EventsCalendar = () => {
                 </div>
             </div>
             <div>
-            {(activeEvent !== null) && activeEvent}
-            {(activeEvent !== null) && <EventDetail id={activeEvent} />}
+                {(activeEvent !== null) && <EventDetail id={activeEvent} />}
             </div>
-
         </div>
     )
 }
