@@ -51,3 +51,7 @@
 .comment{
     width: 50%;
 }
+
+.day{
+    flex-direction: column;
+}

@@ -12,6 +12,10 @@ const ActivitiesCalendar = () => {
 
     const [actividades, setActividades] = useState([]);
 
+    const totalActividades = actividades.length
+    console.log(totalActividades)
+    
+
     const getActividades = async () => {
         const response = await fetch(`${process.env.REACT_APP_API_URL}${ACTIVIDADES}`);
         const res = await response.json();
@@ -41,14 +45,24 @@ const ActivitiesCalendar = () => {
                                 <div className='detail-activity'>
                                     <p className="main-title">{activity.nombre}</p>
                                     <hr></hr>
-                                    <p className='detail-act'>Fecha: {start_date.toLocaleDateString()}</p>
+                                    <div className="prueba">    
+                                        <p className='detail-act'>Días: </p>
+                                        
+                                        {activity.dias.map((dia => 
+                                        <div className='dias'>
+                                            <p>{dia.nombre},</p>
+                                        </div>
+                                        ))}
+
+                                        
+                                    </div>
                                     <p className="location">Lugar: {activity.instalacion.nombre}</p>
 
                                     <div className='SeeMore-btn'>
                                         <SeeMore to={"/Detalle-actividad/" + activity.id} />
                                     </div>
 
-                                </div>
+                                </div> 
 
 
                             </div>

@@ -79,7 +79,8 @@
     width:100%;
     margin-top: 0;
     margin-bottom: 0;
-    text-align: center;
+    padding-left: 2rem;
+    font-size: large;
 }
 
 .SeeMore-btn{
@@ -109,4 +110,17 @@
         width: 90%;
         margin-left: 5%;
     }
+}
+
+.prueba{
+    display:flex;
+    padding-left: 2rem;
+}
+.dias{
+    display: flex;
+}
+.dias p{
+    font-size: large;
+    text-align: center;
+    margin-top: 0.5rem;
 }

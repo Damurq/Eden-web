@@ -37,7 +37,11 @@ const Gallery = () => {
                 <div className="Title-carousel">
                     <h3>{evento.nombre}</h3>
                     <hr></hr>
-                    <p className="text-detail">Todos los dias en la cancha, no te lo pierdas... </p>
+                    {evento.dias.map((dia => 
+                        <p style={{marginLeft:'2rem'}}>{dia.nombre},</p>
+                    ))}
+                    <p className="text-detail2">en {evento.instalacion.nombre}</p>
+
                 </div>
                 <div className="Carousel-Gallery">
                     {evento?.galeria?.length > 0 ? (evento?.galeria.map(gal => (
@@ -54,7 +58,7 @@ const Gallery = () => {
                         : evento?.imagen_principal ? <img src={evento?.imagen_principal} alt={evento?.nombre} style={{width:'80%', marginLeft:'10%'}}/> : null}
                 </div>
                 <div className="Description">
-                    <h2>{evento.descripcion}</h2>
+                    <h2>{evento.descripcion}</h2> 
                 </div>
                 
                { /*<div className="section-commentary">
